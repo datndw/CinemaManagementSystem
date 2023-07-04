@@ -10,6 +10,7 @@ namespace CinemaManagementSystem.Application.Persistance.Contracts
     {
         Task<T> GetAsync(Guid id);
         Task<IReadOnlyList<T>> GetAllAsync();
+        Task<bool> Exists(Guid id);
         Task<T> AddAsync (T entity);
         Task<T> UpdateAsync (T entity);
         Task<bool> DeleteAsync (Guid id);

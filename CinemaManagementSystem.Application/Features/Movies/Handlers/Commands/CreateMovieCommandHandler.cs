@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using CinemaManagementSystem.Application.DTOs.Movie.Validators;
 using CinemaManagementSystem.Application.Features.Movies.Requests.Commands;
 using CinemaManagementSystem.Application.Persistance.Contracts;
 using CinemaManagementSystem.Domain.Entities;
@@ -22,6 +23,11 @@ namespace CinemaManagementSystem.Application.Features.Movies.Handlers.Commands
         }
         public async Task<Guid> Handle(CreateMovieCommand request, CancellationToken cancellationToken)
         {
+            var validator = new IMovieDTOValidator(_repository);
+            var validationResult = await validator.ValidateAsync(request.CreateMovieDTO);
+            if (!validationResult.IsValid) {
+                throw new Exception();
+            }
             var movie = _mapper.Map<Movie>(request.MovieDTO);
             movie = await _repository.AddAsync(movie);
             return movie.Id;

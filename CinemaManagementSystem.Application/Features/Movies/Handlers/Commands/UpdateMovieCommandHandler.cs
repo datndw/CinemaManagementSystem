@@ -22,9 +22,16 @@ namespace CinemaManagementSystem.Application.Features.Movies.Handlers.Commands
         }
         public async Task<Unit> Handle(UpdateMovieCommand request, CancellationToken cancellationToken)
         {
-            var movie = await _repository.GetAsync(request.MovieDTO.Id);
-            _mapper.Map(request.MovieDTO, movie);
-            await _repository.UpdateAsync(movie);
+            var movie = await _repository.GetAsync(request.Id);
+            if (request.MovieDTO != null)
+            {
+                _mapper.Map(request.MovieDTO, movie);
+                await _repository.UpdateAsync(movie);
+            }
+            else if (request.ChangeMovieImageUrlDTO != null)
+            {
+                await _repository.ChangeImageUrl(movie, request.ChangeMovieImageUrlDTO.ImageUrl);
+            }
             return Unit.Value;
 
         }

@@ -10,7 +10,8 @@ namespace CinemaManagementSystem.Application.Features.Movies.Requests.Commands
 {
     public class UpdateMovieCommand : IRequest<Unit>
     {
-        public MovieDTO MovieDTO { get; set; }
+        public Guid Id { get; set; }
+        public UpdateMovieDTO MovieDTO { get; set; }
         public ChangeMovieImageUrlDTO ChangeMovieImageUrlDTO { get; set; }
     }
 }

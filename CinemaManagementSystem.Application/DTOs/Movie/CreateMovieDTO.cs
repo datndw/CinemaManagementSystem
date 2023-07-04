@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CinemaManagementSystem.Application.DTOs.Movie
 {
-    public class CreateMovieDTO
+    public class CreateMovieDTO : IMovieDTO
     {
         public string Title { get; set; }
         public string Description { get; set; }

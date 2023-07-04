@@ -11,5 +11,6 @@ namespace CinemaManagementSystem.Application.Features.Movies.Requests.Commands
     public class CreateMovieCommand : IRequest<Guid>
     {
         public MovieDTO MovieDTO { get; set; }
+        public CreateMovieDTO CreateMovieDTO { get; set; }
     }
 }
