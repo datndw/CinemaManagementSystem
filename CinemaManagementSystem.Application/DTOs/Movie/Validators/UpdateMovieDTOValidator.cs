@@ -1,4 +1,4 @@
-﻿using CinemaManagementSystem.Application.Persistance.Contracts;
+﻿using CinemaManagementSystem.Application.Contracts.Persistence;
 using FluentValidation;
 using System;
 using System.Collections.Generic;

@@ -2,7 +2,7 @@
 using CinemaManagementSystem.Application.DTOs.Movie;
 using CinemaManagementSystem.Application.Exceptions;
 using CinemaManagementSystem.Application.Features.Movies.Requests.Queries;
-using CinemaManagementSystem.Application.Persistance.Contracts;
+using CinemaManagementSystem.Application.Contracts.Persistence;
 using CinemaManagementSystem.Domain.Entities;
 using MediatR;
 using System;

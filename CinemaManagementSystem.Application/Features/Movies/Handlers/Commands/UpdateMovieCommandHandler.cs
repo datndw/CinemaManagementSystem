@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using CinemaManagementSystem.Application.Features.Movies.Requests.Commands;
-using CinemaManagementSystem.Application.Persistance.Contracts;
+using CinemaManagementSystem.Application.Contracts.Persistence;
 using CinemaManagementSystem.Domain.Entities;
 using MediatR;
 using System;

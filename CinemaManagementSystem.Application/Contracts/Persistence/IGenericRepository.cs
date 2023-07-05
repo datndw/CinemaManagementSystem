@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CinemaManagementSystem.Application.Persistance.Contracts
+namespace CinemaManagementSystem.Application.Contracts.Persistence
 {
     public interface IGenericRepository<T> where T : class
     {
@@ -12,7 +12,7 @@ namespace CinemaManagementSystem.Application.Persistance.Contracts
         Task<IReadOnlyList<T>> GetAllAsync();
         Task<bool> Exists(Guid id);
         Task<T> AddAsync (T entity);
-        Task<T> UpdateAsync (T entity);
-        Task<bool> DeleteAsync (Guid id);
+        Task UpdateAsync (T entity);
+        Task DeleteAsync (T entity);
     }
 }

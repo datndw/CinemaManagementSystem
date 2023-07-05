@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using CinemaManagementSystem.Application.Features.Movies.Requests.Commands;
-using CinemaManagementSystem.Application.Persistance.Contracts;
+using CinemaManagementSystem.Application.Contracts.Persistence;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -21,7 +21,8 @@ namespace CinemaManagementSystem.Application.Features.Movies.Handlers.Commands
         }
         public async Task<bool> Handle(DeleteMovieCommand request, CancellationToken cancellationToken)
         {
-            await _repository.DeleteAsync(request.Id);
+            var movie = await _repository.GetAsync(request.Id);
+            await _repository.DeleteAsync(movie);
             return true;
         }
     }

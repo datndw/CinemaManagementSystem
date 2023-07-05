@@ -3,7 +3,7 @@ using CinemaManagementSystem.Application.DTOs.Movie;
 using CinemaManagementSystem.Application.DTOs.Movie.Validators;
 using CinemaManagementSystem.Application.Exceptions;
 using CinemaManagementSystem.Application.Features.Movies.Requests.Commands;
-using CinemaManagementSystem.Application.Persistance.Contracts;
+using CinemaManagementSystem.Application.Contracts.Persistence;
 using CinemaManagementSystem.Application.Resposes;
 using CinemaManagementSystem.Application.Resposes.Movie;
 using CinemaManagementSystem.Domain.Entities;
