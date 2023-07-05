@@ -21,13 +21,8 @@ namespace CinemaManagementSystem.Application.Features.Movies.Handlers.Commands
         }
         public async Task<bool> Handle(DeleteMovieCommand request, CancellationToken cancellationToken)
         {
-            try
-            {
-                await _repository.DeleteAsync(request.Id);
-                return true;
-            } catch {
-                return false;
-            }
+            await _repository.DeleteAsync(request.Id);
+            return true;
         }
     }
 }
