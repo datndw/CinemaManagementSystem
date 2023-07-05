@@ -11,9 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{C2D94C95-8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{9E47930A-F78F-4E58-964D-DA4D02417D4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaManagementSystem.Domain", "CinemaManagementSystem.Domain\CinemaManagementSystem.Domain.csproj", "{B7DC9BDC-A5FE-4C75-A996-784AA6C9AEE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CinemaManagementSystem.Domain", "CinemaManagementSystem.Domain\CinemaManagementSystem.Domain.csproj", "{B7DC9BDC-A5FE-4C75-A996-784AA6C9AEE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaManagementSystem.Application", "CinemaManagementSystem.Application\CinemaManagementSystem.Application.csproj", "{4EBE4E1C-D7F5-4343-BFA1-8A29157A00EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CinemaManagementSystem.Application", "CinemaManagementSystem.Application\CinemaManagementSystem.Application.csproj", "{4EBE4E1C-D7F5-4343-BFA1-8A29157A00EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaManagementSystem.Infrastructure", "CinemaManagementSystem.Infrastructure\CinemaManagementSystem.Infrastructure.csproj", "{D60032A1-D2A5-47DC-9CF5-1A9DD8847E70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaManagementSystem.Persistence", "CinemaManagementSystem.Persistence\CinemaManagementSystem.Persistence.csproj", "{2DDE208A-F8AD-474B-854B-CE81012239D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +33,14 @@ Global
 		{4EBE4E1C-D7F5-4343-BFA1-8A29157A00EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EBE4E1C-D7F5-4343-BFA1-8A29157A00EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EBE4E1C-D7F5-4343-BFA1-8A29157A00EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D60032A1-D2A5-47DC-9CF5-1A9DD8847E70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D60032A1-D2A5-47DC-9CF5-1A9DD8847E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D60032A1-D2A5-47DC-9CF5-1A9DD8847E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D60032A1-D2A5-47DC-9CF5-1A9DD8847E70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DDE208A-F8AD-474B-854B-CE81012239D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DDE208A-F8AD-474B-854B-CE81012239D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DDE208A-F8AD-474B-854B-CE81012239D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DDE208A-F8AD-474B-854B-CE81012239D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +51,8 @@ Global
 		{9E47930A-F78F-4E58-964D-DA4D02417D4E} = {D1576825-2DF8-47BC-A4CE-D1D631240D75}
 		{B7DC9BDC-A5FE-4C75-A996-784AA6C9AEE5} = {C2D94C95-83BD-4D36-B510-015E6C7FEC95}
 		{4EBE4E1C-D7F5-4343-BFA1-8A29157A00EE} = {C2D94C95-83BD-4D36-B510-015E6C7FEC95}
+		{D60032A1-D2A5-47DC-9CF5-1A9DD8847E70} = {9E47930A-F78F-4E58-964D-DA4D02417D4E}
+		{2DDE208A-F8AD-474B-854B-CE81012239D0} = {9E47930A-F78F-4E58-964D-DA4D02417D4E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FD518B52-2BD7-4D3C-BA73-F64B6E074B16}

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using CinemaManagementSystem.Application.DTOs.Movie;
 using CinemaManagementSystem.Application.Features.Movies.Requests.Queries;
-using CinemaManagementSystem.Application.Persistance.Contracts;
+using CinemaManagementSystem.Application.Contracts.Persistence;
 using MediatR;
 using System;
 using System.Collections.Generic;

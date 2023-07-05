@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CinemaManagementSystem.Application.Persistance.Contracts
+namespace CinemaManagementSystem.Application.Contracts.Persistence
 {
-    public interface IMovieRepository : IGenericRepository<Movie>
+    public interface IGenreRepository : IGenericRepository<Genre>
     {
     }
 }
