@@ -1,6 +1,7 @@
 ﻿using CinemaManagementSystem.Application.DTOs.Movie;
 using CinemaManagementSystem.Application.Features.Movies.Requests.Commands;
 using CinemaManagementSystem.Application.Features.Movies.Requests.Queries;
+using CinemaManagementSystem.Application.Resposes.Common;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,7 +31,9 @@ namespace CinemaManagementSystem.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] MovieDTO movieDTO)
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        public async Task<ActionResult<BaseCommandResponse>> Post([FromBody] MovieDTO movieDTO)
         {
             var command = new CreateMovieCommand { MovieDTO = movieDTO };
             var response = await _mediator.Send(command);

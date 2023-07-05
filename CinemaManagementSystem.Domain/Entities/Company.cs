@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 
 namespace CinemaManagementSystem.Domain.Entities
 {
-    public class Genre : BaseDomainEntity
+    public class Company : BaseDomainEntity
     {
-        public string Name { get; set; }
-        public string ImageUrl { get; set; }
     }
 }
