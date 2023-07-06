@@ -9,22 +9,17 @@ using System.Threading.Tasks;
 
 namespace CinemaManagementSystem.Persistence.Configurations.Entities
 {
-    public class GenreConfiguration : IEntityTypeConfiguration<Genre>
+    public class CompanyConfiguration : IEntityTypeConfiguration<Company>
     {
-        public void Configure(EntityTypeBuilder<Genre> builder)
+        public void Configure(EntityTypeBuilder<Company> builder)
         {
             builder.HasData(
-                new Genre
+                new Company
                 {
                     Id = Guid.NewGuid(),
-                    Name = "Phim Hành Động",
-                    CreatedBy = "Administrator",
-                    LastModifiedBy = "Administrator"
-                },
-                new Genre
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "Phim Phiêu Lưu",
+                    Name = "Lucasfilm Ltd.",
+                    Description = "Founded in 1971, Lucasfilm is one of the world's leading entertainment companies and home to the legendary Star Wars and Indiana Jones franchises.",
+                    ImageUrl = "/o86DbpburjxrqAzEDhXZcyE8pDb.png",
                     CreatedBy = "Administrator",
                     LastModifiedBy = "Administrator"
                 }

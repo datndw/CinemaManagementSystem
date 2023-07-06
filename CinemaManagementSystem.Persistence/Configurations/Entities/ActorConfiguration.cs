@@ -9,22 +9,19 @@ using System.Threading.Tasks;
 
 namespace CinemaManagementSystem.Persistence.Configurations.Entities
 {
-    public class GenreConfiguration : IEntityTypeConfiguration<Genre>
+    public class ActorConfiguration : IEntityTypeConfiguration<Actor>
     {
-        public void Configure(EntityTypeBuilder<Genre> builder)
+        public void Configure(EntityTypeBuilder<Actor> builder)
         {
             builder.HasData(
-                new Genre
+                new Actor
                 {
                     Id = Guid.NewGuid(),
-                    Name = "Phim Hành Động",
-                    CreatedBy = "Administrator",
-                    LastModifiedBy = "Administrator"
-                },
-                new Genre
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "Phim Phiêu Lưu",
+                    Name = "Cao Quynh Anh",
+                    Description = "Xinh gai, code gioi :))",
+                    BirthDate = DateTime.Now,
+                    Gender = "Female",
+                    ImageUrl = "",
                     CreatedBy = "Administrator",
                     LastModifiedBy = "Administrator"
                 }

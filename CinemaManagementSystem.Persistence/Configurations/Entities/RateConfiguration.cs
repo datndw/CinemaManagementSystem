@@ -9,22 +9,16 @@ using System.Threading.Tasks;
 
 namespace CinemaManagementSystem.Persistence.Configurations.Entities
 {
-    public class GenreConfiguration : IEntityTypeConfiguration<Genre>
+    public class RateConfiguration : IEntityTypeConfiguration<Rate>
     {
-        public void Configure(EntityTypeBuilder<Genre> builder)
+        public void Configure(EntityTypeBuilder<Rate> builder)
         {
             builder.HasData(
-                new Genre
+                new Rate
                 {
                     Id = Guid.NewGuid(),
-                    Name = "Phim Hành Động",
-                    CreatedBy = "Administrator",
-                    LastModifiedBy = "Administrator"
-                },
-                new Genre
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "Phim Phiêu Lưu",
+                    Rating = 9.5,
+                    Comment = "Web xịn, phim hay, toàn trai xinh gái đẹp, recommend nha mọi ngừi",
                     CreatedBy = "Administrator",
                     LastModifiedBy = "Administrator"
                 }
