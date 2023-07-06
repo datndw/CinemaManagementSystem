@@ -1,16 +1,12 @@
 ﻿using CinemaManagementSystem.Identity.Configurations;
 using CinemaManagementSystem.Identity.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CinemaManagementSystem.Identity.DbContexts
 {
-    public class CinemaManagementSystemIdentityDbContext : IdentityDbContext<ApplicationUser>
+    public class CinemaManagementSystemIdentityDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>,Guid>
     {
         public CinemaManagementSystemIdentityDbContext(DbContextOptions<CinemaManagementSystemIdentityDbContext> options) : base(options) { }
 

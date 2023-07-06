@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CinemaManagementSystem.Pers
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CinemaManagementSystem.API", "CinemaManagementSystem.API\CinemaManagementSystem.API.csproj", "{A8134F3F-7CAD-4D67-9346-51A9CDAE3262}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaManagementSystem.Identity", "CinemaManagementSystem.Identity\CinemaManagementSystem.Identity.csproj", "{0C1196D8-4A0B-4ED7-8F89-50BE5D4AB4B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CinemaManagementSystem.Identity", "CinemaManagementSystem.Identity\CinemaManagementSystem.Identity.csproj", "{0C1196D8-4A0B-4ED7-8F89-50BE5D4AB4B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

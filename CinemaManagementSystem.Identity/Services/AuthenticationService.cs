@@ -3,6 +3,7 @@ using CinemaManagementSystem.Application.Models.Identity;
 using CinemaManagementSystem.Identity.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -13,12 +14,13 @@ using System.Threading.Tasks;
 
 namespace CinemaManagementSystem.Identity.Services
 {
-    public class AuthenticationServices : IAuthenticationService
+    public class AuthenticationService : IAuthenticationService
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly JwtSettings _jwtSettings;
-        public AuthenticationServices(UserManager<ApplicationUser> userManager,
+        private const int SEC_PER_MIN = 60;
+        public AuthenticationService(UserManager<ApplicationUser> userManager,
             IOptions<JwtSettings> jwtSettings,
             SignInManager<ApplicationUser> signInManager)
         {
@@ -55,7 +57,7 @@ namespace CinemaManagementSystem.Identity.Services
             var userClaims = await _userManager.GetClaimsAsync(user);
             var roles = await _userManager.GetRolesAsync(user);
             var roleClaims = new List<Claim>();
-            for(int i=0; i< roles.Count; i++)
+            for(int i=0; i < roles.Count; i++)
             {
                 roleClaims.Add(new Claim("roles", roles[i]));
             }
@@ -68,13 +70,21 @@ namespace CinemaManagementSystem.Identity.Services
             }
             .Union(userClaims)
             .Union(roleClaims);
+            var sym = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
+            var credentials = new SigningCredentials(sym, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+                issuer: _jwtSettings.Issuer,
+                audience: _jwtSettings.Audience,
+                claims: claims,
+                expires: DateTime.UtcNow.AddMinutes(_jwtSettings.Duration / SEC_PER_MIN),
+                signingCredentials: credentials );
+            return token;
         }
 
         public Task<RegistrationRequest> Register(RegistrationRequest request)
         {
             throw new NotImplementedException();
         }
-
-        p
     }
 }

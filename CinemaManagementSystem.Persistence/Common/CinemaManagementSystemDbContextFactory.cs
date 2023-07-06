@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace CinemaManagementSystem.Persistence.Common
 {
-    public class MovieManagementSystemDbContextFactory : IDesignTimeDbContextFactory<CinemaManagementSystemDbContext>
+    public class CinemaManagementSystemDbContextFactory : IDesignTimeDbContextFactory<CinemaManagementSystemDbContext>
     {
         public CinemaManagementSystemDbContext CreateDbContext(string[] args)
         {

@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CinemaManagementSystem.Application\CinemaManagementSystem.Application.csproj" />
+    <ProjectReference Include="..\CinemaManagementSystem.Identity\CinemaManagementSystem.Identity.csproj" />
     <ProjectReference Include="..\CinemaManagementSystem.Infrastructure\CinemaManagementSystem.Infrastructure.csproj" />
     <ProjectReference Include="..\CinemaManagementSystem.Persistence\CinemaManagementSystem.Persistence.csproj" />
   </ItemGroup>
