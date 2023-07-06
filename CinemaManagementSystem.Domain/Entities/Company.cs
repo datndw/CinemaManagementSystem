@@ -9,5 +9,10 @@ namespace CinemaManagementSystem.Domain.Entities
 {
     public class Company : BaseDomainEntity
     {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string ImageUrl { get; set; }
+        public IList<MovieCompany> MovieCompanies { get; set; }
+
     }
 }

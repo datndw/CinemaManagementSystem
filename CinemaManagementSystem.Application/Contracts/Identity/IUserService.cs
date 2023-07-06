@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace CinemaManagementSystem.Application.Contracts.Identity
 {
-    public interface IAuthenticationService
+    public interface IUserService
     {
-        Task<AuthenticationResponse> Login(AuthenticationRequest request);
-        Task<RegistrationResponse> Register(RegistrationRequest request);
+        Task<List<User>> GetUsers();
+        Task<User> GetUser(Guid Id);
     }
 }

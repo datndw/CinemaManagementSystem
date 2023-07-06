@@ -10,7 +10,6 @@ namespace CinemaManagementSystem.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class MoviesController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -32,6 +31,7 @@ namespace CinemaManagementSystem.API.Controllers
             return Ok(movie);
         }
 
+        [Authorize]
         [HttpPost]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
@@ -42,6 +42,7 @@ namespace CinemaManagementSystem.API.Controllers
             return Ok(response);
         }
 
+        [Authorize]
         [HttpPut]
         public async Task<ActionResult> Put([FromBody] UpdateMovieDTO movieDTO)
         {
@@ -50,6 +51,7 @@ namespace CinemaManagementSystem.API.Controllers
             return NoContent();
         }
 
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(Guid id)
         {

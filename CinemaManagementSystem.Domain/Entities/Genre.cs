@@ -10,6 +10,6 @@ namespace CinemaManagementSystem.Domain.Entities
     public class Genre : BaseDomainEntity
     {
         public string Name { get; set; }
-        public string ImageUrl { get; set; }
+        public IList<MovieGenre> MovieGenres { get; set; }
     }
 }
