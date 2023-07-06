@@ -1,5 +1,5 @@
 ﻿using CinemaManagementSystem.Application.Contracts.Infrastructure;
-using CinemaManagementSystem.Application.Models;
+using CinemaManagementSystem.Application.Models.EmailModels;
 using Microsoft.Extensions.Options;
 using SendGrid;
 using System;

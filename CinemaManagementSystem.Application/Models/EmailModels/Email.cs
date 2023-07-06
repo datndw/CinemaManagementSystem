@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CinemaManagementSystem.Application.Models
+namespace CinemaManagementSystem.Application.Models.EmailModels
 {
     public class Email
     {
