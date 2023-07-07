@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace CinemaManagementSystem.Persistence.Configurations.Entities
 {
-    public class GenreConfiguration : IEntityTypeConfiguration<Genre>
+    public class CompanyConfiguration : IEntityTypeConfiguration<Company>
     {
-        public void Configure(EntityTypeBuilder<Genre> builder)
+        public void Configure(EntityTypeBuilder<Company> builder)
         {
-            builder.HasData(DataExtension.Genres);
+            builder.HasData(DataExtension.Companies);
         }
     }
 }

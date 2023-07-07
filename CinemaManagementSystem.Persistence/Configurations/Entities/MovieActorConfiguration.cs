@@ -5,11 +5,12 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CinemaManagementSystem.Persistence.Configurations.Entities
 {
-    public class MovieConfiguration : IEntityTypeConfiguration<Movie>
+    public class MovieActorConfiguration : IEntityTypeConfiguration<MovieActor>
     {
-        public void Configure(EntityTypeBuilder<Movie> builder)
+        public void Configure(EntityTypeBuilder<MovieActor> builder)
         {
-            builder.HasData(DataExtension.Movies);
+            builder.HasData(DataExtension.MovieActors);
         }
     }
 }
+
