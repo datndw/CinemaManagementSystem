@@ -1,4 +1,5 @@
 ﻿using CinemaManagementSystem.Domain.Entities;
+using CinemaManagementSystem.Persistence.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -13,22 +14,7 @@ namespace CinemaManagementSystem.Persistence.Configurations.Entities
     {
         public void Configure(EntityTypeBuilder<Genre> builder)
         {
-            builder.HasData(
-                new Genre
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "Phim Hành Động",
-                    CreatedBy = "Administrator",
-                    LastModifiedBy = "Administrator"
-                },
-                new Genre
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "Phim Phiêu Lưu",
-                    CreatedBy = "Administrator",
-                    LastModifiedBy = "Administrator"
-                }
-            );
+            builder.HasData(DataExtension.Genres);
         }
     }
 }

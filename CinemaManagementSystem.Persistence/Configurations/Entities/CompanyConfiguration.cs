@@ -1,4 +1,5 @@
 ﻿using CinemaManagementSystem.Domain.Entities;
+using CinemaManagementSystem.Persistence.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -13,17 +14,7 @@ namespace CinemaManagementSystem.Persistence.Configurations.Entities
     {
         public void Configure(EntityTypeBuilder<Company> builder)
         {
-            builder.HasData(
-                new Company
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "Lucasfilm Ltd.",
-                    Description = "Founded in 1971, Lucasfilm is one of the world's leading entertainment companies and home to the legendary Star Wars and Indiana Jones franchises.",
-                    ImageUrl = "/o86DbpburjxrqAzEDhXZcyE8pDb.png",
-                    CreatedBy = "Administrator",
-                    LastModifiedBy = "Administrator"
-                }
-            );
+            builder.HasData(DataExtension.Companies);
         }
     }
 }

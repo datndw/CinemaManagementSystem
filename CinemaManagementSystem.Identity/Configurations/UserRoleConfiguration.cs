@@ -14,23 +14,7 @@ namespace CinemaManagementSystem.Identity.Configurations
     {
         public void Configure(EntityTypeBuilder<IdentityUserRole<Guid>> builder)
         {
-            builder.HasData(
-            new IdentityUserRole<Guid>
-            {
-                RoleId = GlobalGUIDProvider.Request(0),
-                UserId = GlobalGUIDProvider.Request(3)
-            },
-            new IdentityUserRole<Guid>
-            {
-                RoleId = GlobalGUIDProvider.Request(1),
-                UserId = GlobalGUIDProvider.Request(4)
-            },
-            new IdentityUserRole<Guid>
-            {
-                RoleId = GlobalGUIDProvider.Request(2),
-                UserId = GlobalGUIDProvider.Request(5)
-            }
-            );
+            builder.HasData(DataExtension.UserRoles);
         }
     }
 }

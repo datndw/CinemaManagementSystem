@@ -1,4 +1,5 @@
 ﻿using CinemaManagementSystem.Domain.Entities;
+using CinemaManagementSystem.Persistence.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -13,19 +14,7 @@ namespace CinemaManagementSystem.Persistence.Configurations.Entities
     {
         public void Configure(EntityTypeBuilder<Actor> builder)
         {
-            builder.HasData(
-                new Actor
-                {
-                    Id = Guid.NewGuid(),
-                    Name = "Cao Quynh Anh",
-                    Description = "Xinh gai, code gioi :))",
-                    BirthDate = DateTime.Now,
-                    Gender = "Female",
-                    ImageUrl = "",
-                    CreatedBy = "Administrator",
-                    LastModifiedBy = "Administrator"
-                }
-            );
+            builder.HasData(DataExtension.Actors);
         }
     }
 }

@@ -183,31 +183,46 @@ namespace CinemaManagementSystem.Persistence.Migrations
             migrationBuilder.InsertData(
                 table: "Actor",
                 columns: new[] { "Id", "BirthDate", "CreatedBy", "DateCreated", "Description", "Gender", "ImageUrl", "LastModifiedBy", "LastModifiedDate", "Name" },
-                values: new object[] { new Guid("35550615-de5c-4d59-8701-0a59028ecfd1"), new DateTime(2023, 7, 6, 17, 23, 7, 505, DateTimeKind.Local).AddTicks(6974), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Xinh gai, code gioi :))", "Female", "", "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Cao Quynh Anh" });
+                values: new object[] { new Guid("4583d93a-55bf-4fed-8b82-bc6882a7e1df"), new DateTime(2023, 7, 7, 15, 58, 10, 816, DateTimeKind.Local).AddTicks(1040), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Xinh gai, code gioi :))", "Female", "", "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Cao Quynh Anh" });
 
             migrationBuilder.InsertData(
                 table: "Company",
                 columns: new[] { "Id", "CreatedBy", "DateCreated", "Description", "ImageUrl", "LastModifiedBy", "LastModifiedDate", "Name" },
-                values: new object[] { new Guid("8148cec5-798d-4351-9e72-bf2f725956a1"), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Founded in 1971, Lucasfilm is one of the world's leading entertainment companies and home to the legendary Star Wars and Indiana Jones franchises.", "/o86DbpburjxrqAzEDhXZcyE8pDb.png", "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Lucasfilm Ltd." });
+                values: new object[] { new Guid("2bcd6449-b30b-4485-b1d4-4833a040e971"), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Founded in 1971, Lucasfilm is one of the world's leading entertainment companies and home to the legendary Star Wars and Indiana Jones franchises.", "/o86DbpburjxrqAzEDhXZcyE8pDb.png", "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Lucasfilm Ltd." });
 
             migrationBuilder.InsertData(
                 table: "Genres",
                 columns: new[] { "Id", "CreatedBy", "DateCreated", "LastModifiedBy", "LastModifiedDate", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("867c7ca8-8bb9-412e-9fa9-3ead51e97460"), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Phim Hành Động" },
-                    { new Guid("b8cfe038-95a4-431f-b68e-1f95a9bae532"), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Phim Phiêu Lưu" }
+                    { new Guid("69f8f5fc-a5af-4067-87b5-49961c53d33f"), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Phim Phiêu Lưu" },
+                    { new Guid("6b67cb9e-81b2-4e7f-9029-ada3e5e94def"), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Phim Hành Động" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Movies",
                 columns: new[] { "Id", "AgeRequired", "BackDropUrl", "CreatedBy", "DateCreated", "Description", "ImageUrl", "LastModifiedBy", "LastModifiedDate", "ReleaseDate", "Title" },
-                values: new object[] { new Guid("27df554b-9d84-44ce-94d8-5a3a2eb5ea67"), 8, "/4XM8DUTQb3lhLemJC51Jx4a2EuA.jpg", "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Dom Toretto và gia đình anh ta là mục tiêu của đứa con trai đầy thù hận của trùm ma túy Hernan Reyes.", "/brZzXXQ8GuzlAdu4TJxjhC8ebBL.jpg", "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 7, 6, 17, 23, 7, 505, DateTimeKind.Local).AddTicks(7367), "Fast & Furious X" });
+                values: new object[] { new Guid("83022a84-a7bd-4c06-987a-9d23221e2e4a"), 8, "/4XM8DUTQb3lhLemJC51Jx4a2EuA.jpg", "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Dom Toretto và gia đình anh ta là mục tiêu của đứa con trai đầy thù hận của trùm ma túy Hernan Reyes.", "/brZzXXQ8GuzlAdu4TJxjhC8ebBL.jpg", "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 7, 7, 15, 58, 10, 807, DateTimeKind.Local).AddTicks(5440), "Fast & Furious X" });
+
+            migrationBuilder.InsertData(
+                table: "MovieActor",
+                columns: new[] { "ActorId", "MovieId" },
+                values: new object[] { new Guid("4583d93a-55bf-4fed-8b82-bc6882a7e1df"), new Guid("83022a84-a7bd-4c06-987a-9d23221e2e4a") });
+
+            migrationBuilder.InsertData(
+                table: "MovieCompany",
+                columns: new[] { "CompanyId", "MovieId" },
+                values: new object[] { new Guid("2bcd6449-b30b-4485-b1d4-4833a040e971"), new Guid("83022a84-a7bd-4c06-987a-9d23221e2e4a") });
+
+            migrationBuilder.InsertData(
+                table: "MovieGenre",
+                columns: new[] { "GenreId", "MovieId" },
+                values: new object[] { new Guid("6b67cb9e-81b2-4e7f-9029-ada3e5e94def"), new Guid("83022a84-a7bd-4c06-987a-9d23221e2e4a") });
 
             migrationBuilder.InsertData(
                 table: "Rate",
                 columns: new[] { "Id", "Comment", "CreatedBy", "DateCreated", "LastModifiedBy", "LastModifiedDate", "MovieId", "Rating" },
-                values: new object[] { new Guid("2ac826b3-ac0d-4937-ab22-305a6c9a174d"), "Web xịn, phim hay, toàn trai xinh gái đẹp, recommend nha mọi ngừi", "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("00000000-0000-0000-0000-000000000000"), 9.5 });
+                values: new object[] { new Guid("8f8084d2-aeaa-4089-b106-55429f095f31"), "Web xịn, phim hay, toàn trai xinh gái đẹp, recommend nha mọi ngừi", "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("83022a84-a7bd-4c06-987a-9d23221e2e4a"), 9.5 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_MovieActor_ActorId",
