@@ -1,7 +1,7 @@
 ﻿using CinemaManagementSystem.Application.DTOs.Movie;
 using CinemaManagementSystem.Application.Features.Movies.Requests.Commands;
 using CinemaManagementSystem.Application.Features.Movies.Requests.Queries;
-using CinemaManagementSystem.Application.Resposes.Common;
+using CinemaManagementSystem.Application.Responses.Common;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CinemaManagementSystem.Application.Resposes.Common
+namespace CinemaManagementSystem.Application.Responses.Common
 {
     public abstract class BaseCommandResponse
     {
