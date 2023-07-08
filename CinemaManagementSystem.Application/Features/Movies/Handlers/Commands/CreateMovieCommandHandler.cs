@@ -4,8 +4,8 @@ using CinemaManagementSystem.Application.DTOs.Movie.Validators;
 using CinemaManagementSystem.Application.Exceptions;
 using CinemaManagementSystem.Application.Features.Movies.Requests.Commands;
 using CinemaManagementSystem.Application.Contracts.Persistence;
-using CinemaManagementSystem.Application.Resposes;
-using CinemaManagementSystem.Application.Resposes.Movie;
+using CinemaManagementSystem.Application.Responses;
+using CinemaManagementSystem.Application.Responses.Movie;
 using CinemaManagementSystem.Domain.Entities;
 using MediatR;
 using System;
@@ -35,7 +35,7 @@ namespace CinemaManagementSystem.Application.Features.Movies.Handlers.Commands
                 response.Message = "Creation Failed";
                 response.Errors = validationResult.Errors.Select(e => e.ErrorMessage).ToList();
             }
-            var movie = _mapper.Map<Movie>(request.MovieDTO);
+            var movie = _mapper.Map<Movie>(request.CreateMovieDTO);
             movie = await _repository.AddAsync(movie);
             response.IsSuccess = true;
             response.Message = "Creation Successful";

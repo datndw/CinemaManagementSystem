@@ -1,7 +1,7 @@
 ﻿using CinemaManagementSystem.Application.DTOs.Movie;
 using CinemaManagementSystem.Application.Features.Movies.Requests.Commands;
 using CinemaManagementSystem.Application.Features.Movies.Requests.Queries;
-using CinemaManagementSystem.Application.Resposes.Common;
+using CinemaManagementSystem.Application.Responses.Common;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -27,17 +27,16 @@ namespace CinemaManagementSystem.API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<MovieDTO>> Get(Guid id)
         {
-            var movie = await _mediator.Send(new GetMovieRequest());
+            var movie = await _mediator.Send(new GetMovieRequest { Id = id});
             return Ok(movie);
         }
 
-        [Authorize]
         [HttpPost]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        public async Task<ActionResult<BaseCommandResponse>> Post([FromBody] MovieDTO movieDTO)
+        public async Task<ActionResult<BaseCommandResponse>> Post([FromBody] CreateMovieDTO createMovieDTO)
         {
-            var command = new CreateMovieCommand { MovieDTO = movieDTO };
+            var command = new CreateMovieCommand { CreateMovieDTO = createMovieDTO };
             var response = await _mediator.Send(command);
             return Ok(response);
         }

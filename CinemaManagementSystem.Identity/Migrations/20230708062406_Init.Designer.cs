@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CinemaManagementSystem.Identity.Migrations
 {
     [DbContext(typeof(CinemaManagementSystemIdentityDbContext))]
-    [Migration("20230707090146_Init")]
+    [Migration("20230708062406_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -92,49 +92,49 @@ namespace CinemaManagementSystem.Identity.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("0fd29912-0d4f-4f5c-9c60-7f136c0f7c3c"),
+                            Id = new Guid("00000001-0001-0001-0101-010101010101"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "1dd20704-d197-4659-a3ba-114fb5b3ee97",
+                            ConcurrencyStamp = "553dbbd6-c76a-4e58-af30-dbd577e18447",
                             Email = "admin@localhost.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@LOCALHOST.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEEOgyKo0EIytPnknlsOWcs2fHBi4RZjedtdxdk/cDgRLfdabzkdZVmEk2hoW3uX9/Q==",
+                            PasswordHash = "AQAAAAIAAYagAAAAENpA+L68AugTvr1VMw3pzUrGzGxjPjwsNppC7ALDgofTEtlubPIvXR3GOP7BWaC94A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "fbab4f72-efbe-4907-81d5-48e5b2882a3c",
+                            SecurityStamp = "1f01d6e0-5df6-45fe-8a58-94b4d50036e7",
                             TwoFactorEnabled = false,
                             UserName = "admin"
                         },
                         new
                         {
-                            Id = new Guid("dcfddd00-60e8-4e49-a23c-06539a23b40e"),
+                            Id = new Guid("00000002-0002-0002-0202-020202020202"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c5b801a7-535a-47c9-97b4-3904b30573ce",
+                            ConcurrencyStamp = "f51fd3e6-20c7-4006-879f-89151ec60b36",
                             Email = "publisher@localhost.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "PUBLISHER@LOCALHOST.COM",
                             NormalizedUserName = "PUBLISHER",
-                            PasswordHash = "AQAAAAIAAYagAAAAECSMDrDtx+zY8kiYPzpJquvffsX5JfZxWKZD10OsFsQy9piHF1zhgeI6H7rR5X6l7Q==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEFX6N5pyYAiX7Y/YF+V8DP0xrCYkjYtPvIWTnTqd/HUDK/xne1MIq5sycdV4eRWyxg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1b64bd41-b938-49f4-a653-bb147b23ba11",
+                            SecurityStamp = "13478e10-7f01-428e-829c-719a3a86f3b3",
                             TwoFactorEnabled = false,
                             UserName = "publisher"
                         },
                         new
                         {
-                            Id = new Guid("e1e81213-eccc-42fb-98e2-f1b7a6de33f4"),
+                            Id = new Guid("00000003-0003-0003-0303-030303030303"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "037aa6a2-d2f8-4dd8-9ca0-38ee417b0f28",
+                            ConcurrencyStamp = "ce30c62e-298b-4575-b04b-b129bbbca92b",
                             Email = "user@localhost.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "USER@LOCALHOST.COM",
                             NormalizedUserName = "USER",
-                            PasswordHash = "AQAAAAIAAYagAAAAEHWoCtxrScNd+CB1p95SLwVBI6WP8XKTQH8W0fARBemlOeqtgrNtY7qw1Ii9RHIjEA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEGYPYsmRV1XvbyBvyt4Ji97bquHL0KgXbT1cxzIzTNDizLtS41+1rn6x+qfbdd6V/A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "392f3eea-6a2e-4a9d-a0e6-aaac183f50c3",
+                            SecurityStamp = "7cea5b25-d9c3-4491-b759-44a9bd36d041",
                             TwoFactorEnabled = false,
                             UserName = "user"
                         });
@@ -170,19 +170,19 @@ namespace CinemaManagementSystem.Identity.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("878a7cde-b75d-4615-86be-2c20c62ca503"),
+                            Id = new Guid("84db04da-a7a3-422d-b670-f46ac52491a7"),
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
-                            Id = new Guid("f7814d1b-a242-4f42-a603-cbc14bc151e6"),
+                            Id = new Guid("b9f9795b-5ded-476c-956f-e5117a56f299"),
                             Name = "Publisher",
                             NormalizedName = "PUBLISHER"
                         },
                         new
                         {
-                            Id = new Guid("8c021599-3071-47a2-9603-29d56dfc6770"),
+                            Id = new Guid("8909e8f7-3d7f-49e1-92d7-ca7c1eadd08b"),
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -274,18 +274,18 @@ namespace CinemaManagementSystem.Identity.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = new Guid("0fd29912-0d4f-4f5c-9c60-7f136c0f7c3c"),
-                            RoleId = new Guid("878a7cde-b75d-4615-86be-2c20c62ca503")
+                            UserId = new Guid("00000001-0001-0001-0101-010101010101"),
+                            RoleId = new Guid("84db04da-a7a3-422d-b670-f46ac52491a7")
                         },
                         new
                         {
-                            UserId = new Guid("dcfddd00-60e8-4e49-a23c-06539a23b40e"),
-                            RoleId = new Guid("f7814d1b-a242-4f42-a603-cbc14bc151e6")
+                            UserId = new Guid("00000002-0002-0002-0202-020202020202"),
+                            RoleId = new Guid("b9f9795b-5ded-476c-956f-e5117a56f299")
                         },
                         new
                         {
-                            UserId = new Guid("e1e81213-eccc-42fb-98e2-f1b7a6de33f4"),
-                            RoleId = new Guid("8c021599-3071-47a2-9603-29d56dfc6770")
+                            UserId = new Guid("00000003-0003-0003-0303-030303030303"),
+                            RoleId = new Guid("8909e8f7-3d7f-49e1-92d7-ca7c1eadd08b")
                         });
                 });
 

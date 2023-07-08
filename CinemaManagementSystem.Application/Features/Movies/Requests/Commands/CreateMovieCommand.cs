@@ -1,5 +1,5 @@
 ﻿using CinemaManagementSystem.Application.DTOs.Movie;
-using CinemaManagementSystem.Application.Resposes.Movie;
+using CinemaManagementSystem.Application.Responses.Movie;
 using MediatR;
 using System;
 using System.Collections.Generic;

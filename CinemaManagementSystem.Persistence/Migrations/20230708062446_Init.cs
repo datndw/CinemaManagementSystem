@@ -16,8 +16,8 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BirthDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BirthDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -36,7 +36,8 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -82,6 +83,32 @@ namespace CinemaManagementSystem.Persistence.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Movies", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "User",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Firstname = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MiddleName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Lastname = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CompanyId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    BirthDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_User", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_User_Company_CompanyId",
+                        column: x => x.CompanyId,
+                        principalTable: "Company",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -162,7 +189,8 @@ namespace CinemaManagementSystem.Persistence.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Rating = table.Column<double>(type: "float", nullable: false),
-                    Comment = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Comment = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     MovieId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     DateCreated = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -178,51 +206,67 @@ namespace CinemaManagementSystem.Persistence.Migrations
                         principalTable: "Movies",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Rate_User_UserId",
+                        column: x => x.UserId,
+                        principalTable: "User",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.InsertData(
                 table: "Actor",
                 columns: new[] { "Id", "BirthDate", "CreatedBy", "DateCreated", "Description", "Gender", "ImageUrl", "LastModifiedBy", "LastModifiedDate", "Name" },
-                values: new object[] { new Guid("4583d93a-55bf-4fed-8b82-bc6882a7e1df"), new DateTime(2023, 7, 7, 15, 58, 10, 816, DateTimeKind.Local).AddTicks(1040), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Xinh gai, code gioi :))", "Female", "", "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Cao Quynh Anh" });
+                values: new object[] { new Guid("5255d7fa-c966-4057-aa81-daaac393a4e4"), new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(2000), "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(2400), "Xinh gai, code gioi :))", "Female", "", "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(2410), "Cao Quynh Anh" });
 
             migrationBuilder.InsertData(
                 table: "Company",
-                columns: new[] { "Id", "CreatedBy", "DateCreated", "Description", "ImageUrl", "LastModifiedBy", "LastModifiedDate", "Name" },
-                values: new object[] { new Guid("2bcd6449-b30b-4485-b1d4-4833a040e971"), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Founded in 1971, Lucasfilm is one of the world's leading entertainment companies and home to the legendary Star Wars and Indiana Jones franchises.", "/o86DbpburjxrqAzEDhXZcyE8pDb.png", "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Lucasfilm Ltd." });
+                columns: new[] { "Id", "CreatedBy", "DateCreated", "Description", "ImageUrl", "LastModifiedBy", "LastModifiedDate", "Name", "UserId" },
+                values: new object[] { new Guid("e7a832a3-39d0-4bc5-aa25-ed884b9b589c"), "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(2940), "Founded in 1971, Lucasfilm is one of the world's leading entertainment companies and home to the legendary Star Wars and Indiana Jones franchises.", "/o86DbpburjxrqAzEDhXZcyE8pDb.png", "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(2940), "Lucasfilm Ltd.", null });
 
             migrationBuilder.InsertData(
                 table: "Genres",
                 columns: new[] { "Id", "CreatedBy", "DateCreated", "LastModifiedBy", "LastModifiedDate", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("69f8f5fc-a5af-4067-87b5-49961c53d33f"), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Phim Phiêu Lưu" },
-                    { new Guid("6b67cb9e-81b2-4e7f-9029-ada3e5e94def"), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Phim Hành Động" }
+                    { new Guid("d55f1c00-98d2-4fd3-94ab-1be5f2d3cfd9"), "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1560), "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1560), "Phim Hành Động" },
+                    { new Guid("f7e1ac42-8902-4df3-ac25-d20c360586b2"), "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1580), "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1580), "Phim Phiêu Lưu" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Movies",
                 columns: new[] { "Id", "AgeRequired", "BackDropUrl", "CreatedBy", "DateCreated", "Description", "ImageUrl", "LastModifiedBy", "LastModifiedDate", "ReleaseDate", "Title" },
-                values: new object[] { new Guid("83022a84-a7bd-4c06-987a-9d23221e2e4a"), 8, "/4XM8DUTQb3lhLemJC51Jx4a2EuA.jpg", "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Dom Toretto và gia đình anh ta là mục tiêu của đứa con trai đầy thù hận của trùm ma túy Hernan Reyes.", "/brZzXXQ8GuzlAdu4TJxjhC8ebBL.jpg", "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 7, 7, 15, 58, 10, 807, DateTimeKind.Local).AddTicks(5440), "Fast & Furious X" });
+                values: new object[] { new Guid("0e04dd7d-c209-4434-b8eb-64396ce0f8d9"), 8, "/4XM8DUTQb3lhLemJC51Jx4a2EuA.jpg", "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1230), "Dom Toretto và gia đình anh ta là mục tiêu của đứa con trai đầy thù hận của trùm ma túy Hernan Reyes.", "/brZzXXQ8GuzlAdu4TJxjhC8ebBL.jpg", "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1240), new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1100), "Fast & Furious X" });
+
+            migrationBuilder.InsertData(
+                table: "User",
+                columns: new[] { "Id", "BirthDate", "CompanyId", "CreatedBy", "DateCreated", "Firstname", "ImageUrl", "LastModifiedBy", "LastModifiedDate", "Lastname", "MiddleName" },
+                values: new object[,]
+                {
+                    { new Guid("00000001-0001-0001-0101-010101010101"), null, null, "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 757, DateTimeKind.Local).AddTicks(1300), "System", null, "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 765, DateTimeKind.Local).AddTicks(9860), "Administrator", null },
+                    { new Guid("00000002-0002-0002-0202-020202020202"), null, null, "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(170), "System", null, "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(170), "Publisher", null },
+                    { new Guid("00000003-0003-0003-0303-030303030303"), null, null, "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(170), "System", null, "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(180), "User", null }
+                });
 
             migrationBuilder.InsertData(
                 table: "MovieActor",
                 columns: new[] { "ActorId", "MovieId" },
-                values: new object[] { new Guid("4583d93a-55bf-4fed-8b82-bc6882a7e1df"), new Guid("83022a84-a7bd-4c06-987a-9d23221e2e4a") });
+                values: new object[] { new Guid("5255d7fa-c966-4057-aa81-daaac393a4e4"), new Guid("0e04dd7d-c209-4434-b8eb-64396ce0f8d9") });
 
             migrationBuilder.InsertData(
                 table: "MovieCompany",
                 columns: new[] { "CompanyId", "MovieId" },
-                values: new object[] { new Guid("2bcd6449-b30b-4485-b1d4-4833a040e971"), new Guid("83022a84-a7bd-4c06-987a-9d23221e2e4a") });
+                values: new object[] { new Guid("e7a832a3-39d0-4bc5-aa25-ed884b9b589c"), new Guid("0e04dd7d-c209-4434-b8eb-64396ce0f8d9") });
 
             migrationBuilder.InsertData(
                 table: "MovieGenre",
                 columns: new[] { "GenreId", "MovieId" },
-                values: new object[] { new Guid("6b67cb9e-81b2-4e7f-9029-ada3e5e94def"), new Guid("83022a84-a7bd-4c06-987a-9d23221e2e4a") });
+                values: new object[] { new Guid("d55f1c00-98d2-4fd3-94ab-1be5f2d3cfd9"), new Guid("0e04dd7d-c209-4434-b8eb-64396ce0f8d9") });
 
             migrationBuilder.InsertData(
                 table: "Rate",
-                columns: new[] { "Id", "Comment", "CreatedBy", "DateCreated", "LastModifiedBy", "LastModifiedDate", "MovieId", "Rating" },
-                values: new object[] { new Guid("8f8084d2-aeaa-4089-b106-55429f095f31"), "Web xịn, phim hay, toàn trai xinh gái đẹp, recommend nha mọi ngừi", "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Administrator", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("83022a84-a7bd-4c06-987a-9d23221e2e4a"), 9.5 });
+                columns: new[] { "Id", "Comment", "CreatedBy", "DateCreated", "LastModifiedBy", "LastModifiedDate", "MovieId", "Rating", "UserId" },
+                values: new object[] { new Guid("1634490f-bed2-4060-b55d-ec9e95e6b25d"), "Web xịn, phim hay, toàn trai xinh gái đẹp, recommend nha mọi ngừi", "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(4150), "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(4150), new Guid("0e04dd7d-c209-4434-b8eb-64396ce0f8d9"), 9.5, new Guid("00000001-0001-0001-0101-010101010101") });
 
             migrationBuilder.CreateIndex(
                 name: "IX_MovieActor_ActorId",
@@ -243,6 +287,18 @@ namespace CinemaManagementSystem.Persistence.Migrations
                 name: "IX_Rate_MovieId",
                 table: "Rate",
                 column: "MovieId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Rate_UserId",
+                table: "Rate",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_User_CompanyId",
+                table: "User",
+                column: "CompanyId",
+                unique: true,
+                filter: "[CompanyId] IS NOT NULL");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -263,13 +319,16 @@ namespace CinemaManagementSystem.Persistence.Migrations
                 name: "Actor");
 
             migrationBuilder.DropTable(
-                name: "Company");
-
-            migrationBuilder.DropTable(
                 name: "Genres");
 
             migrationBuilder.DropTable(
                 name: "Movies");
+
+            migrationBuilder.DropTable(
+                name: "User");
+
+            migrationBuilder.DropTable(
+                name: "Company");
         }
     }
 }

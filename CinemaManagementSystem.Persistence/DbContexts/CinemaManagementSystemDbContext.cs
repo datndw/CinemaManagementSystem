@@ -21,12 +21,20 @@ namespace CinemaManagementSystem.Persistence.DbContexts
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(CinemaManagementSystemDbContext).Assembly);
 
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.HasKey(u => u.Id);
+            });
+
             modelBuilder.Entity<Rate>(entity =>
             {
                 entity.HasKey(r => r.Id);
                 entity.HasOne<Movie>(r => r.Movie)
                 .WithMany(m => m.Rates)
                 .HasForeignKey(r => r.MovieId);
+                entity.HasOne<User>(r => r.User)
+                .WithMany(u => u.Rates)
+                .HasForeignKey(u => u.UserId);
             });
 
             modelBuilder.Entity<Movie>(entity =>
@@ -62,6 +70,10 @@ namespace CinemaManagementSystem.Persistence.DbContexts
                 entity.Property(e => e.Name)
                 .IsRequired()
                 .HasMaxLength(100);
+                entity.HasOne(e => e.User)
+                .WithOne(e => e.Company)
+                .HasForeignKey<User>(e => e.CompanyId)
+                .IsRequired(false);
             });
 
             modelBuilder.Entity<MovieActor>(entity =>
