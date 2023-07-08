@@ -4,6 +4,21 @@ namespace CinemaManagementSystem.Persistence.Extensions
 {
     public static class DataExtension
     {
+        public static List<Company> Companies = new List<Company>
+        {
+            new Company
+            {
+                Id = Guid.NewGuid(),
+                Name = "Lucasfilm Ltd.",
+                Description = "Founded in 1971, Lucasfilm is one of the world's leading entertainment companies and home to the legendary Star Wars and Indiana Jones franchises.",
+                ImageUrl = "/o86DbpburjxrqAzEDhXZcyE8pDb.png",
+                DateCreated = DateTime.Now,
+                CreatedBy = "Administrator",
+                LastModifiedDate = DateTime.Now,
+                LastModifiedBy = "Administrator"
+            }
+        };
+
         public static List<User> Users = new List<User>
         {
             new User
@@ -21,6 +36,7 @@ namespace CinemaManagementSystem.Persistence.Extensions
                 Id = new Guid(2,2,2,2,2,2,2,2,2,2,2),
                 Firstname = "System",
                 Lastname = "Publisher",
+                CompanyId = Companies.ElementAt(0).Id,
                 DateCreated = DateTime.Now,
                 CreatedBy = "Administrator",
                 LastModifiedDate = DateTime.Now,
@@ -88,21 +104,6 @@ namespace CinemaManagementSystem.Persistence.Extensions
                 BirthDate = DateTime.Now,
                 Gender = "Female",
                 ImageUrl = "",
-                DateCreated = DateTime.Now,
-                CreatedBy = "Administrator",
-                LastModifiedDate = DateTime.Now,
-                LastModifiedBy = "Administrator"
-            }
-        };
-
-        public static List<Company> Companies = new List<Company>
-        {
-            new Company
-            {
-                Id = Guid.NewGuid(),
-                Name = "Lucasfilm Ltd.",
-                Description = "Founded in 1971, Lucasfilm is one of the world's leading entertainment companies and home to the legendary Star Wars and Indiana Jones franchises.",
-                ImageUrl = "/o86DbpburjxrqAzEDhXZcyE8pDb.png",
                 DateCreated = DateTime.Now,
                 CreatedBy = "Administrator",
                 LastModifiedDate = DateTime.Now,

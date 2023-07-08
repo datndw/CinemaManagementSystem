@@ -35,7 +35,7 @@ namespace CinemaManagementSystem.Application.Features.Movies.Handlers.Commands
                 response.Message = "Creation Failed";
                 response.Errors = validationResult.Errors.Select(e => e.ErrorMessage).ToList();
             }
-            var movie = _mapper.Map<Movie>(request.MovieDTO);
+            var movie = _mapper.Map<Movie>(request.CreateMovieDTO);
             movie = await _repository.AddAsync(movie);
             response.IsSuccess = true;
             response.Message = "Creation Successful";
