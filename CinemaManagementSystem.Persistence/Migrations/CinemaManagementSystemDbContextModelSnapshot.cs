@@ -28,7 +28,7 @@ namespace CinemaManagementSystem.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("BirthDate")
+                    b.Property<DateTime?>("BirthDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedBy")
@@ -47,7 +47,6 @@ namespace CinemaManagementSystem.Persistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastModifiedBy")
@@ -69,15 +68,15 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("4583d93a-55bf-4fed-8b82-bc6882a7e1df"),
-                            BirthDate = new DateTime(2023, 7, 7, 15, 58, 10, 816, DateTimeKind.Local).AddTicks(1040),
+                            Id = new Guid("5255d7fa-c966-4057-aa81-daaac393a4e4"),
+                            BirthDate = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(2000),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateCreated = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(2400),
                             Description = "Xinh gai, code gioi :))",
                             Gender = "Female",
                             ImageUrl = "",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            LastModifiedDate = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(2410),
                             Name = "Cao Quynh Anh"
                         });
                 });
@@ -100,7 +99,6 @@ namespace CinemaManagementSystem.Persistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastModifiedBy")
@@ -115,6 +113,9 @@ namespace CinemaManagementSystem.Persistence.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<Guid?>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
 
                     b.ToTable("Company");
@@ -122,13 +123,13 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("2bcd6449-b30b-4485-b1d4-4833a040e971"),
+                            Id = new Guid("e7a832a3-39d0-4bc5-aa25-ed884b9b589c"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateCreated = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(2940),
                             Description = "Founded in 1971, Lucasfilm is one of the world's leading entertainment companies and home to the legendary Star Wars and Indiana Jones franchises.",
                             ImageUrl = "/o86DbpburjxrqAzEDhXZcyE8pDb.png",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            LastModifiedDate = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(2940),
                             Name = "Lucasfilm Ltd."
                         });
                 });
@@ -165,20 +166,20 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("6b67cb9e-81b2-4e7f-9029-ada3e5e94def"),
+                            Id = new Guid("d55f1c00-98d2-4fd3-94ab-1be5f2d3cfd9"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateCreated = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1560),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            LastModifiedDate = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1560),
                             Name = "Phim Hành Động"
                         },
                         new
                         {
-                            Id = new Guid("69f8f5fc-a5af-4067-87b5-49961c53d33f"),
+                            Id = new Guid("f7e1ac42-8902-4df3-ac25-d20c360586b2"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateCreated = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1580),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            LastModifiedDate = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1580),
                             Name = "Phim Phiêu Lưu"
                         });
                 });
@@ -230,16 +231,16 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("83022a84-a7bd-4c06-987a-9d23221e2e4a"),
+                            Id = new Guid("0e04dd7d-c209-4434-b8eb-64396ce0f8d9"),
                             AgeRequired = 8,
                             BackDropUrl = "/4XM8DUTQb3lhLemJC51Jx4a2EuA.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateCreated = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1230),
                             Description = "Dom Toretto và gia đình anh ta là mục tiêu của đứa con trai đầy thù hận của trùm ma túy Hernan Reyes.",
                             ImageUrl = "/brZzXXQ8GuzlAdu4TJxjhC8ebBL.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ReleaseDate = new DateTime(2023, 7, 7, 15, 58, 10, 807, DateTimeKind.Local).AddTicks(5440),
+                            LastModifiedDate = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1240),
+                            ReleaseDate = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1100),
                             Title = "Fast & Furious X"
                         });
                 });
@@ -261,8 +262,8 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            MovieId = new Guid("83022a84-a7bd-4c06-987a-9d23221e2e4a"),
-                            ActorId = new Guid("4583d93a-55bf-4fed-8b82-bc6882a7e1df")
+                            MovieId = new Guid("0e04dd7d-c209-4434-b8eb-64396ce0f8d9"),
+                            ActorId = new Guid("5255d7fa-c966-4057-aa81-daaac393a4e4")
                         });
                 });
 
@@ -283,8 +284,8 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            MovieId = new Guid("83022a84-a7bd-4c06-987a-9d23221e2e4a"),
-                            CompanyId = new Guid("2bcd6449-b30b-4485-b1d4-4833a040e971")
+                            MovieId = new Guid("0e04dd7d-c209-4434-b8eb-64396ce0f8d9"),
+                            CompanyId = new Guid("e7a832a3-39d0-4bc5-aa25-ed884b9b589c")
                         });
                 });
 
@@ -305,8 +306,8 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            MovieId = new Guid("83022a84-a7bd-4c06-987a-9d23221e2e4a"),
-                            GenreId = new Guid("6b67cb9e-81b2-4e7f-9029-ada3e5e94def")
+                            MovieId = new Guid("0e04dd7d-c209-4434-b8eb-64396ce0f8d9"),
+                            GenreId = new Guid("d55f1c00-98d2-4fd3-94ab-1be5f2d3cfd9")
                         });
                 });
 
@@ -317,7 +318,6 @@ namespace CinemaManagementSystem.Persistence.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Comment")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CreatedBy")
@@ -340,23 +340,110 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     b.Property<double>("Rating")
                         .HasColumnType("float");
 
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
 
                     b.HasIndex("MovieId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Rate");
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("8f8084d2-aeaa-4089-b106-55429f095f31"),
+                            Id = new Guid("1634490f-bed2-4060-b55d-ec9e95e6b25d"),
                             Comment = "Web xịn, phim hay, toàn trai xinh gái đẹp, recommend nha mọi ngừi",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateCreated = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(4150),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            MovieId = new Guid("83022a84-a7bd-4c06-987a-9d23221e2e4a"),
-                            Rating = 9.5
+                            LastModifiedDate = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(4150),
+                            MovieId = new Guid("0e04dd7d-c209-4434-b8eb-64396ce0f8d9"),
+                            Rating = 9.5,
+                            UserId = new Guid("00000001-0001-0001-0101-010101010101")
+                        });
+                });
+
+            modelBuilder.Entity("CinemaManagementSystem.Domain.Entities.User", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("BirthDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("CompanyId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Firstname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastModifiedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("LastModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Lastname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MiddleName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CompanyId")
+                        .IsUnique()
+                        .HasFilter("[CompanyId] IS NOT NULL");
+
+                    b.ToTable("User");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("00000001-0001-0001-0101-010101010101"),
+                            CreatedBy = "Administrator",
+                            DateCreated = new DateTime(2023, 7, 8, 13, 24, 45, 757, DateTimeKind.Local).AddTicks(1300),
+                            Firstname = "System",
+                            LastModifiedBy = "Administrator",
+                            LastModifiedDate = new DateTime(2023, 7, 8, 13, 24, 45, 765, DateTimeKind.Local).AddTicks(9860),
+                            Lastname = "Administrator"
+                        },
+                        new
+                        {
+                            Id = new Guid("00000002-0002-0002-0202-020202020202"),
+                            CreatedBy = "Administrator",
+                            DateCreated = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(170),
+                            Firstname = "System",
+                            LastModifiedBy = "Administrator",
+                            LastModifiedDate = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(170),
+                            Lastname = "Publisher"
+                        },
+                        new
+                        {
+                            Id = new Guid("00000003-0003-0003-0303-030303030303"),
+                            CreatedBy = "Administrator",
+                            DateCreated = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(170),
+                            Firstname = "System",
+                            LastModifiedBy = "Administrator",
+                            LastModifiedDate = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(180),
+                            Lastname = "User"
                         });
                 });
 
@@ -425,7 +512,24 @@ namespace CinemaManagementSystem.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("CinemaManagementSystem.Domain.Entities.User", "User")
+                        .WithMany("Rates")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Movie");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("CinemaManagementSystem.Domain.Entities.User", b =>
+                {
+                    b.HasOne("CinemaManagementSystem.Domain.Entities.Company", "Company")
+                        .WithOne("User")
+                        .HasForeignKey("CinemaManagementSystem.Domain.Entities.User", "CompanyId");
+
+                    b.Navigation("Company");
                 });
 
             modelBuilder.Entity("CinemaManagementSystem.Domain.Entities.Actor", b =>
@@ -436,6 +540,8 @@ namespace CinemaManagementSystem.Persistence.Migrations
             modelBuilder.Entity("CinemaManagementSystem.Domain.Entities.Company", b =>
                 {
                     b.Navigation("MovieCompanies");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("CinemaManagementSystem.Domain.Entities.Genre", b =>
@@ -451,6 +557,11 @@ namespace CinemaManagementSystem.Persistence.Migrations
 
                     b.Navigation("MovieGenres");
 
+                    b.Navigation("Rates");
+                });
+
+            modelBuilder.Entity("CinemaManagementSystem.Domain.Entities.User", b =>
+                {
                     b.Navigation("Rates");
                 });
 #pragma warning restore 612, 618

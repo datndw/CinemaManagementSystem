@@ -32,7 +32,7 @@ namespace CinemaManagementSystem.Identity.Extensions
         {
             new ApplicationUser
                  {
-                     Id = Guid.NewGuid(),
+                     Id = new Guid(1,1,1,1,1,1,1,1,1,1,1),
                      Email = "admin@localhost.com",
                      NormalizedEmail = "ADMIN@LOCALHOST.COM",
                      SecurityStamp = Guid.NewGuid().ToString(),
@@ -43,7 +43,7 @@ namespace CinemaManagementSystem.Identity.Extensions
                  },
                  new ApplicationUser
                  {
-                     Id = Guid.NewGuid(),
+                     Id = new Guid(2,2,2,2,2,2,2,2,2,2,2),
                      Email = "publisher@localhost.com",
                      NormalizedEmail = "PUBLISHER@LOCALHOST.COM",
                      SecurityStamp = Guid.NewGuid().ToString(),
@@ -54,7 +54,7 @@ namespace CinemaManagementSystem.Identity.Extensions
                  },
                  new ApplicationUser
                  {
-                     Id = Guid.NewGuid(),
+                     Id = new Guid(3,3,3,3,3,3,3,3,3,3,3),
                      Email = "user@localhost.com",
                      NormalizedEmail = "USER@LOCALHOST.COM",
                      SecurityStamp = Guid.NewGuid().ToString(),
