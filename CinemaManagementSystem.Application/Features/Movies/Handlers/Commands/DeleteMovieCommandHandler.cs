@@ -12,17 +12,20 @@ namespace CinemaManagementSystem.Application.Features.Movies.Handlers.Commands
 {
     public class DeleteMovieCommandHandler : IRequestHandler<DeleteMovieCommand, bool>
     {
-        private readonly IMovieRepository _repository;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        public DeleteMovieCommandHandler(IMovieRepository repository, IMapper mapper)
+        public DeleteMovieCommandHandler(
+            IUnitOfWork unitOfWork,
+            IMapper mapper)
         {
-            _repository = repository;
+            _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
         public async Task<bool> Handle(DeleteMovieCommand request, CancellationToken cancellationToken)
         {
-            var movie = await _repository.GetAsync(request.Id);
-            await _repository.DeleteAsync(movie);
+            var movie = await _unitOfWork.MovieRepository.GetAsync(request.Id);
+            await _unitOfWork.MovieRepository.DeleteAsync(movie);
+            await _unitOfWork.Save();
             return true;
         }
     }

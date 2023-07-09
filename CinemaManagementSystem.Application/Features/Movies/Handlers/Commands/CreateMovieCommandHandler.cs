@@ -18,17 +18,19 @@ namespace CinemaManagementSystem.Application.Features.Movies.Handlers.Commands
 {
     public class CreateMovieCommandHandler : IRequestHandler<CreateMovieCommand, CreateMovieCommandResponse>
     {
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IMovieRepository _repository;
         private readonly IMapper _mapper;
-        public CreateMovieCommandHandler(IMovieRepository repository, IMapper mapper)
+        public CreateMovieCommandHandler(IUnitOfWork unitOfWork, IMovieRepository repository, IMapper mapper)
         {
+            _unitOfWork = unitOfWork;
             _repository = repository;
             _mapper = mapper;
         }
         public async Task<CreateMovieCommandResponse> Handle(CreateMovieCommand request, CancellationToken cancellationToken)
         {
             var response = new CreateMovieCommandResponse();
-            var validator = new IMovieDTOValidator(_repository);
+            var validator = new IMovieDTOValidator(_unitOfWork.MovieRepository);
             var validationResult = await validator.ValidateAsync(request.CreateMovieDTO);
             if (!validationResult.IsValid) {
                 response.IsSuccess = false;
@@ -36,7 +38,8 @@ namespace CinemaManagementSystem.Application.Features.Movies.Handlers.Commands
                 response.Errors = validationResult.Errors.Select(e => e.ErrorMessage).ToList();
             }
             var movie = _mapper.Map<Movie>(request.CreateMovieDTO);
-            movie = await _repository.AddAsync(movie);
+            movie = await _unitOfWork.MovieRepository.AddAsync(movie);
+            await _unitOfWork.Save();
             response.IsSuccess = true;
             response.Message = "Creation Successful";
             response.Id = movie.Id;
