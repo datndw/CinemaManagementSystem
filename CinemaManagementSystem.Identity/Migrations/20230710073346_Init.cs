@@ -159,9 +159,9 @@ namespace CinemaManagementSystem.Identity.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { new Guid("357ec9fd-4b6c-40ee-bef5-18bd05926d14"), null, "Publisher", "PUBLISHER" },
-                    { new Guid("55d7a042-b49d-4f19-96f0-f9a23c072208"), null, "Administrator", "ADMINISTRATOR" },
-                    { new Guid("91ca46de-0880-4900-9d7c-aae3fe3801d5"), null, "User", "USER" }
+                    { new Guid("41f394d4-2ea5-4e83-9d5c-5befe1a3ab4c"), null, "Administrator", "ADMINISTRATOR" },
+                    { new Guid("aa863ed8-0567-4d2d-a139-f344bafe5f3f"), null, "User", "USER" },
+                    { new Guid("b399b461-0cb6-4e55-8f24-d315578780b4"), null, "Publisher", "PUBLISHER" }
                 });
 
             migrationBuilder.InsertData(
@@ -169,25 +169,25 @@ namespace CinemaManagementSystem.Identity.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { new Guid("00000001-0001-0001-0101-010101010101"), 0, "7fb01672-4718-4bea-bd50-cdf62a4b7180", "admin@localhost.com", true, false, null, "ADMIN@LOCALHOST.COM", "ADMIN", "AQAAAAIAAYagAAAAEM2hcwGAkuKEDZU7AI5R2RfVTUdQcqlOYvHoz/efDiwzjOhJVu+hBe/G0Jo6AZ/R0Q==", null, false, "5241e065-63ce-4d53-8db4-70b38c70c732", false, "admin" },
-                    { new Guid("00000002-0002-0002-0202-020202020202"), 0, "16afb5d1-855f-42e8-abc8-c7ffb4e9351a", "publisher@localhost.com", true, false, null, "PUBLISHER@LOCALHOST.COM", "PUBLISHER", "AQAAAAIAAYagAAAAEGN3/2FVKROAzZ0v7NMdOuGl0rYNSXWk5GOQa82XGwD2BWJMaXAoRen2sna2I7hHyw==", null, false, "8c8482cc-2566-4cf8-bff6-2637511f2773", false, "publisher" },
-                    { new Guid("00000003-0003-0003-0303-030303030303"), 0, "80dc5fe8-3991-4b68-8255-abad1eefe97a", "user@localhost.com", true, false, null, "USER@LOCALHOST.COM", "USER", "AQAAAAIAAYagAAAAEHKaU8yE8K03B7Oh1RGqM3kmEl0PYwT7ThoRIcHwIOUICAyVdC5hguzu3sUEmc9Wqw==", null, false, "8bd8ca8c-5baa-4c1f-8820-6463102ddbb8", false, "user" }
+                    { new Guid("00000001-0001-0001-0101-010101010101"), 0, "eb26c110-5775-4676-bf95-fa48f37d3b65", "admin@localhost.com", true, false, null, "ADMIN@LOCALHOST.COM", "ADMIN", "AQAAAAIAAYagAAAAEIN84m/yotKC8Afx/heflY9idu3HQaGJd9DZZj6z1TJWkvTc1iPA2RhCMTuHWPKNag==", null, false, "c59572db-2324-45ae-b427-2dc5bf20013a", false, "admin" },
+                    { new Guid("00000002-0002-0002-0202-020202020202"), 0, "54493338-8653-4abb-9b6f-7ae067a7d8e2", "publisher@localhost.com", true, false, null, "PUBLISHER@LOCALHOST.COM", "PUBLISHER", "AQAAAAIAAYagAAAAENSxiOc+GqbFbT+qs3kNnKO0YgckB4VrZOfZYpTO8I9U20bUG15fqg3o4DuZJhbJuQ==", null, false, "0bd6597f-7dc2-42ff-81a9-96be018c04a4", false, "publisher" },
+                    { new Guid("00000003-0003-0003-0303-030303030303"), 0, "3b066fae-fd07-4d9a-8f86-3536a89978ec", "user@localhost.com", true, false, null, "USER@LOCALHOST.COM", "USER", "AQAAAAIAAYagAAAAECkwox1Ykbx+6C221WL2A/bzr0KCjuuQd53sRs9FTtrpHR6q+GGCTsK7mOsyrKBBYA==", null, false, "f0801f65-6ad0-47c6-bc13-c0ca27959357", false, "user" }
                 });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
                 columns: new[] { "RoleId", "UserId" },
-                values: new object[] { new Guid("55d7a042-b49d-4f19-96f0-f9a23c072208"), new Guid("00000001-0001-0001-0101-010101010101") });
+                values: new object[] { new Guid("41f394d4-2ea5-4e83-9d5c-5befe1a3ab4c"), new Guid("00000001-0001-0001-0101-010101010101") });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
                 columns: new[] { "RoleId", "UserId" },
-                values: new object[] { new Guid("357ec9fd-4b6c-40ee-bef5-18bd05926d14"), new Guid("00000002-0002-0002-0202-020202020202") });
+                values: new object[] { new Guid("b399b461-0cb6-4e55-8f24-d315578780b4"), new Guid("00000002-0002-0002-0202-020202020202") });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
                 columns: new[] { "RoleId", "UserId" },
-                values: new object[] { new Guid("91ca46de-0880-4900-9d7c-aae3fe3801d5"), new Guid("00000003-0003-0003-0303-030303030303") });
+                values: new object[] { new Guid("aa863ed8-0567-4d2d-a139-f344bafe5f3f"), new Guid("00000003-0003-0003-0303-030303030303") });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
