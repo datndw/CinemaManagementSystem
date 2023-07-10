@@ -20,6 +20,14 @@
 
   <ItemGroup>
     <Folder Include="Features\Genres\" />
+    <Folder Include="Responses\Genre\" />
+    <Folder Include="DTOs\Genre\Validators\" />
+    <Folder Include="Constants\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Responses\Genre\" />
+    <None Remove="DTOs\Genre\Validators\" />
+    <None Remove="Constants\" />
+  </ItemGroup>
 </Project>

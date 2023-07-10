@@ -1,3 +1,4 @@
+using CinemaManagementSystem.API.Middleware;
 using CinemaManagementSystem.Application.Common;
 using CinemaManagementSystem.Identity.Common;
 using CinemaManagementSystem.Infrastructure.Common;
@@ -6,6 +7,7 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddHttpContextAccessor();
 AddSwaggerDoc(builder.Services);
 
 void AddSwaggerDoc(IServiceCollection services)
@@ -76,11 +78,15 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseDeveloperExceptionPage();
 }
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseAuthentication();
 
 app.UseHttpsRedirection();
+
+app.UseRouting();
 
 app.UseAuthorization();
 

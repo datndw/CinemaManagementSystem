@@ -10,11 +10,11 @@ namespace CinemaManagementSystem.Application.DTOs.Movie.Validators
 {
     public class UpdateMovieDTOValidator : AbstractValidator<UpdateMovieDTO>
     {
-        private readonly IMovieRepository _repository;
-        public UpdateMovieDTOValidator(IMovieRepository repository)
+        private readonly IUnitOfWork _unitOfWork;
+        public UpdateMovieDTOValidator(IUnitOfWork unitOfWork)
         {
-            _repository = repository;
-            Include(new IMovieDTOValidator(_repository));
+            _unitOfWork = unitOfWork;
+            Include(new IMovieDTOValidator(_unitOfWork));
             RuleFor(m => m.Id)
                 .NotNull().WithMessage("{PropertyName} must be present");
         }

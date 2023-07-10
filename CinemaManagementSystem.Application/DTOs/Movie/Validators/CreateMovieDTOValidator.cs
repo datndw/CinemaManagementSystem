@@ -10,11 +10,11 @@ namespace CinemaManagementSystem.Application.DTOs.Movie.Validators
 {
     public class CreateMovieDTOValidator : AbstractValidator<CreateMovieDTO>
     {
-        private readonly IMovieRepository _repository;
-        public CreateMovieDTOValidator(IMovieRepository repository)
+        private readonly IUnitOfWork _unitOfWork;
+        public CreateMovieDTOValidator(IUnitOfWork unitOfWork)
         {
-            _repository = repository;
-            Include(new IMovieDTOValidator(_repository));
+            _unitOfWork = unitOfWork;
+            Include(new IMovieDTOValidator(_unitOfWork));
         }
     }
 }

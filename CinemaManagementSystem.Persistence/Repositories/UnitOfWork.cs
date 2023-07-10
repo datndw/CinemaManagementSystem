@@ -9,6 +9,7 @@ namespace CinemaManagementSystem.Persistence.Repositories
 		private readonly CinemaManagementSystemDbContext _context;
 		private IMovieRepository _movieRepository;
 		private IGenreRepository _genreRepository;
+		private IUserRepository _userRepository;
 
 		public UnitOfWork(CinemaManagementSystemDbContext context)
 		{
@@ -17,6 +18,7 @@ namespace CinemaManagementSystem.Persistence.Repositories
 
 		public IMovieRepository MovieRepository => _movieRepository ??= new MovieRepository(_context);
         public IGenreRepository GenreRepository => _genreRepository ??= new GenreRepository(_context);
+		public IUserRepository UserRepository => _userRepository ??= new UserRepository(_context);
 
 
 		public void Dispose()

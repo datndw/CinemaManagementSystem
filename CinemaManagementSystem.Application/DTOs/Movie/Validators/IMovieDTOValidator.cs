@@ -10,10 +10,10 @@ namespace CinemaManagementSystem.Application.DTOs.Movie.Validators
 {
     public class IMovieDTOValidator : AbstractValidator<IMovieDTO>
     {
-        private readonly IMovieRepository _repository;
-        public IMovieDTOValidator(IMovieRepository repository)
+        private readonly IUnitOfWork _unitOfWork;
+        public IMovieDTOValidator(IUnitOfWork unitOfWork)
         {
-            _repository = repository;
+            _unitOfWork = unitOfWork;
 
             RuleFor(m => m.Title)
                 .NotEmpty().WithMessage("{PropertyName} is required")

@@ -5,6 +5,7 @@ namespace CinemaManagementSystem.Application.Contracts.Persistence
 	{
 		IMovieRepository MovieRepository { get; }
 		IGenreRepository GenreRepository { get; }
+		IUserRepository UserRepository { get; }
 		Task Save();
 	}
 }

@@ -68,15 +68,15 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("5255d7fa-c966-4057-aa81-daaac393a4e4"),
-                            BirthDate = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(2000),
+                            Id = new Guid("dbb49f8e-a8d0-4ecd-87aa-d4dee2e0241c"),
+                            BirthDate = new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(5400),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(2400),
+                            DateCreated = new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(5790),
                             Description = "Xinh gai, code gioi :))",
                             Gender = "Female",
                             ImageUrl = "",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(2410),
+                            LastModifiedDate = new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(5800),
                             Name = "Cao Quynh Anh"
                         });
                 });
@@ -123,13 +123,13 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("e7a832a3-39d0-4bc5-aa25-ed884b9b589c"),
+                            Id = new Guid("c5a362e7-2726-401d-bf1c-7c97d85173fd"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(2940),
+                            DateCreated = new DateTime(2023, 7, 9, 22, 7, 3, 516, DateTimeKind.Local).AddTicks(4010),
                             Description = "Founded in 1971, Lucasfilm is one of the world's leading entertainment companies and home to the legendary Star Wars and Indiana Jones franchises.",
                             ImageUrl = "/o86DbpburjxrqAzEDhXZcyE8pDb.png",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(2940),
+                            LastModifiedDate = new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(2280),
                             Name = "Lucasfilm Ltd."
                         });
                 });
@@ -166,20 +166,20 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("d55f1c00-98d2-4fd3-94ab-1be5f2d3cfd9"),
+                            Id = new Guid("e52ff8e0-4254-4d90-9f5f-75e7d4861f24"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1560),
+                            DateCreated = new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(4900),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1560),
+                            LastModifiedDate = new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(4900),
                             Name = "Phim Hành Động"
                         },
                         new
                         {
-                            Id = new Guid("f7e1ac42-8902-4df3-ac25-d20c360586b2"),
+                            Id = new Guid("40ea4241-7fff-40e5-b488-638dc98d5086"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1580),
+                            DateCreated = new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(4920),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1580),
+                            LastModifiedDate = new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(4920),
                             Name = "Phim Phiêu Lưu"
                         });
                 });
@@ -231,16 +231,16 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("0e04dd7d-c209-4434-b8eb-64396ce0f8d9"),
+                            Id = new Guid("9a3ff39f-cde5-4585-b097-6518556f011f"),
                             AgeRequired = 8,
                             BackDropUrl = "/4XM8DUTQb3lhLemJC51Jx4a2EuA.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1230),
+                            DateCreated = new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(4600),
                             Description = "Dom Toretto và gia đình anh ta là mục tiêu của đứa con trai đầy thù hận của trùm ma túy Hernan Reyes.",
                             ImageUrl = "/brZzXXQ8GuzlAdu4TJxjhC8ebBL.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1240),
-                            ReleaseDate = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1100),
+                            LastModifiedDate = new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(4600),
+                            ReleaseDate = new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(4460),
                             Title = "Fast & Furious X"
                         });
                 });
@@ -262,8 +262,8 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            MovieId = new Guid("0e04dd7d-c209-4434-b8eb-64396ce0f8d9"),
-                            ActorId = new Guid("5255d7fa-c966-4057-aa81-daaac393a4e4")
+                            MovieId = new Guid("9a3ff39f-cde5-4585-b097-6518556f011f"),
+                            ActorId = new Guid("dbb49f8e-a8d0-4ecd-87aa-d4dee2e0241c")
                         });
                 });
 
@@ -284,8 +284,8 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            MovieId = new Guid("0e04dd7d-c209-4434-b8eb-64396ce0f8d9"),
-                            CompanyId = new Guid("e7a832a3-39d0-4bc5-aa25-ed884b9b589c")
+                            MovieId = new Guid("9a3ff39f-cde5-4585-b097-6518556f011f"),
+                            CompanyId = new Guid("c5a362e7-2726-401d-bf1c-7c97d85173fd")
                         });
                 });
 
@@ -306,8 +306,8 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            MovieId = new Guid("0e04dd7d-c209-4434-b8eb-64396ce0f8d9"),
-                            GenreId = new Guid("d55f1c00-98d2-4fd3-94ab-1be5f2d3cfd9")
+                            MovieId = new Guid("9a3ff39f-cde5-4585-b097-6518556f011f"),
+                            GenreId = new Guid("e52ff8e0-4254-4d90-9f5f-75e7d4861f24")
                         });
                 });
 
@@ -354,13 +354,13 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("1634490f-bed2-4060-b55d-ec9e95e6b25d"),
+                            Id = new Guid("454dccc4-d67c-487d-8d1d-f0341c0b7240"),
                             Comment = "Web xịn, phim hay, toàn trai xinh gái đẹp, recommend nha mọi ngừi",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(4150),
+                            DateCreated = new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(6730),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(4150),
-                            MovieId = new Guid("0e04dd7d-c209-4434-b8eb-64396ce0f8d9"),
+                            LastModifiedDate = new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(6730),
+                            MovieId = new Guid("9a3ff39f-cde5-4585-b097-6518556f011f"),
                             Rating = 9.5,
                             UserId = new Guid("00000001-0001-0001-0101-010101010101")
                         });
@@ -419,30 +419,31 @@ namespace CinemaManagementSystem.Persistence.Migrations
                         {
                             Id = new Guid("00000001-0001-0001-0101-010101010101"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 8, 13, 24, 45, 757, DateTimeKind.Local).AddTicks(1300),
+                            DateCreated = new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(3060),
                             Firstname = "System",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 8, 13, 24, 45, 765, DateTimeKind.Local).AddTicks(9860),
+                            LastModifiedDate = new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(3060),
                             Lastname = "Administrator"
                         },
                         new
                         {
                             Id = new Guid("00000002-0002-0002-0202-020202020202"),
+                            CompanyId = new Guid("c5a362e7-2726-401d-bf1c-7c97d85173fd"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(170),
+                            DateCreated = new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(3670),
                             Firstname = "System",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(170),
+                            LastModifiedDate = new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(3670),
                             Lastname = "Publisher"
                         },
                         new
                         {
                             Id = new Guid("00000003-0003-0003-0303-030303030303"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(170),
+                            DateCreated = new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(3670),
                             Firstname = "System",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(180),
+                            LastModifiedDate = new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(3670),
                             Lastname = "User"
                         });
                 });

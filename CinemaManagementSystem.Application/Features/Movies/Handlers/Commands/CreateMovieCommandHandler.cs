@@ -19,18 +19,16 @@ namespace CinemaManagementSystem.Application.Features.Movies.Handlers.Commands
     public class CreateMovieCommandHandler : IRequestHandler<CreateMovieCommand, CreateMovieCommandResponse>
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IMovieRepository _repository;
         private readonly IMapper _mapper;
-        public CreateMovieCommandHandler(IUnitOfWork unitOfWork, IMovieRepository repository, IMapper mapper)
+        public CreateMovieCommandHandler(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
-            _repository = repository;
             _mapper = mapper;
         }
         public async Task<CreateMovieCommandResponse> Handle(CreateMovieCommand request, CancellationToken cancellationToken)
         {
             var response = new CreateMovieCommandResponse();
-            var validator = new IMovieDTOValidator(_unitOfWork.MovieRepository);
+            var validator = new IMovieDTOValidator(_unitOfWork);
             var validationResult = await validator.ValidateAsync(request.CreateMovieDTO);
             if (!validationResult.IsValid) {
                 response.IsSuccess = false;

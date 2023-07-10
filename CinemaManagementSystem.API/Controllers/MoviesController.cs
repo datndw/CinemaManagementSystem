@@ -10,6 +10,7 @@ namespace CinemaManagementSystem.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class MoviesController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -34,6 +35,7 @@ namespace CinemaManagementSystem.API.Controllers
         [HttpPost]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
+        [Authorize(Roles = "Administrator")]
         public async Task<ActionResult<BaseCommandResponse>> Post([FromBody] CreateMovieDTO createMovieDTO)
         {
             var command = new CreateMovieCommand { CreateMovieDTO = createMovieDTO };
@@ -43,6 +45,7 @@ namespace CinemaManagementSystem.API.Controllers
 
         [Authorize]
         [HttpPut]
+        [Authorize(Roles = "Administrator")]
         public async Task<ActionResult> Put([FromBody] UpdateMovieDTO movieDTO)
         {
             var command = new UpdateMovieCommand { MovieDTO = movieDTO };
@@ -52,6 +55,7 @@ namespace CinemaManagementSystem.API.Controllers
 
         [Authorize]
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrator")]
         public async Task<ActionResult> Delete(Guid id)
         {
             var command = new DeleteMovieCommand { Id = id };

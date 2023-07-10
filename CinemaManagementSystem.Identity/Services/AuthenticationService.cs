@@ -1,5 +1,7 @@
 ﻿using CinemaManagementSystem.Application.Contracts.Identity;
+using CinemaManagementSystem.Application.Contracts.Persistence;
 using CinemaManagementSystem.Application.Models.Identity;
+using CinemaManagementSystem.Domain.Entities;
 using CinemaManagementSystem.Identity.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
@@ -19,14 +21,17 @@ namespace CinemaManagementSystem.Identity.Services
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly JwtSettings _jwtSettings;
+        private readonly IUnitOfWork _unitOfWork;
         private const int SEC_PER_MIN = 60;
         public AuthenticationService(UserManager<ApplicationUser> userManager,
             IOptions<JwtSettings> jwtSettings,
-            SignInManager<ApplicationUser> signInManager)
-        {
+            SignInManager<ApplicationUser> signInManager,
+            IUnitOfWork unitOfWork)
+        { 
             _userManager = userManager;
             _signInManager = signInManager;
             _jwtSettings = jwtSettings.Value;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<AuthenticationResponse> Login(AuthenticationRequest request)
@@ -107,6 +112,17 @@ namespace CinemaManagementSystem.Identity.Services
                 if (result.Succeeded)
                 {
                     await _userManager.AddToRoleAsync(user, "User");
+                    await _unitOfWork.UserRepository.AddAsync(new User
+                    {
+                        Id = user.Id,
+                        Firstname = request.FirstName,
+                        MiddleName = request.MiddleName,
+                        Lastname = request.LastName,
+                        CreatedBy = request.UserName,
+                        DateCreated = DateTime.Now,
+                        LastModifiedBy = request.UserName,
+                        LastModifiedDate = DateTime.Now
+                    });
                     return new RegistrationResponse() { Id = user.Id };
                 }
                 else

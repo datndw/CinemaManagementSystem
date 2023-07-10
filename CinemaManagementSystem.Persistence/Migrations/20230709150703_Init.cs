@@ -217,56 +217,60 @@ namespace CinemaManagementSystem.Persistence.Migrations
             migrationBuilder.InsertData(
                 table: "Actor",
                 columns: new[] { "Id", "BirthDate", "CreatedBy", "DateCreated", "Description", "Gender", "ImageUrl", "LastModifiedBy", "LastModifiedDate", "Name" },
-                values: new object[] { new Guid("5255d7fa-c966-4057-aa81-daaac393a4e4"), new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(2000), "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(2400), "Xinh gai, code gioi :))", "Female", "", "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(2410), "Cao Quynh Anh" });
+                values: new object[] { new Guid("dbb49f8e-a8d0-4ecd-87aa-d4dee2e0241c"), new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(5400), "Administrator", new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(5790), "Xinh gai, code gioi :))", "Female", "", "Administrator", new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(5800), "Cao Quynh Anh" });
 
             migrationBuilder.InsertData(
                 table: "Company",
                 columns: new[] { "Id", "CreatedBy", "DateCreated", "Description", "ImageUrl", "LastModifiedBy", "LastModifiedDate", "Name", "UserId" },
-                values: new object[] { new Guid("e7a832a3-39d0-4bc5-aa25-ed884b9b589c"), "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(2940), "Founded in 1971, Lucasfilm is one of the world's leading entertainment companies and home to the legendary Star Wars and Indiana Jones franchises.", "/o86DbpburjxrqAzEDhXZcyE8pDb.png", "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(2940), "Lucasfilm Ltd.", null });
+                values: new object[] { new Guid("c5a362e7-2726-401d-bf1c-7c97d85173fd"), "Administrator", new DateTime(2023, 7, 9, 22, 7, 3, 516, DateTimeKind.Local).AddTicks(4010), "Founded in 1971, Lucasfilm is one of the world's leading entertainment companies and home to the legendary Star Wars and Indiana Jones franchises.", "/o86DbpburjxrqAzEDhXZcyE8pDb.png", "Administrator", new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(2280), "Lucasfilm Ltd.", null });
 
             migrationBuilder.InsertData(
                 table: "Genres",
                 columns: new[] { "Id", "CreatedBy", "DateCreated", "LastModifiedBy", "LastModifiedDate", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("d55f1c00-98d2-4fd3-94ab-1be5f2d3cfd9"), "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1560), "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1560), "Phim Hành Động" },
-                    { new Guid("f7e1ac42-8902-4df3-ac25-d20c360586b2"), "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1580), "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1580), "Phim Phiêu Lưu" }
+                    { new Guid("40ea4241-7fff-40e5-b488-638dc98d5086"), "Administrator", new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(4920), "Administrator", new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(4920), "Phim Phiêu Lưu" },
+                    { new Guid("e52ff8e0-4254-4d90-9f5f-75e7d4861f24"), "Administrator", new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(4900), "Administrator", new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(4900), "Phim Hành Động" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Movies",
                 columns: new[] { "Id", "AgeRequired", "BackDropUrl", "CreatedBy", "DateCreated", "Description", "ImageUrl", "LastModifiedBy", "LastModifiedDate", "ReleaseDate", "Title" },
-                values: new object[] { new Guid("0e04dd7d-c209-4434-b8eb-64396ce0f8d9"), 8, "/4XM8DUTQb3lhLemJC51Jx4a2EuA.jpg", "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1230), "Dom Toretto và gia đình anh ta là mục tiêu của đứa con trai đầy thù hận của trùm ma túy Hernan Reyes.", "/brZzXXQ8GuzlAdu4TJxjhC8ebBL.jpg", "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1240), new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(1100), "Fast & Furious X" });
+                values: new object[] { new Guid("9a3ff39f-cde5-4585-b097-6518556f011f"), 8, "/4XM8DUTQb3lhLemJC51Jx4a2EuA.jpg", "Administrator", new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(4600), "Dom Toretto và gia đình anh ta là mục tiêu của đứa con trai đầy thù hận của trùm ma túy Hernan Reyes.", "/brZzXXQ8GuzlAdu4TJxjhC8ebBL.jpg", "Administrator", new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(4600), new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(4460), "Fast & Furious X" });
 
             migrationBuilder.InsertData(
                 table: "User",
                 columns: new[] { "Id", "BirthDate", "CompanyId", "CreatedBy", "DateCreated", "Firstname", "ImageUrl", "LastModifiedBy", "LastModifiedDate", "Lastname", "MiddleName" },
                 values: new object[,]
                 {
-                    { new Guid("00000001-0001-0001-0101-010101010101"), null, null, "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 757, DateTimeKind.Local).AddTicks(1300), "System", null, "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 765, DateTimeKind.Local).AddTicks(9860), "Administrator", null },
-                    { new Guid("00000002-0002-0002-0202-020202020202"), null, null, "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(170), "System", null, "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(170), "Publisher", null },
-                    { new Guid("00000003-0003-0003-0303-030303030303"), null, null, "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(170), "System", null, "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(180), "User", null }
+                    { new Guid("00000001-0001-0001-0101-010101010101"), null, null, "Administrator", new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(3060), "System", null, "Administrator", new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(3060), "Administrator", null },
+                    { new Guid("00000003-0003-0003-0303-030303030303"), null, null, "Administrator", new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(3670), "System", null, "Administrator", new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(3670), "User", null }
                 });
 
             migrationBuilder.InsertData(
                 table: "MovieActor",
                 columns: new[] { "ActorId", "MovieId" },
-                values: new object[] { new Guid("5255d7fa-c966-4057-aa81-daaac393a4e4"), new Guid("0e04dd7d-c209-4434-b8eb-64396ce0f8d9") });
+                values: new object[] { new Guid("dbb49f8e-a8d0-4ecd-87aa-d4dee2e0241c"), new Guid("9a3ff39f-cde5-4585-b097-6518556f011f") });
 
             migrationBuilder.InsertData(
                 table: "MovieCompany",
                 columns: new[] { "CompanyId", "MovieId" },
-                values: new object[] { new Guid("e7a832a3-39d0-4bc5-aa25-ed884b9b589c"), new Guid("0e04dd7d-c209-4434-b8eb-64396ce0f8d9") });
+                values: new object[] { new Guid("c5a362e7-2726-401d-bf1c-7c97d85173fd"), new Guid("9a3ff39f-cde5-4585-b097-6518556f011f") });
 
             migrationBuilder.InsertData(
                 table: "MovieGenre",
                 columns: new[] { "GenreId", "MovieId" },
-                values: new object[] { new Guid("d55f1c00-98d2-4fd3-94ab-1be5f2d3cfd9"), new Guid("0e04dd7d-c209-4434-b8eb-64396ce0f8d9") });
+                values: new object[] { new Guid("e52ff8e0-4254-4d90-9f5f-75e7d4861f24"), new Guid("9a3ff39f-cde5-4585-b097-6518556f011f") });
 
             migrationBuilder.InsertData(
                 table: "Rate",
                 columns: new[] { "Id", "Comment", "CreatedBy", "DateCreated", "LastModifiedBy", "LastModifiedDate", "MovieId", "Rating", "UserId" },
-                values: new object[] { new Guid("1634490f-bed2-4060-b55d-ec9e95e6b25d"), "Web xịn, phim hay, toàn trai xinh gái đẹp, recommend nha mọi ngừi", "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(4150), "Administrator", new DateTime(2023, 7, 8, 13, 24, 45, 766, DateTimeKind.Local).AddTicks(4150), new Guid("0e04dd7d-c209-4434-b8eb-64396ce0f8d9"), 9.5, new Guid("00000001-0001-0001-0101-010101010101") });
+                values: new object[] { new Guid("454dccc4-d67c-487d-8d1d-f0341c0b7240"), "Web xịn, phim hay, toàn trai xinh gái đẹp, recommend nha mọi ngừi", "Administrator", new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(6730), "Administrator", new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(6730), new Guid("9a3ff39f-cde5-4585-b097-6518556f011f"), 9.5, new Guid("00000001-0001-0001-0101-010101010101") });
+
+            migrationBuilder.InsertData(
+                table: "User",
+                columns: new[] { "Id", "BirthDate", "CompanyId", "CreatedBy", "DateCreated", "Firstname", "ImageUrl", "LastModifiedBy", "LastModifiedDate", "Lastname", "MiddleName" },
+                values: new object[] { new Guid("00000002-0002-0002-0202-020202020202"), null, new Guid("c5a362e7-2726-401d-bf1c-7c97d85173fd"), "Administrator", new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(3670), "System", null, "Administrator", new DateTime(2023, 7, 9, 22, 7, 3, 525, DateTimeKind.Local).AddTicks(3670), "Publisher", null });
 
             migrationBuilder.CreateIndex(
                 name: "IX_MovieActor_ActorId",
