@@ -8,34 +8,42 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CinemaManagementSystem.Application.Responses.Movie;
 
 namespace CinemaManagementSystem.Application.Features.Movies.Handlers.Commands
 {
-    public class UpdateMovieCommandHandler : IRequestHandler<UpdateMovieCommand, Unit>
+    public class UpdateMovieCommandHandler : IRequestHandler<UpdateMovieCommand, UpdateMovieCommandResponse>
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+
         public UpdateMovieCommandHandler(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
-        public async Task<Unit> Handle(UpdateMovieCommand request, CancellationToken cancellationToken)
+
+        public async Task<UpdateMovieCommandResponse> Handle(UpdateMovieCommand request, CancellationToken cancellationToken)
         {
+            var response = new UpdateMovieCommandResponse();
             var movie = await _unitOfWork.MovieRepository.GetAsync(request.Id);
-            if (request.MovieDTO != null)
+            if (request.UpdateMovieDTO != null)
             {
-                _mapper.Map(request.MovieDTO, movie);
+                _mapper.Map(request.UpdateMovieDTO, movie);
                 await _unitOfWork.MovieRepository.UpdateAsync(movie);
                 await _unitOfWork.Save();
+                response.IsSuccess = true;
+                response.Message = "Update Successful";
+                response.Id = movie.Id;
+                response.UpdateMovieDTO = request.UpdateMovieDTO;
             }
-            else if (request.ChangeMovieImageUrlDTO != null)
+            else
             {
-                await _unitOfWork.MovieRepository.ChangeImageUrl(movie, request.ChangeMovieImageUrlDTO.ImageUrl);
-                await _unitOfWork.Save();
+                response.IsSuccess = false;
+                response.Message = "Update Failed";
+                response.Errors = new List<string> { "Movie to be updated can't not be null"};
             }
-            return Unit.Value;
-
+            return response;
         }
     }
 }

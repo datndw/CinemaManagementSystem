@@ -9,6 +9,5 @@ namespace CinemaManagementSystem.Application.Contracts.Persistence
 {
     public interface IMovieRepository : IGenericRepository<Movie>
     {
-        Task ChangeImageUrl(Movie movie, string imageUrl);
     }
 }

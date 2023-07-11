@@ -15,6 +15,7 @@ namespace CinemaManagementSystem.Domain.Entities
         public string? BackDropUrl { get; set; }
         public int AgeRequired { get; set; }
         public DateTime ReleaseDate { get; set; }
+        public string Status { get; set; }
         public ICollection<Rate>? Rates { get; set; }
         public IList<MovieActor> MovieActors { get; set; }
         public IList<MovieGenre> MovieGenres { get; set; }

@@ -1,5 +1,4 @@
-﻿using System;
-using CinemaManagementSystem.Application.Contracts.Persistence;
+﻿using CinemaManagementSystem.Application.Contracts.Persistence;
 using CinemaManagementSystem.Domain.Entities;
 using CinemaManagementSystem.Persistence.DbContexts;
 

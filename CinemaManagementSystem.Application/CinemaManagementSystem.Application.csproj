@@ -23,11 +23,47 @@
     <Folder Include="Responses\Genre\" />
     <Folder Include="DTOs\Genre\Validators\" />
     <Folder Include="Constants\" />
+    <Folder Include="Features\Genres\Handlers\" />
+    <Folder Include="Features\Genres\Requests\" />
+    <Folder Include="Features\Genres\Handlers\Commands\" />
+    <Folder Include="Features\Genres\Handlers\Queries\" />
+    <Folder Include="Features\Genres\Requests\Commands\" />
+    <Folder Include="Features\Genres\Requests\Queries\" />
+    <Folder Include="Features\Users\" />
+    <Folder Include="Features\Companies\" />
+    <Folder Include="Features\Rates\" />
+    <Folder Include="Features\Actors\" />
+    <Folder Include="DTOs\Actor\" />
+    <Folder Include="DTOs\Company\" />
+    <Folder Include="DTOs\Rate\" />
+    <Folder Include="DTOs\User\" />
+    <Folder Include="Responses\Company\" />
+    <Folder Include="Responses\Actor\" />
+    <Folder Include="Responses\User\" />
+    <Folder Include="Responses\Rate\" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Responses\Genre\" />
     <None Remove="DTOs\Genre\Validators\" />
     <None Remove="Constants\" />
+    <None Remove="Features\Genres\Handlers\" />
+    <None Remove="Features\Genres\Requests\" />
+    <None Remove="Features\Genres\Handlers\Commands\" />
+    <None Remove="Features\Genres\Handlers\Queries\" />
+    <None Remove="Features\Genres\Requests\Commands\" />
+    <None Remove="Features\Genres\Requests\Queries\" />
+    <None Remove="Features\Users\" />
+    <None Remove="Features\Companies\" />
+    <None Remove="Features\Rates\" />
+    <None Remove="Features\Actors\" />
+    <None Remove="DTOs\Actor\" />
+    <None Remove="DTOs\Company\" />
+    <None Remove="DTOs\Rate\" />
+    <None Remove="DTOs\User\" />
+    <None Remove="Responses\Company\" />
+    <None Remove="Responses\Actor\" />
+    <None Remove="Responses\User\" />
+    <None Remove="Responses\Rate\" />
   </ItemGroup>
 </Project>

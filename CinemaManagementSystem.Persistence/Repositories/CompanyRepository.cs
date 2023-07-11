@@ -4,12 +4,13 @@ using CinemaManagementSystem.Persistence.DbContexts;
 
 namespace CinemaManagementSystem.Persistence.Repositories
 {
-    public class GenreRepository : GenericRepository<Genre>, IGenreRepository
+    public class CompanyRepository : GenericRepository<Company>, ICompanyRepository
     {
         private readonly CinemaManagementSystemDbContext _context;
-        public GenreRepository(CinemaManagementSystemDbContext context) : base(context)
+        public CompanyRepository(CinemaManagementSystemDbContext context) : base(context)
         {
             _context = context;
         }
     }
 }
+

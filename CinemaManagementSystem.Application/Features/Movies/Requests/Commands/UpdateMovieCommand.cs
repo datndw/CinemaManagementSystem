@@ -1,17 +1,12 @@
 ﻿using CinemaManagementSystem.Application.DTOs.Movie;
+using CinemaManagementSystem.Application.Responses.Movie;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CinemaManagementSystem.Application.Features.Movies.Requests.Commands
 {
-    public class UpdateMovieCommand : IRequest<Unit>
+    public class UpdateMovieCommand : IRequest<UpdateMovieCommandResponse>
     {
         public Guid Id { get; set; }
-        public UpdateMovieDTO MovieDTO { get; set; }
-        public ChangeMovieImageUrlDTO ChangeMovieImageUrlDTO { get; set; }
+        public UpdateMovieDTO UpdateMovieDTO { get; set; }
     }
 }

@@ -11,6 +11,7 @@ namespace CinemaManagementSystem.Persistence.DbContexts
 {
     public class CinemaManagementSystemDbContext : DbContext
     {
+        const string SYSTEM_NAME = "System";
         public CinemaManagementSystemDbContext(DbContextOptions<CinemaManagementSystemDbContext> options)
             : base(options)
         {
@@ -103,9 +104,11 @@ namespace CinemaManagementSystem.Persistence.DbContexts
             foreach (var entry in ChangeTracker.Entries<BaseDomainEntity>())
             {
                 entry.Entity.LastModifiedDate = DateTime.Now;
+                entry.Entity.LastModifiedBy = SYSTEM_NAME;
                 if (entry.State == EntityState.Added)
                 {
                     entry.Entity.DateCreated = DateTime.Now;
+                    entry.Entity.CreatedBy = SYSTEM_NAME;
                 }
             }
             return base.SaveChangesAsync(cancellationToken);

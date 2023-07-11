@@ -17,6 +17,8 @@ namespace CinemaManagementSystem.Application.Profiles
                 .ReverseMap();
             CreateMap<Movie, CreateMovieDTO>()
                 .ReverseMap();
+            CreateMap<Movie, UpdateMovieDTO>()
+                .ReverseMap();
         }
     }
 }

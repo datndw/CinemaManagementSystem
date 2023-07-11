@@ -10,7 +10,6 @@ namespace CinemaManagementSystem.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
     public class MoviesController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -46,9 +45,9 @@ namespace CinemaManagementSystem.API.Controllers
         [Authorize]
         [HttpPut]
         [Authorize(Roles = "Administrator")]
-        public async Task<ActionResult> Put([FromBody] UpdateMovieDTO movieDTO)
+        public async Task<ActionResult> Put([FromBody] UpdateMovieDTO updateMovieDTO)
         {
-            var command = new UpdateMovieCommand { MovieDTO = movieDTO };
+            var command = new UpdateMovieCommand { Id =updateMovieDTO.Id, UpdateMovieDTO = updateMovieDTO };
             await _mediator.Send(command);
             return NoContent();
         }

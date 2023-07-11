@@ -11,5 +11,6 @@ namespace CinemaManagementSystem.Application.Contracts.Identity
     {
         Task<AuthenticationResponse> Login(AuthenticationRequest request);
         Task<RegistrationResponse> Register(RegistrationRequest request);
+        Task<bool> ChangePassword(string oldPassword, string newPassword);
     }
 }

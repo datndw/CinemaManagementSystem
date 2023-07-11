@@ -1,4 +1,5 @@
-﻿using CinemaManagementSystem.Application.Contracts.Identity;
+﻿using CinemaManagementSystem.Application.Constants;
+using CinemaManagementSystem.Application.Contracts.Identity;
 using CinemaManagementSystem.Application.Contracts.Persistence;
 using CinemaManagementSystem.Application.Models.Identity;
 using CinemaManagementSystem.Domain.Entities;
@@ -64,7 +65,7 @@ namespace CinemaManagementSystem.Identity.Services
             var roleClaims = new List<Claim>();
             for(int i=0; i < roles.Count; i++)
             {
-                roleClaims.Add(new Claim("roles", roles[i]));
+                roleClaims.Add(new Claim(ClaimTypes.Role, roles[i]));
             }
             var claims = new[]
             {
@@ -134,6 +135,11 @@ namespace CinemaManagementSystem.Identity.Services
             {
                 throw new Exception($"Email {request.Email} already exists.");
             }
+        }
+
+        public Task<bool> ChangePassword(string oldPassword, string newPassword)
+        {
+            throw new NotImplementedException();
         }
     }
 }

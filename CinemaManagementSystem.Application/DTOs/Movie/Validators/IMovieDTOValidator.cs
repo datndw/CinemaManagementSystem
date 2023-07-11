@@ -14,7 +14,6 @@ namespace CinemaManagementSystem.Application.DTOs.Movie.Validators
         public IMovieDTOValidator(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-
             RuleFor(m => m.Title)
                 .NotEmpty().WithMessage("{PropertyName} is required")
                 .NotNull()

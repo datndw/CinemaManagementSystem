@@ -39,7 +39,7 @@ void AddSwaggerDoc(IServiceCollection services)
                     Name = "Bearer",
                     In = ParameterLocation.Header
                 },
-                new List<String>()
+                new List<string>()
             }
         });
 
@@ -57,7 +57,23 @@ builder.Services.ConfigureInfrastructureServices(builder.Configuration);
 builder.Services.ConfigurePersistenceServices(builder.Configuration);
 builder.Services.ConfigureIdentityServices(builder.Configuration);
 
+builder.Services.AddAuthorization(config =>
+{
+    config.AddPolicy("User", policyConfig =>
+    {
+        policyConfig.RequireClaim("Role", "User");
+    });
 
+    config.AddPolicy("Publisher", policyConfig =>
+    {
+        policyConfig.RequireClaim("Role", "Publisher");
+    });
+
+    config.AddPolicy("Administrator", policyConfig =>
+    {
+        policyConfig.RequireClaim("Role", "Administrator");
+    });
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

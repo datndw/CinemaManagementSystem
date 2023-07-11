@@ -1,5 +1,4 @@
-﻿using System;
-using CinemaManagementSystem.Application.DTOs.Genre;
+﻿using CinemaManagementSystem.Application.DTOs.Genre;
 using CinemaManagementSystem.Application.Responses.Common;
 
 namespace CinemaManagementSystem.Application.Responses.Genre
