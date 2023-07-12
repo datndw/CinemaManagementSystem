@@ -41,6 +41,10 @@
     <Folder Include="Responses\Actor\" />
     <Folder Include="Responses\User\" />
     <Folder Include="Responses\Rate\" />
+    <Folder Include="DTOs\Actor\Validators\" />
+    <Folder Include="DTOs\Company\Validators\" />
+    <Folder Include="DTOs\Rate\Validators\" />
+    <Folder Include="DTOs\User\Validators\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -65,5 +69,10 @@
     <None Remove="Responses\Actor\" />
     <None Remove="Responses\User\" />
     <None Remove="Responses\Rate\" />
+    <None Remove="DTOs\Actor\Validators\" />
+    <None Remove="DTOs\Company\Validators\" />
+    <None Remove="DTOs\Rate\Validators\" />
+    <None Remove="DTOs\User\Validators\" />
+    <None Remove="DTOs\User\Validators\UpdateUserDTOValidator" />
   </ItemGroup>
 </Project>

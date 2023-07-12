@@ -8,4 +8,3 @@ namespace CinemaManagementSystem.Application.Responses.Genre
         public CreateGenreDTO CreateGenreDTO { get; set; }
     }
 }
-

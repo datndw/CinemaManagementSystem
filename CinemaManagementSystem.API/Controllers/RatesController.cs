@@ -1,11 +1,18 @@
 ﻿using System;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
+
 namespace CinemaManagementSystem.API.Controllers
 {
-	public class RatesController
+    [Route("api/[controller]")]
+    [ApiController]
+    public class RatesController
 	{
-		public RatesController()
-		{
-		}
-	}
+        private readonly IMediator _mediator;
+        public RatesController(IMediator mediator)
+        {
+            _mediator = mediator;
+        }
+    }
 }
 

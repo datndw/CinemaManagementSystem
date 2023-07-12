@@ -9,8 +9,12 @@ namespace CinemaManagementSystem.Application.DTOs.Genre.Validators
 		private readonly IUnitOfWork _unitOfWork;
 		public IGenreDTOValidator(IUnitOfWork unitOfWork)
 		{
-
-		}
+			_unitOfWork = unitOfWork;
+            RuleFor(n => n.Name)
+                .NotEmpty().WithMessage("{PropertyName} is required")
+                .NotNull()
+                .MaximumLength(100).WithMessage("{PropertyName} must not exceed 100 characters");
+        }
 	}
 }
 

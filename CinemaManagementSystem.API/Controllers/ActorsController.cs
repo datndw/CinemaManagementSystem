@@ -1,11 +1,18 @@
 ﻿using System;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
+
 namespace CinemaManagementSystem.API.Controllers
 {
-	public class ActorsController
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ActorsController
 	{
-		public ActorsController()
-		{
-		}
-	}
+        private readonly IMediator _mediator;
+        public ActorsController(IMediator mediator)
+        {
+            _mediator = mediator;
+        }
+    }
 }
 

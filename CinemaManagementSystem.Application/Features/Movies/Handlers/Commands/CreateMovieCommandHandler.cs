@@ -1,18 +1,10 @@
 ﻿using AutoMapper;
-using CinemaManagementSystem.Application.DTOs.Movie;
-using CinemaManagementSystem.Application.DTOs.Movie.Validators;
-using CinemaManagementSystem.Application.Exceptions;
-using CinemaManagementSystem.Application.Features.Movies.Requests.Commands;
 using CinemaManagementSystem.Application.Contracts.Persistence;
-using CinemaManagementSystem.Application.Responses;
+using CinemaManagementSystem.Application.DTOs.Movie.Validators;
+using CinemaManagementSystem.Application.Features.Movies.Requests.Commands;
 using CinemaManagementSystem.Application.Responses.Movie;
 using CinemaManagementSystem.Domain.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CinemaManagementSystem.Application.Features.Movies.Handlers.Commands
 {

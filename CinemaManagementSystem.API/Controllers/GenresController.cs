@@ -10,7 +10,6 @@ namespace CinemaManagementSystem.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class GenresController : ControllerBase
     {
         private readonly IMediator _mediator;

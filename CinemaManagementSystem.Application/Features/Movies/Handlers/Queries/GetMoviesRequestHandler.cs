@@ -1,13 +1,8 @@
 ﻿using AutoMapper;
+using CinemaManagementSystem.Application.Contracts.Persistence;
 using CinemaManagementSystem.Application.DTOs.Movie;
 using CinemaManagementSystem.Application.Features.Movies.Requests.Queries;
-using CinemaManagementSystem.Application.Contracts.Persistence;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CinemaManagementSystem.Application.Features.Movies.Handlers.Queries
 {

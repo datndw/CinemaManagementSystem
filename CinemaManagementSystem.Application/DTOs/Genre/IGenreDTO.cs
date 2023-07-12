@@ -1,5 +1,4 @@
-﻿using System;
-namespace CinemaManagementSystem.Application.DTOs.Genre
+﻿namespace CinemaManagementSystem.Application.DTOs.Genre
 {
 	public interface IGenreDTO
 	{
