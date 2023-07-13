@@ -45,6 +45,30 @@
     <Folder Include="DTOs\Company\Validators\" />
     <Folder Include="DTOs\Rate\Validators\" />
     <Folder Include="DTOs\User\Validators\" />
+    <Folder Include="Features\Actors\Handlers\" />
+    <Folder Include="Features\Actors\Requests\" />
+    <Folder Include="Features\Companies\Handlers\" />
+    <Folder Include="Features\Companies\Requests\" />
+    <Folder Include="Features\Rates\Handlers\" />
+    <Folder Include="Features\Rates\Requests\" />
+    <Folder Include="Features\Users\Handlers\" />
+    <Folder Include="Features\Users\Requests\" />
+    <Folder Include="Features\Actors\Handlers\Commands\" />
+    <Folder Include="Features\Actors\Handlers\Queries\" />
+    <Folder Include="Features\Actors\Requests\Commands\" />
+    <Folder Include="Features\Actors\Requests\Queries\" />
+    <Folder Include="Features\Companies\Handlers\Commands\" />
+    <Folder Include="Features\Companies\Handlers\Queries\" />
+    <Folder Include="Features\Companies\Requests\Commands\" />
+    <Folder Include="Features\Companies\Requests\Queries\" />
+    <Folder Include="Features\Rates\Handlers\Commands\" />
+    <Folder Include="Features\Rates\Handlers\Queries\" />
+    <Folder Include="Features\Rates\Requests\Commands\" />
+    <Folder Include="Features\Rates\Requests\Queries\" />
+    <Folder Include="Features\Users\Handlers\Commands\" />
+    <Folder Include="Features\Users\Handlers\Queries\" />
+    <Folder Include="Features\Users\Requests\Commands\" />
+    <Folder Include="Features\Users\Requests\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -74,5 +98,29 @@
     <None Remove="DTOs\Rate\Validators\" />
     <None Remove="DTOs\User\Validators\" />
     <None Remove="DTOs\User\Validators\UpdateUserDTOValidator" />
+    <None Remove="Features\Actors\Handlers\" />
+    <None Remove="Features\Actors\Requests\" />
+    <None Remove="Features\Companies\Handlers\" />
+    <None Remove="Features\Companies\Requests\" />
+    <None Remove="Features\Rates\Handlers\" />
+    <None Remove="Features\Rates\Requests\" />
+    <None Remove="Features\Users\Handlers\" />
+    <None Remove="Features\Users\Requests\" />
+    <None Remove="Features\Actors\Handlers\Commands\" />
+    <None Remove="Features\Actors\Handlers\Queries\" />
+    <None Remove="Features\Actors\Requests\Commands\" />
+    <None Remove="Features\Actors\Requests\Queries\" />
+    <None Remove="Features\Companies\Handlers\Commands\" />
+    <None Remove="Features\Companies\Handlers\Queries\" />
+    <None Remove="Features\Companies\Requests\Commands\" />
+    <None Remove="Features\Companies\Requests\Queries\" />
+    <None Remove="Features\Rates\Handlers\Commands\" />
+    <None Remove="Features\Rates\Handlers\Queries\" />
+    <None Remove="Features\Rates\Requests\Commands\" />
+    <None Remove="Features\Rates\Requests\Queries\" />
+    <None Remove="Features\Users\Handlers\Commands\" />
+    <None Remove="Features\Users\Handlers\Queries\" />
+    <None Remove="Features\Users\Requests\Commands\" />
+    <None Remove="Features\Users\Requests\Queries\" />
   </ItemGroup>
 </Project>

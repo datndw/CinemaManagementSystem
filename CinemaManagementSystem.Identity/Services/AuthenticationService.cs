@@ -119,6 +119,7 @@ namespace CinemaManagementSystem.Identity.Services
                         Firstname = request.FirstName,
                         MiddleName = request.MiddleName,
                         Lastname = request.LastName,
+                        ImageUrl = "",
                         CreatedBy = request.UserName,
                         DateCreated = DateTime.Now,
                         LastModifiedBy = request.UserName,
