@@ -17,6 +17,7 @@ namespace CinemaManagementSystem.API.Controllers
         {
             _mediator = mediator;
         }
+
         [HttpGet]
         public async Task<ActionResult<List<MovieDTO>>> Get()
         {
