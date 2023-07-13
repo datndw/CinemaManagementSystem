@@ -43,7 +43,6 @@ namespace CinemaManagementSystem.API.Controllers
             return Ok(response);
         }
 
-        [Authorize]
         [HttpPut]
         [Authorize(Roles = "Administrator")]
         public async Task<ActionResult> Put([FromBody] UpdateGenreDTO updateGenreDTO)
@@ -53,7 +52,6 @@ namespace CinemaManagementSystem.API.Controllers
             return NoContent();
         }
 
-        [Authorize]
         [HttpDelete("{id}")]
         [Authorize(Roles = "Administrator")]
         public async Task<ActionResult> Delete(Guid id)
