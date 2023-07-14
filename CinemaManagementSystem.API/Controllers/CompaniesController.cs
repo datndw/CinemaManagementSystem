@@ -1,15 +1,10 @@
-﻿using System;
-using CinemaManagementSystem.Application.DTOs.Movie;
-using CinemaManagementSystem.Application.Features.Movies.Requests.Commands;
-using CinemaManagementSystem.Application.Features.Movies.Requests.Queries;
+﻿using CinemaManagementSystem.Application.DTOs.Company;
+using CinemaManagementSystem.Application.Features.Companies.Requests.Commands;
+using CinemaManagementSystem.Application.Features.Companies.Requests.Queries;
 using CinemaManagementSystem.Application.Responses.Common;
-using System.Data;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using CinemaManagementSystem.Application.DTOs.Company;
-using CinemaManagementSystem.Application.Features.Companies.Requests.Queries;
-using CinemaManagementSystem.Application.Features.Companies.Requests.Commands;
 
 namespace CinemaManagementSystem.API.Controllers
 {
@@ -26,7 +21,7 @@ namespace CinemaManagementSystem.API.Controllers
         [HttpGet]
         public async Task<ActionResult<List<CompanyDTO>>> Get()
         {
-            var companies = await _mediator.Send(new GetMoviesRequest());
+            var companies = await _mediator.Send(new GetCompaniesRequest());
             return Ok(companies);
         }
 
@@ -67,4 +62,3 @@ namespace CinemaManagementSystem.API.Controllers
         }
     }
 }
-
