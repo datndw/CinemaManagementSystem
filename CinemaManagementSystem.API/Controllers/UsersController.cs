@@ -1,4 +1,5 @@
-﻿using CinemaManagementSystem.Application.DTOs.User;
+﻿using CinemaManagementSystem.Application.DTOs.Common;
+using CinemaManagementSystem.Application.DTOs.User;
 using CinemaManagementSystem.Application.Features.Users.Requests.Commands;
 using CinemaManagementSystem.Application.Features.Users.Requests.Queries;
 using CinemaManagementSystem.Application.Responses.Common;
@@ -59,6 +60,22 @@ namespace CinemaManagementSystem.API.Controllers
             var command = new DeleteUserCommand { Id = id };
             await _mediator.Send(command);
             return NoContent();
+        }
+
+        [HttpPost("AddToFavorites")]
+        [Authorize(Roles = "User")]
+        public async Task<ActionResult<bool>> Post([FromBody] AddFavoritesDTO addFavoritesDTO)
+        {
+            var command = new AddFavoritesDTO { UserId = addFavoritesDTO.UserId, MovieId = addFavoritesDTO.MovieId };
+            var response = await _mediator.Send(command);
+            return Ok(response);
+        }
+
+        [HttpPost("QRPayment")]
+        [Authorize(Roles = "User")]
+        public Task<ActionResult<string>> Post([FromBody] PaymentInfoDTO paymentInfoDTO)
+        {
+            return null;
         }
     }
 }

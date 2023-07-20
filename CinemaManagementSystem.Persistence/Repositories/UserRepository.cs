@@ -11,6 +11,11 @@ namespace CinemaManagementSystem.Persistence.Repositories
         {
             _context = context;
         }
+
+        public void AddToFavorites(Guid userId, Guid movieId)
+        {
+            _context.MovieUsers.Add(new MovieUser { MovieId = movieId, UserId = userId });
+        }
     }
 }
 

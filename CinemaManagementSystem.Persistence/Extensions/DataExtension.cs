@@ -921,5 +921,39 @@ namespace CinemaManagementSystem.Persistence.Extensions
                 GenreId = Genres.ElementAt(0).Id,
             }
         };
+
+        public static List<MovieUser> MovieUsers = new List<MovieUser>
+        {
+            new MovieUser
+            {
+                MovieId = Movies.ElementAt(0).Id,
+                UserId = Users.ElementAt(2).Id,
+            },
+            new MovieUser
+            {
+                MovieId = Movies.ElementAt(2).Id,
+                UserId = Users.ElementAt(2).Id,
+            },
+            new MovieUser
+            {
+                MovieId = Movies.ElementAt(4).Id,
+                UserId = Users.ElementAt(2).Id,
+            },
+            new MovieUser
+            {
+                MovieId = Movies.ElementAt(6).Id,
+                UserId = Users.ElementAt(2).Id,
+            },
+            new MovieUser
+            {
+                MovieId = Movies.ElementAt(8).Id,
+                UserId = Users.ElementAt(2).Id,
+            },
+            new MovieUser
+            {
+                MovieId = Movies.ElementAt(10).Id,
+                UserId = Users.ElementAt(2).Id,
+            }
+        };
     }
 }

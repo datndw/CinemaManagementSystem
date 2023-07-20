@@ -13,6 +13,7 @@ namespace CinemaManagementSystem.Domain.Entities
         public DateTime? BirthDate { get; set; }
         public ICollection<Rate>? Rates { get; set; }
         public Company? Company { get; set; }
+        public IList<MovieUser> MovieUsers { get; set; }
     }
 }
 

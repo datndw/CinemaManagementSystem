@@ -20,6 +20,6 @@ namespace CinemaManagementSystem.Domain.Entities
         public IList<MovieActor> MovieActors { get; set; }
         public IList<MovieGenre> MovieGenres { get; set; }
         public IList<MovieCompany> MovieCompanies { get; set; }
-
+        public IList<MovieUser> MovieUsers { get; set; }
     }
 }

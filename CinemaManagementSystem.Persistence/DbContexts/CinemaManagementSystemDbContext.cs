@@ -97,6 +97,13 @@ namespace CinemaManagementSystem.Persistence.DbContexts
                 entity.HasOne(e => e.Movie).WithMany(e => e.MovieGenres).HasForeignKey(e => e.MovieId);
                 entity.HasOne(e => e.Genre).WithMany(e => e.MovieGenres).HasForeignKey(e => e.GenreId);
             });
+
+            modelBuilder.Entity<MovieUser>(entity =>
+            {
+                entity.HasKey(e => new { e.MovieId, e.UserId });
+                entity.HasOne(e => e.Movie).WithMany(e => e.MovieUsers).HasForeignKey(e => e.MovieId);
+                entity.HasOne(e => e.User).WithMany(e => e.MovieUsers).HasForeignKey(e => e.UserId);
+            });
         }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
@@ -116,5 +123,14 @@ namespace CinemaManagementSystem.Persistence.DbContexts
 
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Genre> Genres { get; set; }
+        public DbSet<Actor> Actors { get; set; }
+        public DbSet<Company> Companies { get; set; }
+        public DbSet<Rate> Rates { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<MovieActor> MovieActors { get; set; }
+        public DbSet<MovieCompany> MovieCompanies { get; set; }
+        public DbSet<MovieGenre> MovieGenres { get; set; }
+        public DbSet<MovieUser> MovieUsers { get; set; }
+
     }
 }

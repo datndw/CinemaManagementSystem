@@ -63,72 +63,72 @@ namespace CinemaManagementSystem.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Actor");
+                    b.ToTable("Actors");
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("a4c84ad8-ec37-4504-8e59-7fa0143850cf"),
+                            Id = new Guid("ae96d217-2104-45d8-b65d-6bbf71a46699"),
                             BirthDate = new DateTime(1982, 11, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 246, DateTimeKind.Local).AddTicks(530),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(9250),
                             Description = "Nam diễn viên chuyên nghiệp góp mặt trong nhiều bộ phim đình đám của các hãng phim Châu Âu",
                             Gender = "Male",
                             ImageUrl = "/mDLDvsx8PaZoEThkBdyaG1JxPdf.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 246, DateTimeKind.Local).AddTicks(540),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(9250),
                             Name = "Kane Karrtima"
                         },
                         new
                         {
-                            Id = new Guid("3e7fe71d-cf5c-4711-bedc-a792eecdf9a0"),
+                            Id = new Guid("0017645e-ead5-4409-befc-3cbe6c680143"),
                             BirthDate = new DateTime(1959, 12, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 246, DateTimeKind.Local).AddTicks(550),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(9270),
                             Description = "Ông được cho là diễn viên điện ảnh tâm huyết nhất khi tính tới năm 2023, ông đã thro đuổi đam mê được 38 năm",
                             Gender = "Male",
                             ImageUrl = "/2ZulC2Ccq1yv3pemusks6Zlfy2s.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 246, DateTimeKind.Local).AddTicks(560),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(9270),
                             Name = "John Makanno"
                         },
                         new
                         {
-                            Id = new Guid("e01c80f8-c1ea-4e4e-843e-1c285f88ec41"),
+                            Id = new Guid("a94cbbaf-9ae0-4a1a-af9c-b7e9c4632fdd"),
                             BirthDate = new DateTime(1966, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 246, DateTimeKind.Local).AddTicks(560),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(9270),
                             Description = "Dave began his writing career in 1993 as one of the original writers on NBC's \"Late Night With Conan O'Brien.\" After more than 400 shows, Dave moved to Los Angeles in 1995 and landed a job at Walt Disney Feature Animation in the movie \"Tarzan.\"",
                             Gender = "Male",
                             ImageUrl = "/5iKtATPbLpv2lT7q9DPX2v2qPS1.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 246, DateTimeKind.Local).AddTicks(560),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(9280),
                             Name = "David Reynolds"
                         },
                         new
                         {
-                            Id = new Guid("67e9f5d9-bf69-4914-9fbc-08b3806ef1a5"),
+                            Id = new Guid("8b5de660-3363-4450-8687-c778fd6f4de6"),
                             BirthDate = new DateTime(1990, 4, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 246, DateTimeKind.Local).AddTicks(570),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(9280),
                             Description = "Chàng diễn viên trẻ tuổi với những thành tựu lớn lao trong sự nghiệp mới chớm nở của anh tại WestKark",
                             Gender = "Male",
                             ImageUrl = "/fe4mUSp0XotA6Ku4Bs69Q9o2lqU.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 246, DateTimeKind.Local).AddTicks(570),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(9280),
                             Name = "Alexander Gould"
                         },
                         new
                         {
-                            Id = new Guid("ff5d0dba-82c0-4474-8815-7ac85e89ba48"),
+                            Id = new Guid("8eb62e64-9041-42d6-bbde-24574294a553"),
                             BirthDate = new DateTime(1987, 8, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 246, DateTimeKind.Local).AddTicks(580),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(9290),
                             Description = "Diễn viên không thể thiếu trong các tựa phim hành động, phiêu lưu có tính chất liều lĩnh, ngoan cường",
                             Gender = "Male",
                             ImageUrl = "/z8IEEid4z63CBlJtxrTKEfsW7NA.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 246, DateTimeKind.Local).AddTicks(580),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(9290),
                             Name = "Ellen DeGeneres"
                         });
                 });
@@ -170,73 +170,73 @@ namespace CinemaManagementSystem.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Company");
+                    b.ToTable("Companies");
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("b311441d-d5c7-4e8d-9d20-8aa54ea0e005"),
+                            Id = new Guid("09919982-d68a-4e27-955f-2f20bcf86f2f"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 235, DateTimeKind.Local).AddTicks(4860),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 588, DateTimeKind.Local).AddTicks(5870),
                             Description = "Founded in 1971, Lucasfilm is one of the world's leading entertainment companies and home to the legendary Star Wars and Indiana Jones franchises.",
                             ImageUrl = "/o86DbpburjxrqAzEDhXZcyE8pDb.png",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(6090),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(5450),
                             Name = "Lucasfilm Ltd."
                         },
                         new
                         {
-                            Id = new Guid("1e4854b9-8696-4c29-9374-290932f70f59"),
+                            Id = new Guid("17308103-5051-4df1-b616-a6bb30ab1b77"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(6470),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(5760),
                             Description = "Columbia Pictures Industries, Inc. (CPII) is an American film production and distribution company. Columbia Pictures now forms part of the Columbia TriStar Motion Picture Group, owned by Sony Pictures Entertainment, a subsidiary of the Japanese conglomerate Sony. It is one of the leading film companies in the world, a member of the so-called Big Six. It was one of the so-called Little Three among the eight major film studios of Hollywood's Golden Age.",
                             ImageUrl = "/71BqEFAF4V3qjjMPCpLuyJFB9A.png",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(6470),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(5770),
                             Name = "Columbia Pictures"
                         },
                         new
                         {
-                            Id = new Guid("dbe7eed6-9261-4e2b-b72c-0baa77a91023"),
+                            Id = new Guid("c98f61ac-d455-4d3e-a27d-179b2005d0f0"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(6480),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(5770),
                             Description = "Nhắc đến DreamWorks Pictures không thể không nghĩ tới hình ảnh cậu bé ngồi câu sao trên mặt trăng tượng trưng cho không biết, chắc là flex kiểu điện ảnh chuyên nghiệp =))",
                             ImageUrl = "/vru2SssLX3FPhnKZGtYw00pVIS9.png",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(6480),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(5780),
                             Name = "DreamWorks Pictures"
                         },
                         new
                         {
-                            Id = new Guid("27b3143f-bb07-4a54-97e1-ab778425313a"),
+                            Id = new Guid("83615941-d685-45dc-a818-8873dc9822a6"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(6490),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(5780),
                             Description = "Kiểu như đường kẻ mới =)) Chứ còn gì nữa",
                             ImageUrl = "/78ilmDNTpdCfsakrsLqmAUkFTrO.png",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(6490),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(5780),
                             Name = "New Line Cinema"
                         },
                         new
                         {
-                            Id = new Guid("e552ed3c-0c8a-4b16-8602-be040a990a3f"),
+                            Id = new Guid("bc527e23-0685-4c87-a229-f4bef010b103"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(6500),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(5790),
                             Description = "Cái này có phải Disney không nhỉ?",
                             ImageUrl = "/wdrCwmRnLFJhEoH8GSfymY85KHT.png",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(6500),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(5790),
                             Name = "Walt Disney Pictures"
                         },
                         new
                         {
-                            Id = new Guid("c791a36f-efb1-4b0c-bcdb-d589cfef5fa2"),
+                            Id = new Guid("cd3ea95d-af2f-4e63-b7f8-9fd9a49d1f97"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(6510),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(5800),
                             Description = "Cái công ty mà có cái đèn nhảy nhảy đè chứ I đúng không =))",
                             ImageUrl = "/1TjvGVDMYsj6JBxOAkUHpPEwLf7.png",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(6510),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(5800),
                             Name = "Pixar"
                         });
                 });
@@ -273,173 +273,173 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("d4c61819-9098-461e-98f0-b93ef3c5b1af"),
+                            Id = new Guid("8fc2bdcd-4c1b-47d3-89c9-d5e5cb8214b7"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9520),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8330),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9530),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8330),
                             Name = "Phim Hành Động"
                         },
                         new
                         {
-                            Id = new Guid("b13c612c-c4f6-4322-8ab9-f1e37f11146a"),
+                            Id = new Guid("3e45a754-514f-4d18-bb64-820045c42f95"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9540),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8350),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9540),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8350),
                             Name = "Phim Phiêu Lưu"
                         },
                         new
                         {
-                            Id = new Guid("28de40be-66ea-42ef-8cf1-181c3205cada"),
+                            Id = new Guid("e1a6a88c-9918-470c-ac4a-045fa17075be"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9550),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8360),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9550),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8360),
                             Name = "Phim Hoạt Hình"
                         },
                         new
                         {
-                            Id = new Guid("09c732e3-3e68-454c-8584-037c7bb5a6d9"),
+                            Id = new Guid("0081e4c8-8e4e-4d29-8255-c31e81e8fb94"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9560),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8360),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9560),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8360),
                             Name = "Phim Hài"
                         },
                         new
                         {
-                            Id = new Guid("08e2a99e-96b6-4f9a-8866-37fb7e2d1b59"),
+                            Id = new Guid("af3a9fee-a271-45c0-bc8d-b84a313624f7"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9570),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8370),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9570),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8370),
                             Name = "Phim Hình Sự"
                         },
                         new
                         {
-                            Id = new Guid("d4f29d63-a05a-437a-b342-696f0e04b06a"),
+                            Id = new Guid("ed3236c0-c283-480b-b7e1-f5b5b3528feb"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9580),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8380),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9580),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8380),
                             Name = "Phim Tài Liệu"
                         },
                         new
                         {
-                            Id = new Guid("ef1e3663-2349-477d-958b-b8b0a6a9a5ea"),
+                            Id = new Guid("971187c3-bd45-4a48-b6c1-3d4be9172c24"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9590),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8390),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9590),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8390),
                             Name = "Phim Chính Kịch"
                         },
                         new
                         {
-                            Id = new Guid("b57b51ca-de9b-4579-8271-57e6ec5fa7e4"),
+                            Id = new Guid("66480329-0928-4a53-a2be-06e9f85a75dc"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9600),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8400),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9600),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8400),
                             Name = "Phim Gia Đình"
                         },
                         new
                         {
-                            Id = new Guid("ecfeb11d-6453-4d45-ba03-d77cc3f2d0e6"),
+                            Id = new Guid("d8e71725-c56f-4942-ae52-2ecdabe88bcf"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9610),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8410),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9610),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8410),
                             Name = "Phim Giả Tượng"
                         },
                         new
                         {
-                            Id = new Guid("06b57a6d-a169-4875-b3ae-11abcfee691c"),
+                            Id = new Guid("63e46c43-0af7-45db-9ffd-247eca989808"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9610),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8420),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9620),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8420),
                             Name = "Phim Lịch Sử"
                         },
                         new
                         {
-                            Id = new Guid("a92224b1-4f02-4c52-af2f-8f3e26d1c9ec"),
+                            Id = new Guid("aabb54c4-4be3-4715-9de4-64fd4201fce5"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9620),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8420),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9620),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8420),
                             Name = "Phim Kinh Dị"
                         },
                         new
                         {
-                            Id = new Guid("055f8ca6-74df-43c3-9aad-4fc316d85296"),
+                            Id = new Guid("95b12e40-7b7f-418d-8dd2-4572085e3a64"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9630),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8430),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9630),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8430),
                             Name = "Phim Nhạc"
                         },
                         new
                         {
-                            Id = new Guid("d7a9aeb0-f63d-485c-a442-86c52cf9401c"),
+                            Id = new Guid("c164eb0c-ae6d-4871-b2bf-6cb5ddf0644a"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9640),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8440),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9640),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8440),
                             Name = "Phim Bí Ẩn"
                         },
                         new
                         {
-                            Id = new Guid("5d294dd2-08c9-4460-9962-3c5f5a3231cd"),
+                            Id = new Guid("f272f81e-62fc-4ec7-97fd-5f4508702336"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9650),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8450),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9650),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8450),
                             Name = "Phim Lãng Mạn"
                         },
                         new
                         {
-                            Id = new Guid("401a268e-1272-40bf-9175-1e8ea17a99f3"),
+                            Id = new Guid("d88648e3-943d-4813-860c-dfabf1dc9448"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9660),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8460),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9660),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8460),
                             Name = "Phim Khoa Học Viễn Tưởng"
                         },
                         new
                         {
-                            Id = new Guid("c026c572-4918-4093-bf17-4653f1d292fe"),
+                            Id = new Guid("d0b0f0ba-4631-426f-b0cd-6440253c8a00"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9670),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8460),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9670),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8460),
                             Name = "Chương Trình Truyền Hình"
                         },
                         new
                         {
-                            Id = new Guid("180a399f-ad16-43a1-859f-97050f0f8ad1"),
+                            Id = new Guid("fbcb51b9-e5ab-4d36-85b5-ac5bfa91a366"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9670),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8470),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9680),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8470),
                             Name = "Phim Gây Cấn"
                         },
                         new
                         {
-                            Id = new Guid("7e6f037f-4f6e-4931-a79b-1bb68e3c5ea0"),
+                            Id = new Guid("2ccbb760-be2e-4500-82e7-3d5fb5b3dcba"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9680),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8480),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9680),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8480),
                             Name = "Phim Chiến Tranh"
                         },
                         new
                         {
-                            Id = new Guid("29bb13f9-4cf0-4287-9308-2db1a1c8a7c6"),
+                            Id = new Guid("36e49dce-a76a-4671-8519-36842ec580b9"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9690),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8490),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9690),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8490),
                             Name = "Phim Miền Tây"
                         });
                 });
@@ -495,315 +495,315 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("1b3c422c-b757-41ac-a7b7-5291f5f188a1"),
+                            Id = new Guid("c8937670-1d07-4c2b-8e4b-9e3c417ded7e"),
                             AgeRequired = 8,
                             BackDropUrl = "/4XM8DUTQb3lhLemJC51Jx4a2EuA.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(8890),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7820),
                             Description = "Dom Toretto và gia đình anh ta là mục tiêu của đứa con trai đầy thù hận của trùm ma túy Hernan Reyes.",
                             ImageUrl = "/brZzXXQ8GuzlAdu4TJxjhC8ebBL.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(8890),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7820),
                             ReleaseDate = new DateTime(2023, 5, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "Fast & Furious X"
                         },
                         new
                         {
-                            Id = new Guid("02e364f8-d6f9-47f7-88ac-a636466a75d6"),
+                            Id = new Guid("837ad15e-16fb-4f6b-9a01-e3995d691fe5"),
                             AgeRequired = 12,
                             BackDropUrl = "/oqP1qEZccq5AD9TVTIaO6IGUj7o.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(8910),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7840),
                             Description = "Khi nữ thần chiến tranh Athena tái sinh trong cơ thể của một cô gái trẻ tên Sienna, chàng trai mồ côi Seiya phát hiện số phận của anh được định sẵn để bảo vệ cô và giải cứu thế giới. Nếu muốn sống sót, Seiya cần phải nắm lấy vận mệnh của mình và hy sinh mọi thứ để có được vị trí xứng đáng trong số các Hiệp sĩ Hoàng đạo.",
                             ImageUrl = "/7Hb59xDBe9fUPcR3VYFnLMCioLL.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(8920),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7840),
                             ReleaseDate = new DateTime(2023, 4, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "Knights of the Zodiac"
                         },
                         new
                         {
-                            Id = new Guid("f8bcb61f-f531-418f-ac4e-2bee3e99fa12"),
+                            Id = new Guid("421f4e63-fcc8-40d3-a7c5-c43150678896"),
                             AgeRequired = 12,
                             BackDropUrl = "/5YZbUmjbMa3ClvSW1Wj3D6XGolb.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(8920),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7850),
                             Description = "Cho dù vũ trụ này có bao la đến đâu, các Vệ Binh của chúng ta cũng không thể trốn chạy mãi mãi.",
                             ImageUrl = "/Ak5hAxorxMpxKoVw5e3kGfxs7sY.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(8930),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7850),
                             ReleaseDate = new DateTime(2023, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "Vệ Binh Dải Ngân Hà 3"
                         },
                         new
                         {
-                            Id = new Guid("3ccf0380-6621-4cea-a5d3-b02ab91a2200"),
+                            Id = new Guid("524ac7e6-fe80-44b0-913a-5cf0ba158186"),
                             AgeRequired = 14,
                             BackDropUrl = "/fjWcAbHRxCSR4kLGvsPEhNjR2ts.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(8930),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7860),
                             Description = "Khi ngân hàng mà Owen quản lý bị cướp chỉ vài ngày trước đám cưới của anh, mọi chứng cứ đều chỉ về một hướng cực kỳ khó xử: bố mẹ vợ tương lai của anh.",
                             ImageUrl = "/5dliMQ2ODbGNoq0hlefdnuXQxMw.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(8930),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7860),
                             ReleaseDate = new DateTime(2023, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "Khi Nhà Vợ Làm Tội Phạm"
                         },
                         new
                         {
-                            Id = new Guid("3ca87128-52f6-46b8-a129-2d69d9b7ad11"),
+                            Id = new Guid("ccda1415-3cd7-45c8-b367-ad0762dfd62d"),
                             AgeRequired = 14,
                             BackDropUrl = "/628Dep6AxEtDxjZoGP78TsOxYbK.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(8940),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7870),
                             Description = "Phần phim thứ 7 của loạt phim Nhiệm Vụ Bất Khả Thi",
                             ImageUrl = "/eoLBADTttXo4HJLLUK9amxE4RRM.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(8940),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7870),
                             ReleaseDate = new DateTime(2023, 7, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "Nhiệm Vụ: Bất Khả Thi - Nghiệp Báo Phần 1"
                         },
                         new
                         {
-                            Id = new Guid("d3e584c5-0a2f-477d-808b-a78152155fda"),
+                            Id = new Guid("85087659-9e67-47b8-b0c2-e26316c1d564"),
                             AgeRequired = 16,
                             BackDropUrl = "/aO6hDsqTIAtQFUBoPWklmPFsSTW.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(8950),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7880),
                             Description = "To put their demons to rest once and for all, Josh Lambert and a college-aged Dalton Lambert must go deeper into The Further than ever before, facing their family's dark past and a host of new and more horrifying terrors that lurk behind the red door.",
                             ImageUrl = "/faafq0NouR3wSemwc77slLEJHId.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(8960),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7880),
                             ReleaseDate = new DateTime(2023, 7, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "Quỷ Quyệt: Cửa Đỏ Vô Định"
                         },
                         new
                         {
-                            Id = new Guid("5ad3a0a7-272c-4679-897a-1770f0651f5f"),
+                            Id = new Guid("f35e1043-0c4d-4856-b8ab-d2e2872859db"),
                             AgeRequired = 16,
                             BackDropUrl = "/35z8hWuzfFUZQaYog8E9LsXW3iI.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(8960),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7880),
                             Description = "Indiana Jones 5 sẽ pha trộn giữa thực tế, hư cấu khi lấy bối cảnh năm 1969, lần này Indiana Jones sẽ đối mặt với Đức quốc xã trong thời gian diễn ra cuộc chạy đua vào không gian.",
                             ImageUrl = "/gTAR51U4eAiCokNqtRy7FsprUar.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(8960),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7880),
                             ReleaseDate = new DateTime(2022, 6, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "Indiana Jones và Vòng Quay Định Mệnh"
                         },
                         new
                         {
-                            Id = new Guid("bea41c9f-6a15-4e7e-ab7f-a0723be76924"),
+                            Id = new Guid("a97e1be6-d15e-45ac-a18d-f50f8ae2678a"),
                             AgeRequired = 8,
                             BackDropUrl = "/9n2tJBplPbgR2ca05hS5CKXwP2c.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(8970),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7890),
                             Description = "The Super Mario Bros. Movie xoay quanh cuộc phiêu lưu ở thế giới Vương quốc Nấm của anh em thợ sửa ống nước Mario và Luigi. Sau khi tình cờ bước tới vùng đất lạ từ một ống nước, Luigi đã bị chia tách với Mario và rơi vào tay quái vật rùa xấu xa Bowser, hắn đang âm mưu độc chiếm thế giới. Trong lúc cố gắng tìm kiếm người anh em của mình, Mario đã chạm mặt anh bạn nấm Toad và công chúa Peach. Từ đây họ sát cánh bên nhau trên hành trình ngăn chặn thế lực hắc ám.",
                             ImageUrl = "/gRlfFcpPdjREQ3lgeuAuB10gfbR.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(8970),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7890),
                             ReleaseDate = new DateTime(2021, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "Anh Em Super Mario"
                         },
                         new
                         {
-                            Id = new Guid("c5317ab1-07fd-45be-92d5-6b639b60321d"),
+                            Id = new Guid("dd70197d-5459-4245-af6a-9a6cca834bfb"),
                             AgeRequired = 14,
                             BackDropUrl = "/wuwMLVIY0Zqfz6uToyDmb7TYRVN.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(8980),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7930),
                             Description = "A group of Black friends reunite for a Juneteenth weekend getaway only to find themselves trapped in a remote cabin with a twisted killer.",
                             ImageUrl = "/n2aS9FE0C3VUHtSb3Ak41aU9K3y.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(8980),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7930),
                             ReleaseDate = new DateTime(2022, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "The Blackening"
                         },
                         new
                         {
-                            Id = new Guid("7dde9b26-1cfa-4608-813e-e11687a9c68e"),
+                            Id = new Guid("e042a4aa-6aed-4dfd-aa0f-8cd056fbdca3"),
                             AgeRequired = 14,
                             BackDropUrl = "/k1gMjXi1vtwTDiGwfBw7L897zs3.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(8990),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7940),
                             Description = "Quyết tâm tìm kiếm công bằng cũng như lợi nhuận từ công việc bạc bẽo, một công nhân nhà máy âm mưu tuồn nước hoa xa xỉ qua mặt sếp mình.",
                             ImageUrl = "/4x9u5HsxeSJu9SW9Pf6fVVDPwxv.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(8990),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7940),
                             ReleaseDate = new DateTime(2022, 12, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "Mùi Hương Của Vàng"
                         },
                         new
                         {
-                            Id = new Guid("ff4f2c3b-b6fc-4799-90df-69de1faa85b5"),
+                            Id = new Guid("f5da4be8-89fd-44ea-a024-550b7897945d"),
                             AgeRequired = 12,
                             BackDropUrl = "/4HodYYKEIsGOdinkGi2Ucz6X9i0.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9000),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7940),
                             Description = "Miles Morales tái xuất trong phần tiếp theo của bom tấn hoạt hình từng đoạt giải Oscar - Spider-Man: Across the Spider-Verse. Sau khi gặp lại Gwen Stacy, chàng Spider-Man thân thiện đến từ Brooklyn phải du hành qua đa vũ trụ và gặp một nhóm Người Nhện chịu trách nhiệm bảo vệ các thế giới song song. Nhưng khi nhóm siêu anh hùng xung đột về cách xử lý một mối đe dọa mới, Miles buộc phải đọ sức với các Người Nhện khác và phải xác định lại ý nghĩa của việc trở thành một người hùng để có thể cứu những người cậu yêu thương nhất.",
                             ImageUrl = "/bX547n5W9ZIKCeAE44Vf2nfw4w.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9000),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7950),
                             ReleaseDate = new DateTime(2021, 11, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "Người Nhện: Du Hành Vũ Trụ Nhện"
                         },
                         new
                         {
-                            Id = new Guid("ee9a8ba8-4313-4b5d-853f-dae43dd837c3"),
+                            Id = new Guid("1d18ba26-6af1-40e6-8375-67885b5ebccc"),
                             AgeRequired = 12,
                             BackDropUrl = "/3LzSMuatf6E6xw6i9F8LnvBZmAy.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9010),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7950),
                             Description = "Greg is a police lieutenant; he must collect informations on eco-activists, infiltrating them for months. Myriam, a young free woman, is fighting to save a forest from the building of a dam. They meet and fall in love on the Zone. A beautiful life, a joy that Greg discovers, despite the risks of being unmasked. For each of them, time is short: soon everything will disappear.",
                             ImageUrl = "/36wyM5ceCCIpu8lU88mxonYET71.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9010),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7950),
                             ReleaseDate = new DateTime(2022, 6, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "A Place to Fight For"
                         },
                         new
                         {
-                            Id = new Guid("ba0f389e-1c6b-40d5-b236-085c572f73bf"),
+                            Id = new Guid("6a1f8665-fa64-40ab-aee3-edc6a3cedcc5"),
                             AgeRequired = 14,
                             BackDropUrl = "/8rpDcsfLJypbO6vREc0547VKqEv.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9020),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7960),
                             Description = "Câu chuyện của “Avatar: Dòng Chảy Của Nước” lấy bối cảnh 10 năm sau những sự kiện xảy ra ở phần đầu tiên. Phim kể câu chuyện về gia đình mới của Jake Sully (Sam Worthington thủ vai) cùng những rắc rối theo sau và bi kịch họ phải chịu đựng khi phe loài người xâm lược hành tinh Pandora.",
                             ImageUrl = "/jGmC7aMqoLU0ALRKHkz3pQVV1pg.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9020),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7960),
                             ReleaseDate = new DateTime(2023, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "Avatar:  Dòng Chảy Của Nước"
                         },
                         new
                         {
-                            Id = new Guid("5d92a2c7-dbdc-4640-8df8-81d9a8f82c0b"),
+                            Id = new Guid("abbb5d76-f709-4911-863e-eeda82118978"),
                             AgeRequired = 14,
                             BackDropUrl = "/vblTCXOWUQGSc837vgbhDRi4HSc.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9060),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7970),
                             Description = "Quái vật cơ bắp Seok-do (Ma Dong Seok) dẫn đầu đội hình sự truy lùng đường dây buôn chất cấm của thiếu gia Joo Seong Cheol. Cuộc truy đuổi càng thêm gay cấn khi cú đấm công lý \"chú Ma\" chạm trán thanh kiếm lừng lẫy chốn giang hồ Nhật Bản.",
                             ImageUrl = "/jeRp9uQSt4IkpGPqR2iWviRUEsE.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9060),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7970),
                             ReleaseDate = new DateTime(2023, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "Vây Hãm: Không Lối Thoát"
                         },
                         new
                         {
-                            Id = new Guid("1924ff46-177a-4c0a-964a-5f1331deffa3"),
+                            Id = new Guid("cdf2a4b3-b5b5-4a8f-9751-25f0e0b8a120"),
                             AgeRequired = 16,
                             BackDropUrl = "/4tdV5AeojEdbvn6VpeQrbuDlmzs.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9070),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7980),
                             Description = "Câu chuyện bắt đầu khi Suzume vô tình gặp chàng trai Souta đến thị trấn nơi cô sinh sống với mục đích tìm kiếm \"một cánh cửa\". Để bảo vệ Nhật Bản khỏi thảm họa, những cánh cửa rải rác khắp nơi phải được đóng lại, và bất ngờ thay Suzume cũng có khả năng đóng cửa đặc biệt này. Từ đó cả hai cùng nhau thực hiện sự mệnh \"khóa chặt cửa\"!",
                             ImageUrl = "/70f6AyM2U74up5MaPAZJ7AAnKKL.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9070),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7980),
                             ReleaseDate = new DateTime(2020, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "Khóa Chặt Cửa Nào Suzume"
                         },
                         new
                         {
-                            Id = new Guid("8f5ba224-1ca9-4a5c-8ede-68b52e1e7a93"),
+                            Id = new Guid("551d7d2b-6c00-46b1-a869-6a87666bea80"),
                             AgeRequired = 8,
                             BackDropUrl = "/nHf61UzkfFno5X1ofIhugCPus2R.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9080),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7990),
                             Description = "Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land. However, when they get a chance to go to the real world, they soon discover the joys and perils of living among humans.",
                             ImageUrl = "/mqNkQhaXxsH8SLNmJnG5oGz4meR.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9080),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(7990),
                             ReleaseDate = new DateTime(2021, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "Barbie"
                         },
                         new
                         {
-                            Id = new Guid("c7b4aeb4-5e12-4b25-b49a-e81d9b881f38"),
+                            Id = new Guid("6847ef13-b8d8-4019-9ef0-bccc1099d94d"),
                             AgeRequired = 14,
                             BackDropUrl = "/4QpKxH614YFIsmiIBVUbsnG2H8w.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9090),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8000),
                             Description = "Bị đổ oan tội ác bi thảm, hiệp sĩ nọ bắt tay với một thiếu nữ kiên cường, có khả năng thay đổi hình dạng để minh oan. Nhưng sẽ ra sao nếu cô là con quái vật anh thề sẽ tiêu diệt?",
                             ImageUrl = "/2NQljeavtfl22207D1kxLpa4LS3.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9090),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8000),
                             ReleaseDate = new DateTime(2022, 1, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "Nimona"
                         },
                         new
                         {
-                            Id = new Guid("70fa9a7d-69b5-47f2-8eaf-cf093f950ae8"),
+                            Id = new Guid("24ea61fa-7c35-425c-b8e3-432e3df1c985"),
                             AgeRequired = 14,
                             BackDropUrl = "/7I6VUdPj6tQECNHdviJkUHD2u89.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9100),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8010),
                             Description = "Sát Thủ John Wick: Chương 4 là câu chuyện của John Wick (Keanu Reeves) đã khám phá ra con đường để đánh bại High Table. Nhưng trước khi có thể kiếm được tự do, Wick phải đối đầu với kẻ thù mới với những liên minh hùng mạnh trên toàn cầu và những lực lượng biến những người bạn cũ thành kẻ thù.",
                             ImageUrl = "/ksg3XSEezxpRVEB6BrKxmNOuhft.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9100),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8010),
                             ReleaseDate = new DateTime(2023, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "Sát Thủ John Wick: Phần 4"
                         },
                         new
                         {
-                            Id = new Guid("9a6e062e-2309-4bbd-8e5b-9482fef46ec7"),
+                            Id = new Guid("900bf760-5952-4385-beea-b3e85d1da20a"),
                             AgeRequired = 10,
                             BackDropUrl = "/cSYLX73WskxCgvpN3MtRkYUSj1T.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9110),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8010),
                             Description = "Xứ Sở Các Nguyên Tố từ Disney và Pixar lấy bối cảnh tại thành phố các các nguyên tố, nơi lửa, nước, đất và không khí cùng chung sống với nhau. Câu chuyện xoay quanh nhân vật Ember, một cô nàng cá tính, thông minh, mạnh mẽ và đầy sức hút. Tuy nhiên, mối quan hệ của cô với Wade - một anh chàng hài hước, luôn thuận thế đẩy dòng - khiến Ember cảm thấy ngờ vực với thế giới này.",
                             ImageUrl = "/7GaeF6xeUbfXFZCtOCWs503CJUl.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9110),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8010),
                             ReleaseDate = new DateTime(2022, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "Xứ Sở Các Nguyên Tố"
                         },
                         new
                         {
-                            Id = new Guid("11d7437c-b44d-4966-bf36-fe73d569b21a"),
+                            Id = new Guid("b8800b30-7638-4842-bdf2-d0c9b816a6d8"),
                             AgeRequired = 12,
                             BackDropUrl = "/wbNm4ShryprgwY9QIlEZU6JIcr1.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9120),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8020),
                             Description = "The story of Tim Ballard, a former US government agent, who quits his job in order to devote his life to rescuing children from global sex traffickers.",
                             ImageUrl = "/mx4O9OEvIB265VM3UATLslsSW5t.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9120),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8020),
                             ReleaseDate = new DateTime(2023, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "Sound of Freedom"
                         },
                         new
                         {
-                            Id = new Guid("b1cf2efb-3972-4220-9c0e-89e1e5619062"),
+                            Id = new Guid("bccbbce7-6946-45c8-bf37-5fdfa4ea0bd1"),
                             AgeRequired = 14,
                             BackDropUrl = "/wbNm4ShryprgwY9QIlEZU6JIcr1.jpg",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9130),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8030),
                             Description = "Based on the novels by Colombian writer Mario Mendoza and on the character of detective Frank Molina, the filming of Los Initiados took place in Bogotá. In the saga of Frank Molina, which uses the books Lady Massacre, La melancolia de los feos, El diario del fin del mundo and Akelarre, the story of an alcoholic private investigator who unmasks sinister plots within the underworld of Bogotá is told.",
                             ImageUrl = "/3FzWr7u7uFaLpolFQlUbibFDpQJ.jpg",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(9130),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(8030),
                             ReleaseDate = new DateTime(2023, 3, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Status = "Active",
                             Title = "The Initiated"
@@ -822,73 +822,73 @@ namespace CinemaManagementSystem.Persistence.Migrations
 
                     b.HasIndex("ActorId");
 
-                    b.ToTable("MovieActor");
+                    b.ToTable("MovieActors");
 
                     b.HasData(
                         new
                         {
-                            MovieId = new Guid("1b3c422c-b757-41ac-a7b7-5291f5f188a1"),
-                            ActorId = new Guid("a4c84ad8-ec37-4504-8e59-7fa0143850cf")
+                            MovieId = new Guid("c8937670-1d07-4c2b-8e4b-9e3c417ded7e"),
+                            ActorId = new Guid("ae96d217-2104-45d8-b65d-6bbf71a46699")
                         },
                         new
                         {
-                            MovieId = new Guid("1b3c422c-b757-41ac-a7b7-5291f5f188a1"),
-                            ActorId = new Guid("3e7fe71d-cf5c-4711-bedc-a792eecdf9a0")
+                            MovieId = new Guid("c8937670-1d07-4c2b-8e4b-9e3c417ded7e"),
+                            ActorId = new Guid("0017645e-ead5-4409-befc-3cbe6c680143")
                         },
                         new
                         {
-                            MovieId = new Guid("02e364f8-d6f9-47f7-88ac-a636466a75d6"),
-                            ActorId = new Guid("a4c84ad8-ec37-4504-8e59-7fa0143850cf")
+                            MovieId = new Guid("837ad15e-16fb-4f6b-9a01-e3995d691fe5"),
+                            ActorId = new Guid("ae96d217-2104-45d8-b65d-6bbf71a46699")
                         },
                         new
                         {
-                            MovieId = new Guid("f8bcb61f-f531-418f-ac4e-2bee3e99fa12"),
-                            ActorId = new Guid("a4c84ad8-ec37-4504-8e59-7fa0143850cf")
+                            MovieId = new Guid("421f4e63-fcc8-40d3-a7c5-c43150678896"),
+                            ActorId = new Guid("ae96d217-2104-45d8-b65d-6bbf71a46699")
                         },
                         new
                         {
-                            MovieId = new Guid("f8bcb61f-f531-418f-ac4e-2bee3e99fa12"),
-                            ActorId = new Guid("3e7fe71d-cf5c-4711-bedc-a792eecdf9a0")
+                            MovieId = new Guid("421f4e63-fcc8-40d3-a7c5-c43150678896"),
+                            ActorId = new Guid("0017645e-ead5-4409-befc-3cbe6c680143")
                         },
                         new
                         {
-                            MovieId = new Guid("3ccf0380-6621-4cea-a5d3-b02ab91a2200"),
-                            ActorId = new Guid("a4c84ad8-ec37-4504-8e59-7fa0143850cf")
+                            MovieId = new Guid("524ac7e6-fe80-44b0-913a-5cf0ba158186"),
+                            ActorId = new Guid("ae96d217-2104-45d8-b65d-6bbf71a46699")
                         },
                         new
                         {
-                            MovieId = new Guid("d3e584c5-0a2f-477d-808b-a78152155fda"),
-                            ActorId = new Guid("67e9f5d9-bf69-4914-9fbc-08b3806ef1a5")
+                            MovieId = new Guid("85087659-9e67-47b8-b0c2-e26316c1d564"),
+                            ActorId = new Guid("8b5de660-3363-4450-8687-c778fd6f4de6")
                         },
                         new
                         {
-                            MovieId = new Guid("f8bcb61f-f531-418f-ac4e-2bee3e99fa12"),
-                            ActorId = new Guid("ff5d0dba-82c0-4474-8815-7ac85e89ba48")
+                            MovieId = new Guid("421f4e63-fcc8-40d3-a7c5-c43150678896"),
+                            ActorId = new Guid("8eb62e64-9041-42d6-bbde-24574294a553")
                         },
                         new
                         {
-                            MovieId = new Guid("3ccf0380-6621-4cea-a5d3-b02ab91a2200"),
-                            ActorId = new Guid("ff5d0dba-82c0-4474-8815-7ac85e89ba48")
+                            MovieId = new Guid("524ac7e6-fe80-44b0-913a-5cf0ba158186"),
+                            ActorId = new Guid("8eb62e64-9041-42d6-bbde-24574294a553")
                         },
                         new
                         {
-                            MovieId = new Guid("3ca87128-52f6-46b8-a129-2d69d9b7ad11"),
-                            ActorId = new Guid("e01c80f8-c1ea-4e4e-843e-1c285f88ec41")
+                            MovieId = new Guid("ccda1415-3cd7-45c8-b367-ad0762dfd62d"),
+                            ActorId = new Guid("a94cbbaf-9ae0-4a1a-af9c-b7e9c4632fdd")
                         },
                         new
                         {
-                            MovieId = new Guid("d3e584c5-0a2f-477d-808b-a78152155fda"),
-                            ActorId = new Guid("e01c80f8-c1ea-4e4e-843e-1c285f88ec41")
+                            MovieId = new Guid("85087659-9e67-47b8-b0c2-e26316c1d564"),
+                            ActorId = new Guid("a94cbbaf-9ae0-4a1a-af9c-b7e9c4632fdd")
                         },
                         new
                         {
-                            MovieId = new Guid("bea41c9f-6a15-4e7e-ab7f-a0723be76924"),
-                            ActorId = new Guid("67e9f5d9-bf69-4914-9fbc-08b3806ef1a5")
+                            MovieId = new Guid("a97e1be6-d15e-45ac-a18d-f50f8ae2678a"),
+                            ActorId = new Guid("8b5de660-3363-4450-8687-c778fd6f4de6")
                         },
                         new
                         {
-                            MovieId = new Guid("9a6e062e-2309-4bbd-8e5b-9482fef46ec7"),
-                            ActorId = new Guid("e01c80f8-c1ea-4e4e-843e-1c285f88ec41")
+                            MovieId = new Guid("900bf760-5952-4385-beea-b3e85d1da20a"),
+                            ActorId = new Guid("a94cbbaf-9ae0-4a1a-af9c-b7e9c4632fdd")
                         });
                 });
 
@@ -904,63 +904,63 @@ namespace CinemaManagementSystem.Persistence.Migrations
 
                     b.HasIndex("CompanyId");
 
-                    b.ToTable("MovieCompany");
+                    b.ToTable("MovieCompanies");
 
                     b.HasData(
                         new
                         {
-                            MovieId = new Guid("1b3c422c-b757-41ac-a7b7-5291f5f188a1"),
-                            CompanyId = new Guid("b311441d-d5c7-4e8d-9d20-8aa54ea0e005")
+                            MovieId = new Guid("c8937670-1d07-4c2b-8e4b-9e3c417ded7e"),
+                            CompanyId = new Guid("09919982-d68a-4e27-955f-2f20bcf86f2f")
                         },
                         new
                         {
-                            MovieId = new Guid("3ccf0380-6621-4cea-a5d3-b02ab91a2200"),
-                            CompanyId = new Guid("b311441d-d5c7-4e8d-9d20-8aa54ea0e005")
+                            MovieId = new Guid("524ac7e6-fe80-44b0-913a-5cf0ba158186"),
+                            CompanyId = new Guid("09919982-d68a-4e27-955f-2f20bcf86f2f")
                         },
                         new
                         {
-                            MovieId = new Guid("f8bcb61f-f531-418f-ac4e-2bee3e99fa12"),
-                            CompanyId = new Guid("b311441d-d5c7-4e8d-9d20-8aa54ea0e005")
+                            MovieId = new Guid("421f4e63-fcc8-40d3-a7c5-c43150678896"),
+                            CompanyId = new Guid("09919982-d68a-4e27-955f-2f20bcf86f2f")
                         },
                         new
                         {
-                            MovieId = new Guid("d3e584c5-0a2f-477d-808b-a78152155fda"),
-                            CompanyId = new Guid("1e4854b9-8696-4c29-9374-290932f70f59")
+                            MovieId = new Guid("85087659-9e67-47b8-b0c2-e26316c1d564"),
+                            CompanyId = new Guid("17308103-5051-4df1-b616-a6bb30ab1b77")
                         },
                         new
                         {
-                            MovieId = new Guid("bea41c9f-6a15-4e7e-ab7f-a0723be76924"),
-                            CompanyId = new Guid("1e4854b9-8696-4c29-9374-290932f70f59")
+                            MovieId = new Guid("a97e1be6-d15e-45ac-a18d-f50f8ae2678a"),
+                            CompanyId = new Guid("17308103-5051-4df1-b616-a6bb30ab1b77")
                         },
                         new
                         {
-                            MovieId = new Guid("c5317ab1-07fd-45be-92d5-6b639b60321d"),
-                            CompanyId = new Guid("dbe7eed6-9261-4e2b-b72c-0baa77a91023")
+                            MovieId = new Guid("dd70197d-5459-4245-af6a-9a6cca834bfb"),
+                            CompanyId = new Guid("c98f61ac-d455-4d3e-a27d-179b2005d0f0")
                         },
                         new
                         {
-                            MovieId = new Guid("ff4f2c3b-b6fc-4799-90df-69de1faa85b5"),
-                            CompanyId = new Guid("dbe7eed6-9261-4e2b-b72c-0baa77a91023")
+                            MovieId = new Guid("f5da4be8-89fd-44ea-a024-550b7897945d"),
+                            CompanyId = new Guid("c98f61ac-d455-4d3e-a27d-179b2005d0f0")
                         },
                         new
                         {
-                            MovieId = new Guid("7dde9b26-1cfa-4608-813e-e11687a9c68e"),
-                            CompanyId = new Guid("27b3143f-bb07-4a54-97e1-ab778425313a")
+                            MovieId = new Guid("e042a4aa-6aed-4dfd-aa0f-8cd056fbdca3"),
+                            CompanyId = new Guid("83615941-d685-45dc-a818-8873dc9822a6")
                         },
                         new
                         {
-                            MovieId = new Guid("1924ff46-177a-4c0a-964a-5f1331deffa3"),
-                            CompanyId = new Guid("27b3143f-bb07-4a54-97e1-ab778425313a")
+                            MovieId = new Guid("cdf2a4b3-b5b5-4a8f-9751-25f0e0b8a120"),
+                            CompanyId = new Guid("83615941-d685-45dc-a818-8873dc9822a6")
                         },
                         new
                         {
-                            MovieId = new Guid("11d7437c-b44d-4966-bf36-fe73d569b21a"),
-                            CompanyId = new Guid("e552ed3c-0c8a-4b16-8602-be040a990a3f")
+                            MovieId = new Guid("b8800b30-7638-4842-bdf2-d0c9b816a6d8"),
+                            CompanyId = new Guid("bc527e23-0685-4c87-a229-f4bef010b103")
                         },
                         new
                         {
-                            MovieId = new Guid("ee9a8ba8-4313-4b5d-853f-dae43dd837c3"),
-                            CompanyId = new Guid("c791a36f-efb1-4b0c-bcdb-d589cfef5fa2")
+                            MovieId = new Guid("1d18ba26-6af1-40e6-8375-67885b5ebccc"),
+                            CompanyId = new Guid("cd3ea95d-af2f-4e63-b7f8-9fd9a49d1f97")
                         });
                 });
 
@@ -976,109 +976,124 @@ namespace CinemaManagementSystem.Persistence.Migrations
 
                     b.HasIndex("GenreId");
 
-                    b.ToTable("MovieGenre");
+                    b.ToTable("MovieGenres");
 
                     b.HasData(
                         new
                         {
-                            MovieId = new Guid("1b3c422c-b757-41ac-a7b7-5291f5f188a1"),
-                            GenreId = new Guid("d4c61819-9098-461e-98f0-b93ef3c5b1af")
+                            MovieId = new Guid("c8937670-1d07-4c2b-8e4b-9e3c417ded7e"),
+                            GenreId = new Guid("8fc2bdcd-4c1b-47d3-89c9-d5e5cb8214b7")
                         },
                         new
                         {
-                            MovieId = new Guid("1b3c422c-b757-41ac-a7b7-5291f5f188a1"),
-                            GenreId = new Guid("5d294dd2-08c9-4460-9962-3c5f5a3231cd")
+                            MovieId = new Guid("c8937670-1d07-4c2b-8e4b-9e3c417ded7e"),
+                            GenreId = new Guid("f272f81e-62fc-4ec7-97fd-5f4508702336")
                         },
                         new
                         {
-                            MovieId = new Guid("02e364f8-d6f9-47f7-88ac-a636466a75d6"),
-                            GenreId = new Guid("055f8ca6-74df-43c3-9aad-4fc316d85296")
+                            MovieId = new Guid("837ad15e-16fb-4f6b-9a01-e3995d691fe5"),
+                            GenreId = new Guid("95b12e40-7b7f-418d-8dd2-4572085e3a64")
                         },
                         new
                         {
-                            MovieId = new Guid("02e364f8-d6f9-47f7-88ac-a636466a75d6"),
-                            GenreId = new Guid("d4c61819-9098-461e-98f0-b93ef3c5b1af")
+                            MovieId = new Guid("837ad15e-16fb-4f6b-9a01-e3995d691fe5"),
+                            GenreId = new Guid("8fc2bdcd-4c1b-47d3-89c9-d5e5cb8214b7")
                         },
                         new
                         {
-                            MovieId = new Guid("f8bcb61f-f531-418f-ac4e-2bee3e99fa12"),
-                            GenreId = new Guid("b13c612c-c4f6-4322-8ab9-f1e37f11146a")
+                            MovieId = new Guid("421f4e63-fcc8-40d3-a7c5-c43150678896"),
+                            GenreId = new Guid("3e45a754-514f-4d18-bb64-820045c42f95")
                         },
                         new
                         {
-                            MovieId = new Guid("f8bcb61f-f531-418f-ac4e-2bee3e99fa12"),
-                            GenreId = new Guid("d4c61819-9098-461e-98f0-b93ef3c5b1af")
+                            MovieId = new Guid("421f4e63-fcc8-40d3-a7c5-c43150678896"),
+                            GenreId = new Guid("8fc2bdcd-4c1b-47d3-89c9-d5e5cb8214b7")
                         },
                         new
                         {
-                            MovieId = new Guid("3ccf0380-6621-4cea-a5d3-b02ab91a2200"),
-                            GenreId = new Guid("09c732e3-3e68-454c-8584-037c7bb5a6d9")
+                            MovieId = new Guid("524ac7e6-fe80-44b0-913a-5cf0ba158186"),
+                            GenreId = new Guid("0081e4c8-8e4e-4d29-8255-c31e81e8fb94")
                         },
                         new
                         {
-                            MovieId = new Guid("3ca87128-52f6-46b8-a129-2d69d9b7ad11"),
-                            GenreId = new Guid("28de40be-66ea-42ef-8cf1-181c3205cada")
+                            MovieId = new Guid("ccda1415-3cd7-45c8-b367-ad0762dfd62d"),
+                            GenreId = new Guid("e1a6a88c-9918-470c-ac4a-045fa17075be")
                         },
                         new
                         {
-                            MovieId = new Guid("d3e584c5-0a2f-477d-808b-a78152155fda"),
-                            GenreId = new Guid("055f8ca6-74df-43c3-9aad-4fc316d85296")
+                            MovieId = new Guid("85087659-9e67-47b8-b0c2-e26316c1d564"),
+                            GenreId = new Guid("95b12e40-7b7f-418d-8dd2-4572085e3a64")
                         },
                         new
                         {
-                            MovieId = new Guid("d3e584c5-0a2f-477d-808b-a78152155fda"),
-                            GenreId = new Guid("a92224b1-4f02-4c52-af2f-8f3e26d1c9ec")
+                            MovieId = new Guid("85087659-9e67-47b8-b0c2-e26316c1d564"),
+                            GenreId = new Guid("aabb54c4-4be3-4715-9de4-64fd4201fce5")
                         },
                         new
                         {
-                            MovieId = new Guid("5ad3a0a7-272c-4679-897a-1770f0651f5f"),
-                            GenreId = new Guid("ecfeb11d-6453-4d45-ba03-d77cc3f2d0e6")
+                            MovieId = new Guid("f35e1043-0c4d-4856-b8ab-d2e2872859db"),
+                            GenreId = new Guid("d8e71725-c56f-4942-ae52-2ecdabe88bcf")
                         },
                         new
                         {
-                            MovieId = new Guid("bea41c9f-6a15-4e7e-ab7f-a0723be76924"),
-                            GenreId = new Guid("ecfeb11d-6453-4d45-ba03-d77cc3f2d0e6")
+                            MovieId = new Guid("a97e1be6-d15e-45ac-a18d-f50f8ae2678a"),
+                            GenreId = new Guid("d8e71725-c56f-4942-ae52-2ecdabe88bcf")
                         },
                         new
                         {
-                            MovieId = new Guid("c5317ab1-07fd-45be-92d5-6b639b60321d"),
-                            GenreId = new Guid("b57b51ca-de9b-4579-8271-57e6ec5fa7e4")
+                            MovieId = new Guid("dd70197d-5459-4245-af6a-9a6cca834bfb"),
+                            GenreId = new Guid("66480329-0928-4a53-a2be-06e9f85a75dc")
                         },
                         new
                         {
-                            MovieId = new Guid("7dde9b26-1cfa-4608-813e-e11687a9c68e"),
-                            GenreId = new Guid("d4f29d63-a05a-437a-b342-696f0e04b06a")
+                            MovieId = new Guid("e042a4aa-6aed-4dfd-aa0f-8cd056fbdca3"),
+                            GenreId = new Guid("ed3236c0-c283-480b-b7e1-f5b5b3528feb")
                         },
                         new
                         {
-                            MovieId = new Guid("7dde9b26-1cfa-4608-813e-e11687a9c68e"),
-                            GenreId = new Guid("28de40be-66ea-42ef-8cf1-181c3205cada")
+                            MovieId = new Guid("e042a4aa-6aed-4dfd-aa0f-8cd056fbdca3"),
+                            GenreId = new Guid("e1a6a88c-9918-470c-ac4a-045fa17075be")
                         },
                         new
                         {
-                            MovieId = new Guid("ff4f2c3b-b6fc-4799-90df-69de1faa85b5"),
-                            GenreId = new Guid("08e2a99e-96b6-4f9a-8866-37fb7e2d1b59")
+                            MovieId = new Guid("f5da4be8-89fd-44ea-a024-550b7897945d"),
+                            GenreId = new Guid("af3a9fee-a271-45c0-bc8d-b84a313624f7")
                         },
                         new
                         {
-                            MovieId = new Guid("ee9a8ba8-4313-4b5d-853f-dae43dd837c3"),
-                            GenreId = new Guid("09c732e3-3e68-454c-8584-037c7bb5a6d9")
+                            MovieId = new Guid("1d18ba26-6af1-40e6-8375-67885b5ebccc"),
+                            GenreId = new Guid("0081e4c8-8e4e-4d29-8255-c31e81e8fb94")
                         },
                         new
                         {
-                            MovieId = new Guid("ba0f389e-1c6b-40d5-b236-085c572f73bf"),
-                            GenreId = new Guid("b13c612c-c4f6-4322-8ab9-f1e37f11146a")
+                            MovieId = new Guid("6a1f8665-fa64-40ab-aee3-edc6a3cedcc5"),
+                            GenreId = new Guid("3e45a754-514f-4d18-bb64-820045c42f95")
                         },
                         new
                         {
-                            MovieId = new Guid("5d92a2c7-dbdc-4640-8df8-81d9a8f82c0b"),
-                            GenreId = new Guid("b13c612c-c4f6-4322-8ab9-f1e37f11146a")
+                            MovieId = new Guid("abbb5d76-f709-4911-863e-eeda82118978"),
+                            GenreId = new Guid("3e45a754-514f-4d18-bb64-820045c42f95")
                         },
                         new
                         {
-                            MovieId = new Guid("5d92a2c7-dbdc-4640-8df8-81d9a8f82c0b"),
-                            GenreId = new Guid("d4c61819-9098-461e-98f0-b93ef3c5b1af")
+                            MovieId = new Guid("abbb5d76-f709-4911-863e-eeda82118978"),
+                            GenreId = new Guid("8fc2bdcd-4c1b-47d3-89c9-d5e5cb8214b7")
                         });
+                });
+
+            modelBuilder.Entity("CinemaManagementSystem.Domain.Entities.MovieUser", b =>
+                {
+                    b.Property<Guid>("MovieId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("MovieId", "UserId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("MovieUsers");
                 });
 
             modelBuilder.Entity("CinemaManagementSystem.Domain.Entities.Rate", b =>
@@ -1119,18 +1134,18 @@ namespace CinemaManagementSystem.Persistence.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Rate");
+                    b.ToTable("Rates");
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("b19cd956-7225-4c57-b82a-33b30ed5818f"),
+                            Id = new Guid("f32c9b5a-51fe-43a3-b17d-5f5a52531979"),
                             Comment = "Web xịn, phim hay, toàn trai xinh gái đẹp, recommend nha mọi ngừi",
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 246, DateTimeKind.Local).AddTicks(1550),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 611, DateTimeKind.Local).AddTicks(190),
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 246, DateTimeKind.Local).AddTicks(1560),
-                            MovieId = new Guid("1b3c422c-b757-41ac-a7b7-5291f5f188a1"),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 611, DateTimeKind.Local).AddTicks(190),
+                            MovieId = new Guid("c8937670-1d07-4c2b-8e4b-9e3c417ded7e"),
                             Rating = 9.5,
                             UserId = new Guid("00000001-0001-0001-0101-010101010101")
                         });
@@ -1182,38 +1197,38 @@ namespace CinemaManagementSystem.Persistence.Migrations
                         .IsUnique()
                         .HasFilter("[CompanyId] IS NOT NULL");
 
-                    b.ToTable("User");
+                    b.ToTable("Users");
 
                     b.HasData(
                         new
                         {
                             Id = new Guid("00000001-0001-0001-0101-010101010101"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(7080),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(6260),
                             Firstname = "System",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(7080),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(6270),
                             Lastname = "Administrator"
                         },
                         new
                         {
                             Id = new Guid("00000002-0002-0002-0202-020202020202"),
-                            CompanyId = new Guid("b311441d-d5c7-4e8d-9d20-8aa54ea0e005"),
+                            CompanyId = new Guid("09919982-d68a-4e27-955f-2f20bcf86f2f"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(7790),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(6810),
                             Firstname = "System",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(7790),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(6810),
                             Lastname = "Publisher"
                         },
                         new
                         {
                             Id = new Guid("00000003-0003-0003-0303-030303030303"),
                             CreatedBy = "Administrator",
-                            DateCreated = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(7790),
+                            DateCreated = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(6820),
                             Firstname = "System",
                             LastModifiedBy = "Administrator",
-                            LastModifiedDate = new DateTime(2023, 7, 11, 15, 34, 31, 245, DateTimeKind.Local).AddTicks(7800),
+                            LastModifiedDate = new DateTime(2023, 7, 18, 20, 54, 18, 610, DateTimeKind.Local).AddTicks(6820),
                             Lastname = "User"
                         });
                 });
@@ -1275,6 +1290,25 @@ namespace CinemaManagementSystem.Persistence.Migrations
                     b.Navigation("Movie");
                 });
 
+            modelBuilder.Entity("CinemaManagementSystem.Domain.Entities.MovieUser", b =>
+                {
+                    b.HasOne("CinemaManagementSystem.Domain.Entities.Movie", "Movie")
+                        .WithMany("MovieUsers")
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CinemaManagementSystem.Domain.Entities.User", "User")
+                        .WithMany("MovieUsers")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Movie");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("CinemaManagementSystem.Domain.Entities.Rate", b =>
                 {
                     b.HasOne("CinemaManagementSystem.Domain.Entities.Movie", "Movie")
@@ -1328,11 +1362,15 @@ namespace CinemaManagementSystem.Persistence.Migrations
 
                     b.Navigation("MovieGenres");
 
+                    b.Navigation("MovieUsers");
+
                     b.Navigation("Rates");
                 });
 
             modelBuilder.Entity("CinemaManagementSystem.Domain.Entities.User", b =>
                 {
+                    b.Navigation("MovieUsers");
+
                     b.Navigation("Rates");
                 });
 #pragma warning restore 612, 618
