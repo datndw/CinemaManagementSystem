@@ -32,6 +32,13 @@ namespace CinemaManagementSystem.API.Controllers
             return Ok(movie);
         }
 
+        [HttpGet("Details/{id}")]
+        public async Task<ActionResult<MovieDetailDTO>> GetDetails(Guid id)
+        {
+            var movie = await _mediator.Send(new GetMovieDetailRequest { Id = id });
+            return Ok(movie);
+        }
+
         [HttpPost]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]

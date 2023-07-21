@@ -9,5 +9,6 @@ namespace CinemaManagementSystem.Application.Contracts.Persistence
 {
     public interface IMovieRepository : IGenericRepository<Movie>
     {
+        Task<Movie> GetMovieDetailAsync(Guid id);
     }
 }

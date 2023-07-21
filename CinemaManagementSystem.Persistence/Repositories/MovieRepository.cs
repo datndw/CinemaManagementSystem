@@ -12,5 +12,21 @@ namespace CinemaManagementSystem.Persistence.Repositories
         {
             _context = context;
         }
+
+        public async Task<Movie> GetMovieDetailAsync(Guid id)
+        {
+            return await _context.Movies
+                .Include(m => m.MovieActors)
+                .ThenInclude(a => a.Actor)
+                .Include(m => m.MovieCompanies)
+                .ThenInclude(c => c.Company)
+                .ThenInclude(c => c.User)
+                .Include(m => m.MovieGenres)
+                .ThenInclude(g => g.Genre)
+                .Include(m => m.Rates)
+                .ThenInclude(r => r.User)
+                .Where(m => m.Id == id)
+                .FirstAsync();
+        }
     }
 }

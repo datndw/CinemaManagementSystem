@@ -14,6 +14,9 @@ namespace CinemaManagementSystem.Application.Profiles
                 .ReverseMap();
             CreateMap<Rate, UpdateRateDTO>()
                 .ReverseMap();
+            CreateMap<Rate, RateDetailDTO>()
+                .ForMember(dest => dest.User, opt => opt.MapFrom(src => src.User))
+                .ReverseMap();
         }
 	}
 }
