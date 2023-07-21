@@ -13,7 +13,7 @@ namespace CinemaManagementSystem.Application.DTOs.Rate.Validators
             _unitOfWork = unitOfWork;
 
             RuleFor(r => r.Rating)
-                .LessThan(10).WithMessage("{PropertyName} can not be more than 10");
+                .LessThan(5).WithMessage("{PropertyName} can not be more than 10");
 
             RuleFor(c => c.Comment)
                 .MaximumLength(500).WithMessage("{PropertyName} must not exceed 500 characters");
