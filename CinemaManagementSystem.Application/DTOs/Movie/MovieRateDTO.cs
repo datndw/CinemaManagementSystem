@@ -14,6 +14,7 @@ namespace CinemaManagementSystem.Application.DTOs.Movie
         public DateTime ReleaseDate { get; set; }
         public string Status { get; set; }
         public double AvgRate { get; set; }
+        public List<string> CompanyNames { get; set; }
     }
 }
 

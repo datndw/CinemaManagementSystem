@@ -12,6 +12,7 @@ namespace CinemaManagementSystem.Application.Profiles
                 .ReverseMap();
             CreateMap<Movie, MovieRateDTO>()
                 .ForMember(dest => dest.AvgRate, opt => opt.MapFrom(src => Average(src.Rates)))
+                .ForMember(dest => dest.CompanyNames, opt => opt.MapFrom(src => src.MovieCompanies.Select(mc => mc.Company.Name).ToList()))
                 .ReverseMap();
             CreateMap<Movie, CreateMovieDTO>()
                 .ReverseMap();

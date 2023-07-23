@@ -33,6 +33,8 @@ namespace CinemaManagementSystem.Persistence.Repositories
         {
             return await _context.Movies
                 .Include(m => m.Rates)
+                .Include(m => m.MovieCompanies)
+                .ThenInclude(mc => mc.Company)
                 .Where(m => m.MovieCompanies.Any(mc => mc.CompanyId == id))
                 .ToListAsync();
         }
@@ -41,6 +43,8 @@ namespace CinemaManagementSystem.Persistence.Repositories
         {
             return await _context.Movies
                 .Include(m => m.Rates)
+                .Include(m => m.MovieCompanies)
+                .ThenInclude(mc => mc.Company)
                 .Where(m => m.MovieGenres.Any(mg => mg.GenreId == id))
                 .ToListAsync();
         }
@@ -49,6 +53,8 @@ namespace CinemaManagementSystem.Persistence.Repositories
         {
             return await _context.Movies
                 .Include(m => m.Rates)
+                .Include(m => m.MovieCompanies)
+                .ThenInclude(mc => mc.Company)
                 .ToListAsync();
         }
     }
