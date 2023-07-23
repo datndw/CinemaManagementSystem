@@ -5,6 +5,8 @@ namespace CinemaManagementSystem.Application.DTOs.Rate
 	{
         public double Rating { get; set; }
         public string? Comment { get; set; }
+        public Guid UserId { get; set; }
+        public Guid MovieId { get; set; }
     }
 }
 
