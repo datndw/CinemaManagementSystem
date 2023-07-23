@@ -16,6 +16,12 @@ namespace CinemaManagementSystem.Persistence.Repositories
         {
             _context.MovieUsers.Add(new MovieUser { MovieId = movieId, UserId = userId });
         }
+
+        public void RemoveFromFavorites(Guid userId, Guid movieId)
+        {
+            var removingEntity = _context.MovieUsers.FirstOrDefault(mu => mu.MovieId == movieId && mu.UserId == userId);
+            _context.MovieUsers.Remove(removingEntity);
+        }
     }
 }
 

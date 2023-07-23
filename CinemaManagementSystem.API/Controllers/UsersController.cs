@@ -72,7 +72,16 @@ namespace CinemaManagementSystem.API.Controllers
         [Authorize(Roles = "User")]
         public async Task<ActionResult<bool>> Post([FromBody] AddFavoritesDTO addFavoritesDTO)
         {
-            var command = new AddFavoritesDTO { UserId = addFavoritesDTO.UserId, MovieId = addFavoritesDTO.MovieId };
+            var command = new AddToFavoritesCommand { UserId = addFavoritesDTO.UserId, MovieId = addFavoritesDTO.MovieId };
+            var response = await _mediator.Send(command);
+            return Ok(response);
+        }
+
+        [HttpPost("RemoveFromFavorites")]
+        [Authorize(Roles = "User")]
+        public async Task<ActionResult<bool>> Post([FromBody] RemoveFavoritesDTO removeFavoritesDTO)
+        {
+            var command = new RemoveFromFavoritesCommand { UserId = removeFavoritesDTO.UserId, MovieId = removeFavoritesDTO.MovieId };
             var response = await _mediator.Send(command);
             return Ok(response);
         }
