@@ -29,6 +29,43 @@ namespace CinemaManagementSystem.Persistence.Repositories
                 .FirstAsync();
         }
 
+        public async Task<List<Movie>> SearchMovies(string keyword)
+        {
+            return double.TryParse(keyword, out double value)
+                ?
+                await _context.Movies
+                .Include(m => m.MovieActors)
+                .ThenInclude(a => a.Actor)
+                .Include(m => m.MovieCompanies)
+                .ThenInclude(c => c.Company)
+                .ThenInclude(c => c.User)
+                .Include(m => m.MovieGenres)
+                .ThenInclude(g => g.Genre)
+                .Include(m => m.Rates)
+                .ThenInclude(r => r.User)
+                .Where(m => m.AgeRequired == value ||
+                    m.ReleaseDate.Year == value)
+                .ToListAsync()
+                :
+                await _context.Movies
+                .Include(m => m.MovieActors)
+                .ThenInclude(a => a.Actor)
+                .Include(m => m.MovieCompanies)
+                .ThenInclude(c => c.Company)
+                .ThenInclude(c => c.User)
+                .Include(m => m.MovieGenres)
+                .ThenInclude(g => g.Genre)
+                .Include(m => m.Rates)
+                .ThenInclude(r => r.User)
+                .Where(m => m.Title.ToUpper().Contains(keyword.ToUpper()) ||
+                    m.Description.ToUpper().Contains(keyword.ToUpper()) ||
+                    m.MovieGenres.Any(mg => mg.Genre.Name.ToUpper().Contains(keyword.ToUpper())) ||
+                    m.MovieCompanies.Any(mg => mg.Company.Name.ToUpper().Contains(keyword.ToUpper())))
+                .ToListAsync();
+
+
+        }
+
         public async Task<List<Movie>> GetMoviesByCompany(Guid id)
         {
             return await _context.Movies
@@ -57,5 +94,6 @@ namespace CinemaManagementSystem.Persistence.Repositories
                 .ThenInclude(mc => mc.Company)
                 .ToListAsync();
         }
+
     }
 }

@@ -25,6 +25,13 @@ namespace CinemaManagementSystem.API.Controllers
             return Ok(movies);
         }
 
+        [HttpGet("Search/{keyword}")]
+        public async Task<ActionResult<List<MovieDetailDTO>>> Search(string keyword)
+        {
+            var movies = await _mediator.Send(new SearchMoviesRequest { Keyword = keyword});
+            return Ok(movies);
+        }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<MovieDTO>> Get(Guid id)
         {
@@ -56,7 +63,7 @@ namespace CinemaManagementSystem.API.Controllers
         [HttpPost]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Publisher")]
         public async Task<ActionResult<BaseCommandResponse>> Post([FromBody] CreateMovieDTO createMovieDTO)
         {
             var command = new CreateMovieCommand { CreateMovieDTO = createMovieDTO };
@@ -68,7 +75,7 @@ namespace CinemaManagementSystem.API.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesDefaultResponseType]
-        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Publisher")]
         public async Task<ActionResult> Put([FromBody] UpdateMovieDTO updateMovieDTO)
         {
             var command = new UpdateMovieCommand { Id =updateMovieDTO.Id, UpdateMovieDTO = updateMovieDTO };
@@ -80,7 +87,7 @@ namespace CinemaManagementSystem.API.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesDefaultResponseType]
-        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Publisher")]
         public async Task<ActionResult> Delete(Guid id)
         {
             var command = new DeleteMovieCommand { Id = id };
