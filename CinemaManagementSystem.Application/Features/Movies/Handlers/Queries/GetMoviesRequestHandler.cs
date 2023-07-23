@@ -6,7 +6,7 @@ using MediatR;
 
 namespace CinemaManagementSystem.Application.Features.Movies.Handlers.Queries
 {
-    public class GetMoviesRequestHandler : IRequestHandler<GetMoviesRequest, List<MovieDTO>>
+    public class GetMoviesRequestHandler : IRequestHandler<GetMoviesRequest, List<MovieRateDTO>>
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
@@ -17,10 +17,10 @@ namespace CinemaManagementSystem.Application.Features.Movies.Handlers.Queries
         }
 
 
-        public async Task<List<MovieDTO>> Handle(GetMoviesRequest request, CancellationToken cancellationToken)
+        public async Task<List<MovieRateDTO>> Handle(GetMoviesRequest request, CancellationToken cancellationToken)
         {
-            var movies = await _unitOfWork.MovieRepository.GetAllAsync();
-            return _mapper.Map<List<MovieDTO>>(movies);
+            var movies = await _unitOfWork.MovieRepository.GetMoviesWithRate();
+            return _mapper.Map<List<MovieRateDTO>>(movies);
         }
     }
 }

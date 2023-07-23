@@ -3,7 +3,7 @@ using MediatR;
 
 namespace CinemaManagementSystem.Application.Features.Movies.Requests.Queries
 {
-    public class GetMoviesRequest : IRequest<List<MovieDTO>>
+    public class GetMoviesRequest : IRequest<List<MovieRateDTO>>
     {
     }
 }

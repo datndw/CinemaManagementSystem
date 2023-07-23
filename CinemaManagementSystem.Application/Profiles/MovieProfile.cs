@@ -10,6 +10,9 @@ namespace CinemaManagementSystem.Application.Profiles
         {
             CreateMap<Movie, MovieDTO>()
                 .ReverseMap();
+            CreateMap<Movie, MovieRateDTO>()
+                .ForMember(dest => dest.AvgRate, opt => opt.MapFrom(src => Average(src.Rates)))
+                .ReverseMap();
             CreateMap<Movie, CreateMovieDTO>()
                 .ReverseMap();
             CreateMap<Movie, UpdateMovieDTO>()
@@ -20,6 +23,15 @@ namespace CinemaManagementSystem.Application.Profiles
                 .ForMember(dest => dest.Rates, opt => opt.MapFrom(src => src.Rates))
                 .ForMember(dest => dest.Genres, opt => opt.MapFrom(src => src.MovieGenres.Select(g => g.Genre)))
                 .ReverseMap();
+        }
+
+        private double Average(ICollection<Rate>? rates)
+        {
+            if (rates == null || rates.Count == 0)
+                return 0;
+
+            double sum = rates.Sum(r => r.Rating);
+            return sum / rates.Count;
         }
     }
 }

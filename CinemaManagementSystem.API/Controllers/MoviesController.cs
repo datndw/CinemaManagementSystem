@@ -19,7 +19,7 @@ namespace CinemaManagementSystem.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<MovieDTO>>> Get()
+        public async Task<ActionResult<List<MovieRateDTO>>> Get()
         {
             var movies = await _mediator.Send(new GetMoviesRequest());
             return Ok(movies);
