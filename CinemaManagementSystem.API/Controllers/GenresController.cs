@@ -25,6 +25,13 @@ namespace CinemaManagementSystem.API.Controllers
             return Ok(genres);
         }
 
+        [HttpGet("Details")]
+        public async Task<ActionResult<List<GenreDetailDTO>>> GetDetails()
+        {
+            var genres = await _mediator.Send(new GetGenresDetailRequest());
+            return Ok(genres);
+        }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<GenreDTO>> Get(Guid id)
         {

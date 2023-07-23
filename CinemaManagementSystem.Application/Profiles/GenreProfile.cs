@@ -14,6 +14,9 @@ namespace CinemaManagementSystem.Application.Profiles
                 .ReverseMap();
             CreateMap<Genre, UpdateGenreDTO>()
                 .ReverseMap();
+            CreateMap<Genre, GenreDetailDTO>()
+                .ForMember(dest => dest.Movies, opt => opt.MapFrom(src => src.MovieGenres.Select(c => c.Movie)))
+                .ReverseMap();
         }
 	}
 }

@@ -9,5 +9,6 @@ namespace CinemaManagementSystem.Application.Contracts.Persistence
 {
     public interface IGenreRepository : IGenericRepository<Genre>
     {
+        Task<List<Genre>> GetGenresDetailAsync();
     }
 }
