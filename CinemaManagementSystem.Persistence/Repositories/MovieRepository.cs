@@ -29,6 +29,14 @@ namespace CinemaManagementSystem.Persistence.Repositories
                 .FirstAsync();
         }
 
+        public async Task<List<Movie>> GetMoviesByGenre(Guid id)
+        {
+            return await _context.Movies
+                .Include(m => m.Rates)
+                .Where(m => m.MovieGenres.Any(mg => mg.GenreId == id))
+                .ToListAsync();
+        }
+
         public async Task<List<Movie>> GetMoviesWithRate()
         {
             return await _context.Movies

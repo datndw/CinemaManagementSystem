@@ -11,5 +11,6 @@ namespace CinemaManagementSystem.Application.Contracts.Persistence
     {
         Task<Movie> GetMovieDetailAsync(Guid id);
         Task<List<Movie>> GetMoviesWithRate();
+        Task<List<Movie>> GetMoviesByGenre(Guid id);
     }
 }
