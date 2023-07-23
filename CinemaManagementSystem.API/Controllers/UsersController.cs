@@ -86,6 +86,14 @@ namespace CinemaManagementSystem.API.Controllers
             return Ok(response);
         }
 
+        [HttpPost("MyFavorites")]
+        [Authorize(Roles = "User")]
+        public async Task<ActionResult<List<FavoritesDTO>>> MyFavorites([FromBody] Guid id)
+        {
+            var favs = await _mediator.Send(new MyFavoritesRequest { Id = id});
+            return Ok(favs);
+        }
+
         [HttpPost("QRPayment")]
         [Authorize(Roles = "User")]
         public Task<ActionResult<string>> Post([FromBody] PaymentInfoDTO paymentInfoDTO)

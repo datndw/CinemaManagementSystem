@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using CinemaManagementSystem.Application.DTOs.Common;
 using CinemaManagementSystem.Application.DTOs.User;
 using CinemaManagementSystem.Domain.Entities;
 
@@ -13,6 +14,8 @@ namespace CinemaManagementSystem.Application.Profiles
             CreateMap<User, CreateUserDTO>()
                 .ReverseMap();
             CreateMap<User, UpdateUserDTO>()
+                .ReverseMap();
+            CreateMap<MovieUser, FavoritesDTO>()
                 .ReverseMap();
         }
 	}

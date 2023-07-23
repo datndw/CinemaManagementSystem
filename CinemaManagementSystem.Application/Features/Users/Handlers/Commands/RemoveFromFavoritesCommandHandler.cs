@@ -19,7 +19,7 @@ namespace CinemaManagementSystem.Application.Features.Users.Handlers.Commands
         {
             _unitOfWork.UserRepository.RemoveFromFavorites(request.UserId, request.MovieId);
             await _unitOfWork.Save();
-            return false;
+            return true;
         }
     }
 }
