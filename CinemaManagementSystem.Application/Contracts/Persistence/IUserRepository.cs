@@ -8,6 +8,8 @@ namespace CinemaManagementSystem.Application.Contracts.Persistence
         void AddToFavorites(Guid userId, Guid movieId);
         void RemoveFromFavorites(Guid userId, Guid movieId);
         Task<List<Movie>> FavoritesAsync(Guid userId);
+        Task<List<User>> GetDetailsAsync();
+        Task<User> GetDetailAsync(Guid userId);
     }
 }
 

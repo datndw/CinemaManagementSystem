@@ -11,6 +11,7 @@ namespace CinemaManagementSystem.Application.DTOs.User
         public string? ImageUrl { get; set; }
         public Guid? CompanyId { get; set; }
         public DateTime? BirthDate { get; set; }
+        public string? CompanyName { get; set; }
     }
 }
 

@@ -19,7 +19,7 @@ namespace CinemaManagementSystem.Application.Features.Users.Handlers.Queries
 
         public async Task<List<UserDTO>> Handle(GetUsersRequest request, CancellationToken cancellationToken)
         {
-            var users = await _unitOfWork.UserRepository.GetAllAsync();
+            var users = await _unitOfWork.UserRepository.GetDetailsAsync();
             return _mapper.Map<List<UserDTO>>(users);
         }
     }

@@ -18,7 +18,7 @@ namespace CinemaManagementSystem.Application.Features.Users.Handlers.Queries
         }
         public async Task<UserDTO> Handle(GetUserRequest request, CancellationToken cancellationToken)
         {
-            var user = await _unitOfWork.UserRepository.GetAsync(request.Id);
+            var user = await _unitOfWork.UserRepository.GetDetailAsync(request.Id);
             if (user == null)
             {
                 throw new NotFoundException(nameof(user), request.Id);

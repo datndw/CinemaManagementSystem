@@ -10,6 +10,7 @@ namespace CinemaManagementSystem.Application.Profiles
 		public UserProfile()
 		{
             CreateMap<User, UserDTO>()
+                .ForMember(dest => dest.CompanyName, opt => opt.MapFrom(src => src.Company.Name))
                 .ReverseMap();
             CreateMap<User, CreateUserDTO>()
                 .ReverseMap();

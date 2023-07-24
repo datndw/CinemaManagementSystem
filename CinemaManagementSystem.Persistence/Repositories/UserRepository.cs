@@ -42,6 +42,21 @@ namespace CinemaManagementSystem.Persistence.Repositories
                 .ToListAsync();
         }
 
+        public async Task<List<User>> GetDetailsAsync()
+        {
+            return await _context.Users
+                .Include(u => u.Company)
+                .ToListAsync();
+        }
+
+        public async Task<User> GetDetailAsync(Guid userId)
+        {
+            return await _context.Users
+                .Include(u => u.Company)
+                .Where(u => u.Id == userId)
+                .FirstOrDefaultAsync();
+        }
+
         public void RemoveFromFavorites(Guid userId, Guid movieId)
         {
             var removingEntity = _context.MovieUsers.FirstOrDefault(mu => mu.MovieId == movieId && mu.UserId == userId);
