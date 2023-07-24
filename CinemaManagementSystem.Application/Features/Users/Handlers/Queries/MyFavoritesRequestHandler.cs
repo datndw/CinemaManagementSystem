@@ -1,12 +1,13 @@
 ﻿using AutoMapper;
 using CinemaManagementSystem.Application.Contracts.Persistence;
 using CinemaManagementSystem.Application.DTOs.Common;
+using CinemaManagementSystem.Application.DTOs.Movie;
 using CinemaManagementSystem.Application.Features.Users.Requests.Queries;
 using MediatR;
 
 namespace CinemaManagementSystem.Application.Features.Users.Handlers.Queries
 {
-    public class MyFavoritesRequestHandler : IRequestHandler<MyFavoritesRequest, List<FavoritesDTO>>
+    public class MyFavoritesRequestHandler : IRequestHandler<MyFavoritesRequest, List<MovieDTO>>
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
@@ -16,10 +17,10 @@ namespace CinemaManagementSystem.Application.Features.Users.Handlers.Queries
             _mapper = mapper;
         }
 
-        public async Task<List<FavoritesDTO>> Handle(MyFavoritesRequest request, CancellationToken cancellationToken)
+        public async Task<List<MovieDTO>> Handle(MyFavoritesRequest request, CancellationToken cancellationToken)
         {
-            var favs = await _unitOfWork.UserRepository.FavoritesAsync(request.Id);
-            return _mapper.Map<List<FavoritesDTO>>(favs);
+            var movs = await _unitOfWork.UserRepository.FavoritesAsync(request.Id);
+            return _mapper.Map<List<MovieDTO>>(movs);
         }
     }
 }

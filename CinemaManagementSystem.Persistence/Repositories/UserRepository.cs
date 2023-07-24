@@ -1,4 +1,5 @@
-﻿using CinemaManagementSystem.Application.Contracts.Persistence;
+﻿using System;
+using CinemaManagementSystem.Application.Contracts.Persistence;
 using CinemaManagementSystem.Domain.Entities;
 using CinemaManagementSystem.Persistence.DbContexts;
 using Microsoft.EntityFrameworkCore;
@@ -15,13 +16,29 @@ namespace CinemaManagementSystem.Persistence.Repositories
 
         public void AddToFavorites(Guid userId, Guid movieId)
         {
-            _context.MovieUsers.Add(new MovieUser { MovieId = movieId, UserId = userId });
+            var existing = _context.MovieUsers.FirstOrDefault(mu => mu.MovieId == movieId && mu.UserId == userId);
+
+            if (existing == null)
+            {
+                var mu = new MovieUser
+                {
+                    MovieId = movieId,
+                    UserId = userId
+                };
+
+                _context.MovieUsers.Add(mu);
+            }
+            else
+            {
+            }
         }
 
-        public async Task<List<MovieUser>> FavoritesAsync(Guid userId)
+        public async Task<List<Movie>> FavoritesAsync(Guid userId)
         {
             return await _context.MovieUsers
+                .Include(mu => mu.Movie)
                 .Where(mu => mu.UserId == userId)
+                .Select(mu => mu.Movie)
                 .ToListAsync();
         }
 

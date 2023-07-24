@@ -1,4 +1,5 @@
 ﻿using CinemaManagementSystem.Application.DTOs.Common;
+using CinemaManagementSystem.Application.DTOs.Movie;
 using CinemaManagementSystem.Application.DTOs.User;
 using CinemaManagementSystem.Application.Features.Users.Requests.Commands;
 using CinemaManagementSystem.Application.Features.Users.Requests.Queries;
@@ -88,7 +89,7 @@ namespace CinemaManagementSystem.API.Controllers
 
         [HttpPost("MyFavorites")]
         [Authorize(Roles = "User")]
-        public async Task<ActionResult<List<FavoritesDTO>>> MyFavorites([FromBody] Guid id)
+        public async Task<ActionResult<List<MovieDTO>>> MyFavorites([FromBody] Guid id)
         {
             var favs = await _mediator.Send(new MyFavoritesRequest { Id = id});
             return Ok(favs);
